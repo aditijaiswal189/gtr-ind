@@ -32,26 +32,27 @@ const Hero: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-20">
           <div className="max-w-3xl text-white">
             <div className="inline-block px-4 py-2 mb-6 bg-red-600 text-white text-sm font-semibold rounded-md">
-              Your Most Trusted Partners
+             Recritment | Immigration | Settlement
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Immigration & Visa Consulting Here...
+            Business In Canada...
             </h1>
             
             <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl">
-              We are the world's leading provider of immigration and visa consulting services. 
-              With over 15 years of experience, we help you navigate the complex immigration process.
+              {/* We are the world's leading provider of immigration and visa consulting services. 
+              With over 15 years of experience, we help you navigate the complex immigration process. */}
+              C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K
             </p>
 
             <div className="flex flex-wrap gap-4">
               <button className="bg-red-600 hover:bg-red-700 text-white font-medium px-8 py-3 rounded-md flex items-center transition-all duration-300 transform hover:translate-x-1">
-                Learn More 
-                <ArrowRight size={20} className="ml-2" />
+                Call Us : +1 855 477 9797
+                {/* <ArrowRight size={20} className="ml-2" /> */}
               </button>
               
               <button className="bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium px-8 py-3 rounded-md transition-all duration-300">
-                Contact Us
+       Book An Appointment
               </button>
             </div>
           </div>

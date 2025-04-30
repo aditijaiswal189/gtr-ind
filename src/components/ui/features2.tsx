@@ -1,41 +1,42 @@
 import React from 'react';
-import { Settings, Smartphone, Users, HeadphonesIcon } from 'lucide-react';
+import { Smartphone, Laptop, Book, HeadphonesIcon } from 'lucide-react';
 
 const Features2 = () => {
   const features = [
     {
-      icon: <Settings className="w-16 h-16" />,
-      title: "Easy to Customize",
-      description: "Our services are easily customizable to meet your specific immigration needs and requirements."
-    },
-    {
       icon: <Smartphone className="w-16 h-16" />,
-      title: "Responsive & Ready",
-      description: "Access our services and support from any device, anywhere in the world."
+      title: "Establish business in Canada",
+      description: "We provide guidance on how to start and grow your business in Canada.",
     },
     {
-      icon: <Users className="w-16 h-16" />,
-      title: "Intuitive Process",
-      description: "Our streamlined immigration process is designed to be clear and easy to follow."
+      icon: <Laptop className="w-16 h-16" />,
+      title: "Secure a job in Canada​",
+      description: "We help you find the right job in Canada that matches your skills and experience.",
+    },
+    {
+      icon: <Book className="w-16 h-16" />,
+      title: "Visa refusal? We can assist",
+      description: "We offer expert advice and support for visa refusals to help you reapply successfully.",
     },
     {
       icon: <HeadphonesIcon className="w-16 h-16" />,
-      title: "Legendary Support",
-      description: "24/7 dedicated support to assist you throughout your immigration journey."
-    }
+      title: "Book a consultation with RCIC",
+      description: "Schedule a consultation with our Registered Canadian executive",
+    },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-center p-6 hover:transform hover:scale-105 transition-transform duration-300">
-              <div className="text-red-600 mb-6 flex justify-center">
-                {feature.icon}
-              </div>
+            <div
+              key={index}
+              className="text-center p-6 transition-transform duration-300 hover:scale-105 text-foreground"
+            >
+              <div className="mb-6 flex justify-center text-primary">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-muted-foreground">{feature.description}</p>
             </div>
           ))}
         </div>

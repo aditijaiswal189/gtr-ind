@@ -1,4 +1,6 @@
+import { Button } from '@/components/ui/button';
 import Coaching from '@/components/ui/coaching';
+import Coaching2 from '@/components/ui/coaching2';
 import Contact from '@/components/ui/contact-us';
 // import Faq from '@/components/ui/FAQ';
 import Features from '@/components/ui/features';
@@ -6,6 +8,7 @@ import Features2 from '@/components/ui/features2';
 import Footer from '@/components/ui/footer';
 import Header from '@/components/ui/header-bolt';
 import Hero from '@/components/ui/hero';
+import HorizontalCard from '@/components/ui/horizontal-card';
 import Newsletter from '@/components/ui/news-letter';
 import Pricing from '@/components/ui/pricing';
 import Process from '@/components/ui/process';
@@ -17,20 +20,24 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex gap-4 flex-col">
       <Header />
       <Hero />
-      <Features />
-      <Features2/>
-      <Coaching/>
+      {/* <Features /> */}
+      {/* <HorizontalCard/> */}
+      {/* <Coaching/> */}
+      <Coaching2/>
+
       {/* <Faq/> */}
-      <Newsletter/>
+      {/* <Newsletter/>
       <Pricing/>
       <Process/>
       <Stats/>
       <Services />
       <Testimonials />
-      <Contact />
+      */}
+      {/* <Contact /> */}
+      <Features2/>
       <Footer />
     </div>
   );
