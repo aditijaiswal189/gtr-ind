@@ -1,65 +1,79 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
-const Hero: React.FC = () => {
+const HeroSection = () => {
   return (
-    <div className="relative pt-20 overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-gray-900 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1600')] opacity-20 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-gray-900/70"></div>
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div 
-              key={i}
-              className="absolute border border-gray-700 rounded-full"
-              style={{
-                width: `${Math.random() * 200 + 50}px`,
-                height: `${Math.random() * 200 + 50}px`,
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                opacity: Math.random() * 0.3 + 0.1,
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
+    <div className="relative min-h-[600px] bg-gray-900 overflow-hidden text-[var(--primary-foreground)]">
+      {/* Diagonal stripes background */}
+      <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 bg-[repeating-linear-gradient(135deg,transparent,transparent_20px,rgba(255,255,255,0.1)_20px,rgba(255,255,255,0.1)_40px)]" />
 
-      {/* Red diagonal stripe */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-red-600 -skew-x-12 translate-x-1/3 z-0"></div>
+      {/* Red diagonal accent */}
+      <motion.div
+        className="absolute -top-40 -right-20 w-[400px] h-[800px] bg-[var(--primary)] opacity-90"
+        initial={{ x: 400, y: -400 }}
+        animate={{ x: 0, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        style={{ clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%)" }}
+      />
 
-      <div className="relative z-10 min-h-[90vh] flex flex-col justify-center">
-        <div className="container mx-auto px-4 md:px-6 py-16 md:py-20">
-          <div className="max-w-3xl text-white">
-            <div className="inline-block px-4 py-2 mb-6 bg-red-600 text-white text-sm font-semibold rounded-md">
-             Recritment | Immigration | Settlement
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Business In Canada...
-            </h1>
-            
-            <p className="text-lg md:text-xl opacity-90 mb-8 max-w-2xl">
-              {/* We are the world's leading provider of immigration and visa consulting services. 
-              With over 15 years of experience, we help you navigate the complex immigration process. */}
-              C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K
-            </p>
+      {/* White overlay accent */}
+      <motion.div
+        className="absolute -top-40 -right-20 w-[400px] h-[800px] bg-white opacity-10"
+        initial={{ x: 400, y: -400 }}
+        animate={{ x: 50, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 0.1 }}
+        style={{ clipPath: "polygon(30% 0, 100% 0, 100% 100%, 10% 100%)" }}
+      />
 
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-red-600 hover:bg-red-700 text-white font-medium px-8 py-3 rounded-md flex items-center transition-all duration-300 transform hover:translate-x-1">
-                Call Us : +1 855 477 9797
-                {/* <ArrowRight size={20} className="ml-2" /> */}
-              </button>
-              
-              <button className="bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium px-8 py-3 rounded-md transition-all duration-300">
-       Book An Appointment
-              </button>
-            </div>
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-block px-6 py-2 rounded-md mb-10 bg-[var(--primary)] text-[var(--primary-foreground)]"
+        >
+          <p className="text-sm font-bold tracking-wider uppercase">
+            Recruitment | Immigration | Settlement
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-3xl space-y-6"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            Business In<br />Canada...
+          </h1>
+
+          <p className="text-lg max-w-2xl text-[var(--muted-foreground)]">
+            C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-2">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 rounded-md font-semibold text-lg transition-colors bg-[var(--primary)] text-[var(--primary-foreground)]"
+            >
+              Call Us: +1 855 477 9797
+            </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-3 border rounded-md font-semibold text-lg transition-colors border-white border-opacity-30 text-[var(--primary-foreground)] bg-transparent"
+            >
+              Book An Appointment
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default HeroSection;

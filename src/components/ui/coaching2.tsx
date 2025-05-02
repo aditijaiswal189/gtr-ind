@@ -23,6 +23,11 @@ import {
   BriefcaseBusiness,
   Factory,
   Handshake,
+  Network,
+  Contact,
+  ChartNetwork,
+  Notebook,
+  LibraryBig,
 } from 'lucide-react';
 import HorizontalCard, { CardColor } from './horizontal-card';
 
@@ -62,14 +67,14 @@ const Coaching2: React.FC = () => {
       color: 'blue' as CardColor,
     },
     {
-      title: 'IELTS Coaching',
+      title: 'Study',
       description:
-        'Scoring method the band of 0-9. Personalized strategies to improve listening, reading, writing, and speaking skills.',
+        'Studying in Canada promises world-class education, rich cultural diversity, and a pathway to a promising future, all within a welcoming and inclusive environment.',
       features: [
-        { icon: <BookCheck className="w-4 h-4" />, title: 'Band Scoring', description: 'Score improvement tips' },
-        { icon: <MessageSquare className="w-4 h-4" />, title: 'Speaking Tasks', description: 'Interview preparation' },
-        { icon: <PenTool className="w-4 h-4" />, title: 'Writing Tasks', description: 'Essay techniques' },
-        { icon: <Headphones className="w-4 h-4" />, title: 'Listening Skills', description: 'Audio comprehension' },
+        { icon: <Brain className="w-4 h-4" />, title: 'Designated Learning Institutions', description: 'To streamline the process' },
+        { icon: <Notebook className="w-4 h-4" />, title: 'Student Direct Stream', description: 'Helping students directly' },
+        { icon: <LibraryBig className="w-4 h-4" />, title: 'Study in Canada', description: 'Dream to study in canada' },
+        { icon: <GraduationCap className="w-4 h-4" />, title: 'Post Graduation WP', description: 'Help in Post graduation Courses' },
       ],
       icon: <GraduationCap className="w-6 h-6 bg-primary-green text-white" />,
       imageUrl: 'https://images.pexels.com/photos/4778611/pexels-photo-4778611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -77,16 +82,16 @@ const Coaching2: React.FC = () => {
       color: 'green' as CardColor,
     },
     {
-      title: 'GMAT',
+      title: 'Work & Jobs',
       description:
-        'Master in management or business oriented studies. Comprehensive preparation for analytical writing, integrated reasoning, and more.',
+        'Canada offers diverse work opportunities, fostering career growth and global experiences in a vibrant, welcoming country for skilled professionals and temporary workers.',
       features: [
-        { icon: <Lightbulb className="w-4 h-4" />, title: 'Quantitative', description: 'Math problem solving' },
-        { icon: <BookMarked className="w-4 h-4" />, title: 'Verbal', description: 'Critical reasoning' },
-        { icon: <TrendingUp className="w-4 h-4" />, title: 'Integrated', description: 'Data interpretation' },
-        { icon: <PenTool className="w-4 h-4" />, title: 'Analytical', description: 'Essay writing skills' },
+        { icon: <Network className="w-4 h-4" />, title: 'For Employers', description: 'Hiring good candidates' },
+        { icon: <Briefcase className="w-4 h-4" />, title: 'International Mobility Program', description: 'IMP offers services for mobility' },
+        { icon: <Contact className="w-4 h-4" />, title: 'Work Permit', description: 'Get Work Permit seemlesly' },
+        { icon: <ChartNetwork className="w-4 h-4" />, title: 'In Demand Jobs', description: 'Get full information about jobs in demand' },
       ],
-      icon: <Brain className="w-6 h-6 text-white bg-primary-yellow" />,
+      icon: <Network className="w-6 h-6 text-white bg-primary-yellow" />,
       imageUrl: 'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       imagePosition: 'right',
       color: 'yellow' as CardColor,
