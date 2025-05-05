@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpen, Award, GraduationCap, Brain } from 'lucide-react';
+import Image from 'next/image';
 
 export const ImageWith4Features = () => {
   const courses = [
@@ -30,7 +31,7 @@ export const ImageWith4Features = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
-            <img
+            <Image
               src="https://images.pexels.com/photos/4778621/pexels-photo-4778621.jpeg"
               alt="Students studying"
               className="rounded-lg shadow-xl"

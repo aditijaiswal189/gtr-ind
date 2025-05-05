@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const Hero2 = () => {
     return (
       <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
@@ -10,7 +12,7 @@ export const Hero2 = () => {
           >
             <path d="M50 0H100L50 100H0L50 0Z" />
           </svg>
-          <img
+          <Image
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
             src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
             alt=""

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 import { SectionHeader } from './section-header';
+import Image from 'next/image';
 
 export const Testimonials = () => {
   const testimonials = [
@@ -37,7 +38,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-gray-100">
               <div className="flex items-center mb-6">
-                <img 
+                <Image 
                   src={testimonial.image} 
                   alt={testimonial.name}
                   className="w-16 h-16 rounded-full object-cover mr-4"

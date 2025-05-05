@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 export const Footer = () => {
   return (
@@ -10,7 +11,7 @@ export const Footer = () => {
             <div className="flex items-center mb-6 pr-2">
               {/* <Globe className="w-8 h-8 text-red-600 mr-2" />
               <span className="font-bold text-2xl">VISA<span className="text-red-600">LAND</span></span> */}
-              <img src="/logo3.png"/>
+              <Image src="/logo3.png"/>
             </div>
             <p className="text-gray-400 mb-6 ">
             Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!

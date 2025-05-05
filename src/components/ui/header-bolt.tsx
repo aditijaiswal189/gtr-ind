@@ -1,5 +1,6 @@
 "use client";
 import { Search } from "lucide-react";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 
@@ -30,7 +31,7 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/logo3.png" alt="Logo" className="h-10 w-auto mx-auto" />
+            <Image src="/logo3.png" alt="Logo" className="h-10 w-auto mx-auto" />
           </div>
 
           <nav className="hidden md:flex space-x-8">

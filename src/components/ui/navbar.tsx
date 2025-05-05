@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 // import MobileNavbar from "./mobile-navbar";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export  function Navbar({ defaultStyle = false, type = "default" }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,7 +77,7 @@ export  function Navbar({ defaultStyle = false, type = "default" }) {
         )}
       >
         <div className="h-full flex justify-center items-center px-8">
-          <img src="/gtr-white.png" alt="" className="w-72" />
+          <Image src="/gtr-white.png" alt="" className="w-72" />
         </div>
         <div className="flex flex-col w-full justify-start items-start h-24">
           <div className="w-full flex gap-10 py-2 justify-end items-center px-6">
