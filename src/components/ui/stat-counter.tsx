@@ -10,6 +10,7 @@ interface StatCounterProps {
 export const StatCounter: React.FC<StatCounterProps> = ({
   end,
   duration = 2000,
+  // Default duration to 2 seconds
   suffix = '',
   className = '',
 }) => {
