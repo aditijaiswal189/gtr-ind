@@ -40,7 +40,7 @@ export const Feature1Animated: React.FC = () => (
                 className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-primary hover:text-primary-foreground"
               >
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
         </div>

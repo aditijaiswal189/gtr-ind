@@ -116,13 +116,13 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
   suffix?: string;
 }
 
- interface ServiceItem {
-  title: string;
-  description: string;
-  icon: ReactNode;
-  highlighted?: boolean;
-  buttonText?: string;
-}
+//  interface ServiceItem {
+//   title: string;
+//   description: string;
+//   icon: ReactNode;
+//   highlighted?: boolean;
+//   buttonText?: string;
+// }
 
  interface FeaturesConfig {
   intro: {
