@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface StatCounterProps {
   end: number;
@@ -7,20 +7,44 @@ interface StatCounterProps {
   className?: string;
 }
 
-export const StatCounter: React.FC<StatCounterProps> = ({ 
-  end, 
+export const StatCounter: React.FC<StatCounterProps> = ({
+  end,
   duration = 2000,
   suffix = '',
-  className = ''
+  className = '',
 }) => {
   const [count, setCount] = useState(0);
   const countRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
+  // 1️⃣ Memoize so we can safely put this in deps
+  const animateCount = useCallback(() => {
+    let startTime: number;
+    const startValue = 0;
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const currentCount = Math.floor(progress * (end - startValue) + startValue);
+      setCount(currentCount);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  }, [duration, end]);
+
+  // 2️⃣ Use a single effect that observes the element
   useEffect(() => {
+    const el = countRef.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
+      ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
           animateCount();
@@ -29,42 +53,17 @@ export const StatCounter: React.FC<StatCounterProps> = ({
       { threshold: 0.1 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
-    }
+    observer.observe(el);
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
-      }
+      observer.unobserve(el);
     };
-  }, []);
-
-  const animateCount = () => {
-    let startTime: number;
-    const startValue = 0;
-    
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      const currentCount = Math.floor(progress * (end - startValue) + startValue);
-      setCount(currentCount);
-      
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      } else {
-        setCount(end);
-      }
-    };
-    
-    window.requestAnimationFrame(step);
-  };
+  }, [animateCount]);  // ← animateCount is now a stable dependency
 
   return (
     <div ref={countRef} className={className}>
-      {count}{suffix}
+      {count}
+      {suffix}
     </div>
   );
 };
-

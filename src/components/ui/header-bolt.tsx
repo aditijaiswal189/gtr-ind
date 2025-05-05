@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 
-export const Header: React.FC = () => {
+export const HeaderBolt: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -85,14 +85,14 @@ interface LinkProps {
 
 const Link: React.FC<LinkProps> = ({ href, children, isActive }) => {
   return (
-    <a
+    <Link
       href={href}
       className={`font-medium transition-colors duration-300 ${
         isActive ? "text-primary" : "text-foreground hover:text-primary"
       }`}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 

@@ -9,6 +9,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import Link from "next/link";
 
 export function TopBar() {
   return (
@@ -26,14 +27,14 @@ export function TopBar() {
         </div>
         <div className="flex items-center space-x-4">
           {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-            <a
+            <Link
               key={i}
               href="#"
               className="text-muted-foreground hover:text-foreground transition-colors duration-200"
               aria-label={Icon.name}
             >
               <Icon />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

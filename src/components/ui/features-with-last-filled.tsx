@@ -1,5 +1,6 @@
 // service-card.tsx
 import { Briefcase, FileCheck, Globe, Plane, UserCheck } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -57,7 +58,7 @@ interface Props {
           {buttonText}
         </button>
       ) : (
-        <a
+        <Link
           href="#"
           className={`mt-auto inline-block font-medium ${
             highlighted
@@ -66,7 +67,7 @@ interface Props {
           }`}
         >
           Learn More →
-        </a>
+        </Link>
       )}
     </div>
   );

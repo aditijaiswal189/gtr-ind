@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Users, Star, UserCheck, Section } from 'lucide-react';
+import { FileText, Users, Star, UserCheck } from 'lucide-react';
 import { SectionHeader } from './section-header';
 
 export const Stats = () => {

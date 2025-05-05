@@ -1,6 +1,7 @@
 import React from 'react';
-import { Globe, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import {  Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -11,46 +12,46 @@ export const Footer = () => {
             <div className="flex items-center mb-6 pr-2">
               {/* <Globe className="w-8 h-8 text-red-600 mr-2" />
               <span className="font-bold text-2xl">VISA<span className="text-red-600">LAND</span></span> */}
-              <Image src="/logo3.png"/>
+              <Image alt='logo' src="/logo3.png"/>
             </div>
             <p className="text-gray-400 mb-6 ">
             Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-6 h-6" />
-              </a>
+              </Link>
             </div>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Immigration</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Business</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Study</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Work </a></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Immigration</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Business</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Study</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Work </Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Other Services</h3>
             <ul className="space-y-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">News</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">LMIA Map</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Jobs</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Visitor</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Family sponsorship</a></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">News</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">LMIA Map</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Jobs</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Visitor</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Family sponsorship</Link></li>
             </ul>
           </div>
           

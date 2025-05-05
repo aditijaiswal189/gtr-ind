@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { SectionHeader } from './section-header';
 import React from 'react';
-import { Award, BookOpen, Brain, GraduationCap } from 'lucide-react';
+import { Award, BookOpen } from 'lucide-react';
 import Image from 'next/image';
 
 interface Country {
