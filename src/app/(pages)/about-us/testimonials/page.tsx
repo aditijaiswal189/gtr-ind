@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Testimonials: React.FC = () => {
+ const Testimonials: React.FC = () => {
     return (
         <div>
             <h1>Testimonials</h1>
@@ -9,3 +9,4 @@ export const Testimonials: React.FC = () => {
     );
 };
 
+export default Testimonials;
