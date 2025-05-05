@@ -41,7 +41,7 @@ export const ImageWithTitleAndFeatures: React.FC = () => {
             features={card.features}
             icon={card.icon}
             imageUrl={card.imageUrl}
-            imagePosition={card.imagePosition}
+            imagePosition={card.imagePosition as "left" | "right"}
             color={card.color}
           />
         ))}
