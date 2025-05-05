@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { SectionHeader } from './section-header';
 import React from 'react';
 import { Award, BookOpen } from 'lucide-react';
-import Image from 'next/image';
 
 interface Country {
   name: string;
@@ -54,7 +53,7 @@ export const CountriesSection = () => {
                   whileHover={{ rotate: 90 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Image
+                  <img
                     src={country.flag}
                     alt={`${country.name} flag`}
                     className="w-full h-full object-cover"

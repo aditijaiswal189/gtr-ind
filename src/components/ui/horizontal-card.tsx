@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import Image from 'next/image';
 
 export type CardColor = 'red' | 'blue' | 'green' | 'yellow';
 
@@ -63,9 +62,9 @@ export const HorizontalCard: React.FC<CardProps> = ({
   return (
     <div className={clsx("relative overflow-hidden rounded-lg shadow-md group transition-all duration-300 hover:shadow-lg", background)}>
       <div className={clsx("flex flex-col md:flex-row", imagePosition === 'right' && 'md:flex-row-reverse')}>
-        {/* Image */}
+        {/* img */}
         <div className="md:w-1/2 h-64 md:h-auto overflow-hidden">
-          <Image
+          <img
             src={imageUrl}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
