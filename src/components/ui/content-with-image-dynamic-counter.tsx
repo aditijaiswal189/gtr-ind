@@ -4,7 +4,7 @@ import { StatCounter } from "./stat-counter";
 
 
 import { CheckCircle } from "lucide-react";
-import Image from "next/image";
+
 
 
 
@@ -30,13 +30,13 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
         <div className="flex flex-col justify-between md:flex-row items-center mb-16">
           <div className="ml-10 md:w-1/4 mb-8 md:mb-0 relative">
             <div className="relative">
-              <Image
+              <img
                 src={images.main}
                 alt="Visa consultant with client"
                 className="rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block">
-                <Image
+                <img
                   src={images.overlay || '/fallback-image.jpg'}
                   alt="Passport and documents"
                   className="w-40 h-40 object-cover rounded-lg shadow-xl border-4 border-background"

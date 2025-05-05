@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 
 export const Newsletter = () => {
@@ -24,7 +23,7 @@ export const Newsletter = () => {
           </div>
           
           <div className="lg:w-1/2 lg:pl-12">
-            <Image
+            <img
               src="https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Newsletter illustration"
               className="w-full h-auto rounded-lg shadow-lg"

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, CommandIcon, User2 } from 'lucide-react';
-import Image from 'next/image';
+
 
 interface BlogCardProps {
     date: { day: string; month: string };
@@ -24,7 +24,7 @@ interface BlogCardProps {
     return (
       <div className="bg-card rounded-lg shadow-md overflow-hidden border-border">
         <div className="relative">
-          <Image src={image} alt={title} className="w-full h-64 object-cover" />
+          <img src={image} alt={title} className="w-full h-64 object-cover" />
           <div className="absolute top-4 left-4 primary-red rounded-lg p-2 text-center min-w-[60px]">
             <div className="text-2xl font-bold">{date.day}</div>
             <div className="text-sm">{date.month}</div>
