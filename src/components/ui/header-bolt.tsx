@@ -35,14 +35,14 @@ export const HeaderBolt: React.FC = () => {
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" isActive>
+            <CustomLink href="/" isActive>
               About us
-            </Link>
-            <Link href="/about">Immigration</Link>
-            <Link href="/services">Business</Link>
-            <Link href="/visa">Work and Jobs</Link>
-            <Link href="/blog">Study</Link>
-            <Link href="/contact">Other services</Link>
+            </CustomLink>
+            <CustomLink href="/about">Immigration</CustomLink>
+            <CustomLink href="/services">Business</CustomLink>
+            <CustomLink href="/visa">Work and Jobs</CustomLink>
+            <CustomLink href="/blog">Study</CustomLink>
+            <CustomLink href="/contact">Other services</CustomLink>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -83,16 +83,16 @@ interface LinkProps {
   isActive?: boolean;
 }
 
-const Link: React.FC<LinkProps> = ({ href, children, isActive }) => {
+const CustomLink: React.FC<LinkProps> = ({ href, children, isActive }) => {
   return (
-    <Link
+    <a
       href={href}
       className={`font-medium transition-colors duration-300 ${
         isActive ? "text-primary" : "text-foreground hover:text-primary"
       }`}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
