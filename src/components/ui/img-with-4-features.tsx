@@ -1,7 +1,7 @@
 import React from 'react';
 import { BookOpen, Award, GraduationCap, Brain } from 'lucide-react';
 
-export const imgWith4Features = () => {
+export const ImgWith4Features = () => {
   const courses = [
     {
       icon: <BookOpen className="w-12 h-12" />,

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { SectionHeader } from "./section-header";
 
 export const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -32,13 +33,13 @@ export const FAQ: React.FC = () => {
     <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-foreground">
-            Common questions answered
+          {/* <h2 className="text-4xl font-bold mb-4 text-foreground">
+            
           </h2>
           <p className="text-muted-foreground mb-8">
-            At the heart of our commitment to providing exceptional immigration
-            solutions stands our trusted expertise.
-          </p>
+           
+          </p> */}
+          <SectionHeader title="Common questions answered" subtitle="Our commitment to providing exceptional immigration solutions"/>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (

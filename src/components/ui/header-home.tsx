@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
 
-export const HeaderBolt: React.FC = () => {
+export const HeaderHome: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
