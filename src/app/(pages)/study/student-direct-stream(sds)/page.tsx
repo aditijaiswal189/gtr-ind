@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentDirectStream: React.FC = () => {
+export const StudentDirectStream: React.FC = () => {
     return (
         <div>
             <h1>StudentDirectStream</h1>
@@ -9,4 +9,3 @@ const StudentDirectStream: React.FC = () => {
     );
 };
 
-export default StudentDirectStream;

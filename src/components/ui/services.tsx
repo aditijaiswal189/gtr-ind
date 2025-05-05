@@ -1,7 +1,7 @@
 import React from 'react';
 import { Briefcase, Globe2, GraduationCap, Users2, FileCheck, HeartHandshake } from 'lucide-react';
 
-const Services = () => {
+export const Services = () => {
   const services = [
     {
       icon: <Briefcase className="w-12 h-12" />,
@@ -64,4 +64,3 @@ const Services = () => {
   );
 };
 
-export default Services;

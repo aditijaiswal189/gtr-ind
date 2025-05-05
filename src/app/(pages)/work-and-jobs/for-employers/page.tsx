@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  ForEmployers: React.FC = () => {
+export const  ForEmployers: React.FC = () => {
     return (
         <div>
             <h1> ForEmployers</h1>
@@ -9,4 +9,3 @@ const  ForEmployers: React.FC = () => {
     );
 };
 
-export default ForEmployers ;

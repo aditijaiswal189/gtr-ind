@@ -1,7 +1,7 @@
 import React from 'react';
 import { Globe, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -84,4 +84,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;

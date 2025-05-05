@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WhyChooseUs: React.FC = () => {
+export const WhyChooseUs: React.FC = () => {
     return (
         <div>
             <h1>Why Choose Us</h1>
@@ -9,4 +9,3 @@ const WhyChooseUs: React.FC = () => {
     );
 };
 
-export default WhyChooseUs;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuSelfEmployed: React.FC = () => {
+export const QuSelfEmployed: React.FC = () => {
     return (
         <div>
             <h1>QuSelfEmployed</h1>
@@ -9,4 +9,3 @@ const QuSelfEmployed: React.FC = () => {
     );
 };
 
-export default QuSelfEmployed;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SignificantBenefitToCanada: React.FC = () => {
+export const SignificantBenefitToCanada: React.FC = () => {
     return (
         <div>
             <h1>SignificantBenefitToCanada</h1>
@@ -9,4 +9,3 @@ const SignificantBenefitToCanada: React.FC = () => {
     );
 };
 
-export default SignificantBenefitToCanada;

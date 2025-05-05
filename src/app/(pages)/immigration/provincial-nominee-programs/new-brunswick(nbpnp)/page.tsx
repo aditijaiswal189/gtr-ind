@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  NewBrunswwick: React.FC = () => {
+export const  NewBrunswwick: React.FC = () => {
     return (
         <div>
             <h1> NewBrunswwick</h1>
@@ -9,4 +9,3 @@ const  NewBrunswwick: React.FC = () => {
     );
 };
 
-export default NewBrunswwick ;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InDemandJobs: React.FC = () => {
+export const InDemandJobs: React.FC = () => {
     return (
         <div>
             <h1>InDemandJobs</h1>
@@ -9,4 +9,3 @@ const InDemandJobs: React.FC = () => {
     );
 };
 
-export default InDemandJobs;

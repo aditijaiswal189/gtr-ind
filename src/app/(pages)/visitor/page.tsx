@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Visitor: React.FC = () => {
+export const Visitor: React.FC = () => {
     return (
         <div>
             <h1>Visitor</h1>
@@ -9,4 +9,3 @@ const Visitor: React.FC = () => {
     );
 };
 
-export default Visitor;

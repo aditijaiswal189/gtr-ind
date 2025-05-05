@@ -1,7 +1,8 @@
 import React from 'react';
-import { FileText, Users, Star, UserCheck } from 'lucide-react';
+import { FileText, Users, Star, UserCheck, Section } from 'lucide-react';
+import { SectionHeader } from './section-header';
 
-const Stats = () => {
+export const Stats = () => {
   const stats = [
     {
       icon: <FileText className="w-12 h-12" />,
@@ -31,6 +32,7 @@ const Stats = () => {
 
   return (
     <section className="py-16 bg-white">
+      <SectionHeader title="Our Achievements" subtitle="We are proud of our accomplishments" />
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -50,4 +52,3 @@ const Stats = () => {
   );
 };
 
-export default Stats;

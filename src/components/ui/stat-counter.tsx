@@ -7,7 +7,7 @@ interface StatCounterProps {
   className?: string;
 }
 
-const StatCounter: React.FC<StatCounterProps> = ({ 
+export const StatCounter: React.FC<StatCounterProps> = ({ 
   end, 
   duration = 2000,
   suffix = '',
@@ -68,4 +68,3 @@ const StatCounter: React.FC<StatCounterProps> = ({
   );
 };
 
-export default StatCounter;

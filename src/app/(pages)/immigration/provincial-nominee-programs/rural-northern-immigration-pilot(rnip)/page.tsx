@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RuralNorthernImmigrationPilot: React.FC = () => {
+export const RuralNorthernImmigrationPilot: React.FC = () => {
     return (
         <div>
             <h1>RuralNorthernImmigrationPilot</h1>
@@ -9,4 +9,3 @@ const RuralNorthernImmigrationPilot: React.FC = () => {
     );
 };
 
-export default RuralNorthernImmigrationPilot;

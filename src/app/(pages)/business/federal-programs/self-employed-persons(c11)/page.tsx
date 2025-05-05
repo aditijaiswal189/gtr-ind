@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelfEmployedPersons: React.FC = () => {
+export const SelfEmployedPersons: React.FC = () => {
     return (
         <div>
             <h1> SelfEmployedPersons</h1>
@@ -9,4 +9,3 @@ const SelfEmployedPersons: React.FC = () => {
     );
 };
 
-export default SelfEmployedPersons ;

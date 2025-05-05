@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LMIAMap: React.FC = () => {
+export const LMIAMap: React.FC = () => {
     return (
         <div>
             <h1>LMIAMap</h1>
@@ -9,4 +9,3 @@ const LMIAMap: React.FC = () => {
     );
 };
 
-export default LMIAMap;

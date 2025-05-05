@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NovaScotia: React.FC = () => {
+export const NovaScotia: React.FC = () => {
     return (
         <div>
             <h1>NovaScotia</h1>
@@ -9,4 +9,3 @@ const NovaScotia: React.FC = () => {
     );
 };
 
-export default NovaScotia;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FederalSkilledTrade: React.FC = () => {
+export const FederalSkilledTrade: React.FC = () => {
     return (
         <div>
             <h1>Federal Skilled Trade</h1>
@@ -8,4 +8,3 @@ const FederalSkilledTrade: React.FC = () => {
     );
 };
 
-export default FederalSkilledTrade;

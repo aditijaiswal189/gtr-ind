@@ -1,6 +1,6 @@
 import React from 'react';
 
-const JobsMap: React.FC = () => {
+export const JobsMap: React.FC = () => {
     return (
         <div>
             <h1>JobsMap</h1>
@@ -9,4 +9,3 @@ const JobsMap: React.FC = () => {
     );
 };
 
-export default JobsMap;

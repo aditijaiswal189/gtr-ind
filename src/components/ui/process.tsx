@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileCheck, Building2, FileText, Plane } from 'lucide-react';
 
-const Process = () => {
+export const Process = () => {
   const steps = [
     {
       number: 1,
@@ -59,4 +59,3 @@ const Process = () => {
   );
 };
 
-export default Process;

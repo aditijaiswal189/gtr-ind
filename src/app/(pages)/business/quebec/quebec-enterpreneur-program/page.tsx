@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuEnterpreneurProgram: React.FC = () => {
+export const QuEnterpreneurProgram: React.FC = () => {
     return (
         <div>
             <h1>QuEnterpreneurProgram</h1>
@@ -9,4 +9,3 @@ const QuEnterpreneurProgram: React.FC = () => {
     );
 };
 
-export default QuEnterpreneurProgram;

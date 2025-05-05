@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OurServices: React.FC = () => {
+export const OurServices: React.FC = () => {
     return (
         <div>
             <h1>Our Services</h1>
@@ -9,4 +9,3 @@ const OurServices: React.FC = () => {
     );
 };
 
-export default OurServices;

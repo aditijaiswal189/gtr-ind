@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuInvestor: React.FC = () => {
+export const QuInvestor: React.FC = () => {
     return (
         <div>
             <h1>QuInvestor</h1>
@@ -9,4 +9,3 @@ const QuInvestor: React.FC = () => {
     );
 };
 
-export default QuInvestor;

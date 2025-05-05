@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudyToPR: React.FC = () => {
+export const StudyToPR: React.FC = () => {
     return (
         <div>
             <h1>StudyToPR</h1>
@@ -9,4 +9,3 @@ const StudyToPR: React.FC = () => {
     );
 };
 
-export default StudyToPR;

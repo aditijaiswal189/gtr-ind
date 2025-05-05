@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CanadianExperienceClass: React.FC = () => {
+export const CanadianExperienceClass: React.FC = () => {
     return (
         <div>
             <h1>Canadian Experience Class</h1>
@@ -9,4 +9,3 @@ const CanadianExperienceClass: React.FC = () => {
     );
 };
 
-export default CanadianExperienceClass;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  Alberta: React.FC = () => {
+export const  Alberta: React.FC = () => {
     return (
         <div>
             <h1> Alberta
@@ -12,4 +12,3 @@ const  Alberta: React.FC = () => {
     );
 };
 
-export default Alberta ;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  Ontario: React.FC = () => {
+export const  Ontario: React.FC = () => {
     return (
         <div>
             <h1> Ontario</h1>
@@ -9,4 +9,3 @@ const  Ontario: React.FC = () => {
     );
 };
 
-export default Ontario ;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LMIA: React.FC = () => {
+export const LMIA: React.FC = () => {
     return (
         <div>
             <h1>LMIA</h1>
@@ -9,4 +9,3 @@ const LMIA: React.FC = () => {
     );
 };
 
-export default LMIA;

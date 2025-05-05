@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DesignatedLearningInstitution: React.FC = () => {
+export const DesignatedLearningInstitution: React.FC = () => {
     return (
         <div>
             <h1>DesignatedLearningInstitution</h1>
@@ -9,4 +9,3 @@ const DesignatedLearningInstitution: React.FC = () => {
     );
 };
 
-export default DesignatedLearningInstitution;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WorkPermit: React.FC = () => {
+export const WorkPermit: React.FC = () => {
     return (
         <div>
             <h1>WorkPermit</h1>
@@ -9,4 +9,3 @@ const WorkPermit: React.FC = () => {
     );
 };
 
-export default WorkPermit;

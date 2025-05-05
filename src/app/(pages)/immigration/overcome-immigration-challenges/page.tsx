@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OvercomeImmigrationChallenges: React.FC = () => {
+export const OvercomeImmigrationChallenges: React.FC = () => {
     return (
         <div>
             <h1>Overcome Immigration Challenges</h1>
@@ -9,4 +9,3 @@ const OvercomeImmigrationChallenges: React.FC = () => {
     );
 };
 
-export default OvercomeImmigrationChallenges;

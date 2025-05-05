@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PricePolicy: React.FC = () => {
+export const PricePolicy: React.FC = () => {
     return (
         <div>
             <h1>Price Policy</h1>
@@ -9,4 +9,3 @@ const PricePolicy: React.FC = () => {
     );
 };
 
-export default PricePolicy;

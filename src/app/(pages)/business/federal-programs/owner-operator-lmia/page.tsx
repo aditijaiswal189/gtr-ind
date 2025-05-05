@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OwnerOperatorLMIA: React.FC = () => {
+export const OwnerOperatorLMIA: React.FC = () => {
     return (
         <div>
             <h1>OwnerOperatorLMIA</h1>
@@ -9,4 +9,3 @@ const OwnerOperatorLMIA: React.FC = () => {
     );
 };
 
-export default OwnerOperatorLMIA;

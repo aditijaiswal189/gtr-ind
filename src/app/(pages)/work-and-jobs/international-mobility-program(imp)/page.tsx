@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InternationalMobilityPrograms: React.FC = () => {
+export const InternationalMobilityPrograms: React.FC = () => {
     return (
         <div>
             <h1>InternationalMobilityPrograms</h1>
@@ -9,4 +9,3 @@ const InternationalMobilityPrograms: React.FC = () => {
     );
 };
 
-export default InternationalMobilityPrograms;

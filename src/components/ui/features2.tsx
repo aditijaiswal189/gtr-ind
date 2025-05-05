@@ -1,7 +1,8 @@
 import React from 'react';
 import { Smartphone, Laptop, Book, HeadphonesIcon } from 'lucide-react';
+import { SectionHeader } from './section-header';
 
-const Features2 = () => {
+export const Features2 = () => {
   const features = [
     {
       icon: <Smartphone className="w-16 h-16" />,
@@ -27,14 +28,11 @@ const Features2 = () => {
 
   return (
     <section className="py-20 bg-background">
-      <div className="text-center mb-16">
-          <p className="text-sm font-bold tracking-wider text-red-600 uppercase mb-3">
-           OUR SERVICES
-          </p>
-          <h2 className="text-4xl font-bold text-gray-900">
-           Services we offer
-          </h2>
-        </div>
+     <SectionHeader
+  title="Our Services"
+  subtitle="Services we offer"
+  
+/>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
@@ -53,4 +51,4 @@ const Features2 = () => {
   );
 };
 
-export default Features2;
+

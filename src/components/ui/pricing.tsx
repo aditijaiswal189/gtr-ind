@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 
-const Pricing = () => {
+export const Pricing = () => {
   const packages = [
     {
       name: "Consulting Package",
@@ -94,4 +94,3 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;

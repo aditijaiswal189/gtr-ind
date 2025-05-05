@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PrinceEdwardIsland: React.FC = () => {
+export const PrinceEdwardIsland: React.FC = () => {
     return (
         <div>
             <h1>PrinceEdwardIsland</h1>
@@ -9,4 +9,3 @@ const PrinceEdwardIsland: React.FC = () => {
     );
 };
 
-export default PrinceEdwardIsland;

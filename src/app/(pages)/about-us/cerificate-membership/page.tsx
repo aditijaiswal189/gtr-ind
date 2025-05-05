@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CertificateMembership: React.FC = () => {
+export const CertificateMembership: React.FC = () => {
     return (
         <div>
             <h1>Certificate Membership</h1>
@@ -9,4 +9,3 @@ const CertificateMembership: React.FC = () => {
     );
 };
 
-export default CertificateMembership;

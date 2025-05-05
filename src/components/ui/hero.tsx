@@ -2,11 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <div className="relative min-h-[600px] bg-gray-900 overflow-hidden text-[var(--primary-foreground)]">
       {/* Diagonal stripes background */}
       <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 bg-[repeating-linear-gradient(135deg,transparent,transparent_20px,rgba(255,255,255,0.1)_20px,rgba(255,255,255,0.1)_40px)]" />
+
 
       {/* Red diagonal accent */}
       <motion.div
@@ -76,4 +77,3 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  Saskatchewan: React.FC = () => {
+export const  Saskatchewan: React.FC = () => {
     return (
         <div>
             <h1> Saskatchewan</h1>
@@ -9,4 +9,3 @@ const  Saskatchewan: React.FC = () => {
     );
 };
 
-export default Saskatchewan ;

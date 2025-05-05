@@ -1,6 +1,6 @@
 import React from 'react';
 
-const News: React.FC = () => {
+export const News: React.FC = () => {
     return (
         <div>
             <h1>News</h1>
@@ -9,4 +9,3 @@ const News: React.FC = () => {
     );
 };
 
-export default News;

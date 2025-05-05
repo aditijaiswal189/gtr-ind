@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  StartUpVisa: React.FC = () => {
+export const  StartUpVisa: React.FC = () => {
     return (
         <div>
             <h1> StartUpVisa</h1>
@@ -9,4 +9,3 @@ const  StartUpVisa: React.FC = () => {
     );
 };
 
-export default StartUpVisa ;

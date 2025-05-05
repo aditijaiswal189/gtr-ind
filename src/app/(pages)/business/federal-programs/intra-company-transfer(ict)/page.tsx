@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IntraCompanyTransfer: React.FC = () => {
+export const IntraCompanyTransfer: React.FC = () => {
     return (
         <div>
             <h1>IntraCompanyTransfer</h1>
@@ -9,4 +9,3 @@ const IntraCompanyTransfer: React.FC = () => {
     );
 };
 
-export default IntraCompanyTransfer;

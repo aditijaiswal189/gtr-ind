@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AtlanticImmigration : React.FC = () => {
+export const AtlanticImmigration : React.FC = () => {
     return (
         <div>
             <h1> AtlanticImmigration</h1>
@@ -9,4 +9,3 @@ const AtlanticImmigration : React.FC = () => {
     );
 };
 
-export default  AtlanticImmigration;

@@ -17,7 +17,7 @@ interface CardProps {
   color: CardColor;
 }
 
-const HorizontalCard: React.FC<CardProps> = ({
+export const HorizontalCard: React.FC<CardProps> = ({
   title,
   description,
   features,
@@ -82,7 +82,7 @@ const HorizontalCard: React.FC<CardProps> = ({
             <h3 className={clsx("text-2xl font-bold mb-3", text)}>{title}</h3>
             <p className="text-muted-foreground mb-8 max-w-md mx-auto">{description}</p>
 
-            <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="grid grid-cols-3 gap-4 mb-6">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -112,4 +112,4 @@ const HorizontalCard: React.FC<CardProps> = ({
   );
 };
 
-export default HorizontalCard;
+

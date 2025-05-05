@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookAppointment: React.FC = () => {
+export const BookAppointment: React.FC = () => {
     return (
         <div>
             <h1>Book Appointment</h1>
@@ -8,4 +8,3 @@ const BookAppointment: React.FC = () => {
     );
 };
 
-export default BookAppointment;

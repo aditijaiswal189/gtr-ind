@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostGraduate: React.FC = () => {
+export const PostGraduate: React.FC = () => {
     return (
         <div>
             <h1>PostGraduate</h1>
@@ -9,4 +9,3 @@ const PostGraduate: React.FC = () => {
     );
 };
 
-export default PostGraduate;

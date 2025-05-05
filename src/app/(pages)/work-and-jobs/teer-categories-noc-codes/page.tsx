@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeerCategoriesNocCodes: React.FC = () => {
+export const TeerCategoriesNocCodes: React.FC = () => {
     return (
         <div>
             <h1>TeerCategoriesNocCodes</h1>
@@ -9,4 +9,3 @@ const TeerCategoriesNocCodes: React.FC = () => {
     );
 };
 
-export default TeerCategoriesNocCodes;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FamilySponsorship: React.FC = () => {
+export const FamilySponsorship: React.FC = () => {
     return (
         <div>
             <h1>FamilySponsorship</h1>
@@ -9,4 +9,3 @@ const FamilySponsorship: React.FC = () => {
     );
 };
 
-export default FamilySponsorship;

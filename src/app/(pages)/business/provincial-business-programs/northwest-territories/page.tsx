@@ -1,6 +1,6 @@
 import React from 'react';
 
-const  NorthwestTerritories: React.FC = () => {
+export const  NorthwestTerritories: React.FC = () => {
     return (
         <div>
             <h1> NorthwestTerritories</h1>
@@ -9,4 +9,3 @@ const  NorthwestTerritories: React.FC = () => {
     );
 };
 
-export default  NorthwestTerritories;
