@@ -1,9 +1,11 @@
 import { ContentWithImageDynamicCounter } from '@/components/ui/content-with-image-dynamic-counter';
+import { CtaWithFeaturesRightImage } from '@/components/ui/cta-with-features-right-image';
 import { Feature1Animated } from '@/components/ui/feature1-animated';
 import { Hero2 } from '@/components/ui/hero2';
 import { Stats } from '@/components/ui/stats';
 import { Globe, UserCheck } from 'lucide-react';
 import React, { ReactNode } from 'react';
+import { features } from '../about/page';
 
 
 interface StatItem {
@@ -87,6 +89,12 @@ interface StatItem {
                 primaryCta={{ label: "About us", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
                  <ContentWithImageDynamicCounter featuresConfig={featuresConfig}/>
                  <Feature1Animated featureItems={featureItems}/>
+                 <CtaWithFeaturesRightImage
+                       badgeText="Why Choose Us"
+                       title=" GreenTech Resource Worldwide Canada"
+                       subtitle=""
+                       features={features}
+                     />
                  <Stats />
                </div>
     );

@@ -23,25 +23,32 @@ const TeamCard: React.FC<TeamCardProps> = ({ name, role, description, image }) =
 );
 
 interface ImageCardReversibleProps {
+  heading: React.ReactNode;
+  subtitle: string;
+  description: string;
   members: TeamCardProps[];
 }
 
-export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({ members }) => {
+export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({
+  heading,
+  subtitle,
+  description,
+  members,
+}) => {
   return (
     <div className="px-[var(--section-padding-x)] py-[var(--section-padding-y)] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <p className="inline-block px-3 py-2 mb-4 text-xs font-semibold tracking-wider text-[var(--primary)] uppercase rounded-full bg-[color-mix(in srgb, var(--primary) 10%, transparent)]">
-          Greentech Resources Worldwide Canada
+          {subtitle}
         </p>
         <h2 className="max-w-lg mb-6 text-3xl font-bold leading-none tracking-tight text-[var(--foreground)] sm:text-4xl md:mx-auto">
-          <span className="relative inline-block">Welcome</span> to our
-          <span className="pl-3 relative inline-block text-[var(--primary)]"> Team</span>
+          {heading}
         </h2>
         <p className="text-base text-[var(--muted-foreground)] md:text-lg">
-          GreenTech Resources Worldwide Canada is ranked as the 3rd top recruitment agency and here
-          is our certificates and membership.
+          {description}
         </p>
       </div>
+
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {members.map((member, index) => (
           <TeamCard key={index} {...member} />
@@ -50,3 +57,4 @@ export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({ member
     </div>
   );
 };
+

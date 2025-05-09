@@ -7,8 +7,8 @@ import { ImageWithTitleAndFeatures } from '@/components/ui/image-with-title-and-
 import { CountriesSection } from '@/components/ui/countries-section';
 import { Testimonials } from '@/components/ui/testimonials';
 import React from 'react';
-import Timeline from '@/components/ui/timeline';
 import { HeaderHome } from '@/components/ui/header-home';
+import { TimelineSection } from '@/components/ui/timeline-section';
 
 
 
@@ -21,7 +21,7 @@ export default function App() {
       <HeroSection />
       <ImageWithTitleAndFeatures />
       <CountriesSection/>
-<Timeline  />
+      <TimelineSection/>
       
       <BlogSection/>
       <Testimonials />

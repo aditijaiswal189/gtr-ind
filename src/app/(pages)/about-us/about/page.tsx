@@ -109,7 +109,7 @@ interface StatItem {
 
     },
   ];
-  const features = [
+  export const features = [
     {
       title: 'Government of Canada Licensed',
       description:
