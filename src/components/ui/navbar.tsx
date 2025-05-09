@@ -667,10 +667,10 @@
 // ];
 
 // const router = [
-//   {
-//     path: "/",
-//     element: "Home",
-//   },
+// //   {
+// //     path: "/",
+// //     element: "Home",
+// //   },
 //   {
 //     path: "About",
 //     children: [
@@ -894,7 +894,7 @@
 //     ],
 //   },
 //   {
-//     path: "/news",
+//     path: "Other-services",
 //     element: "News",
 //   },
 // ];

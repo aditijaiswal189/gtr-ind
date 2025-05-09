@@ -9,7 +9,28 @@ import { CheckCircle } from "lucide-react";
 
 
 
-export const ContentWithImageDynamicCounter: React.FC = () => {
+interface FeaturesConfig {
+  intro: {
+    eyebrow: string;
+    heading: string;
+    text: string;
+  };
+  images: {
+    main: string;
+    overlay?: string;
+    badge?: {
+      value: string;
+      label: string;
+    };
+  };
+  stats: {
+    label: string;
+    end: number;
+    suffix?: string;
+  }[];
+}
+
+export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: FeaturesConfig }> = ({ featuresConfig }) => {
   const { intro, images, stats} = featuresConfig;
 
   return (
@@ -55,10 +76,7 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
 
           <div className="mr-10 md:w-2/4 md:pl-12">
             <p className="text-foreground mb-6">
-              {/*
-                You could also pull this text into the config if you like,
-                but left inline to match your original.
-              */}
+              
               Our firm brings expertise and personalized attention to every case. 
               We have successfully processed thousands of visa applications for clients 
               from over 100 countries, maintaining a success rate that exceeds industry standards.
@@ -84,10 +102,11 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
+
                 'Free Immigration Assessment',
                 'Expert Document Preparation',
                 'Visa Application Assistance',
-                'Interview Preparation',
+                'Job Placement Services',
                 'Settlement Services',
                 'Appeal Support',
               ].map((service, idx) => (
@@ -110,11 +129,7 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
 };
 
 
- interface StatItem {
-  label: string;
-  end: number;
-  suffix?: string;
-}
+
 
 //  interface ServiceItem {
 //   title: string;
@@ -124,38 +139,4 @@ export const ContentWithImageDynamicCounter: React.FC = () => {
 //   buttonText?: string;
 // }
 
- interface FeaturesConfig {
-  intro: {
-    eyebrow: string;
-    heading: string;
-    text: string;
-  };
-  images: {
-    main: string;
-    overlay?: string;
-    badge?: { value: string; label: string };
-  };
-  stats: StatItem[];
- 
-}
 
- const featuresConfig: FeaturesConfig = {
-  intro: {
-    eyebrow: 'ABOUT OUR COMPANY',
-    heading: 'Welcome To Experience Visa Consulting Firm',
-    text:
-      'Our firm is a leading provider of immigration and visa services worldwide. ' +
-      'We specialize in helping individuals and businesses navigate complex immigration processes.',
-  },
-  images: {
-    main: 'https://images.pexels.com/photos/8867433/pexels-photo-8867433.jpeg',
-    overlay:
-      'https://images.pexels.com/photos/5699516/pexels-photo-5699516.jpeg',
-    badge: { value: '15+', label: 'Years Exp.' },
-  },
-  stats: [
-    { label: 'Success Rate', end: 96, suffix: '%' },
-    { label: 'Customer Support', end: 24, suffix: '/7' },
-  ],
- 
-};

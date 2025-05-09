@@ -1,6 +1,7 @@
 "use client";
-import { Search } from "lucide-react";
+// import { Search } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import { MegaMenuBar } from "./mega-menu-bar";
 
 
 export const HeaderHome: React.FC = () => {
@@ -21,6 +22,8 @@ export const HeaderHome: React.FC = () => {
     };
   }, []);
 
+ 
+
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 text-foreground ${
@@ -33,25 +36,17 @@ export const HeaderHome: React.FC = () => {
             <img src="/logo3.png" alt="Logo"  className="h-10 w-auto mx-auto" />
           </div>
 
-          <nav className="hidden md:flex space-x-8">
-            <CustomLink href="/" isActive>
-              About us
-            </CustomLink>
-            <CustomLink href="/about">Immigration</CustomLink>
-            <CustomLink href="/services">Business</CustomLink>
-            <CustomLink href="/visa">Work and Jobs</CustomLink>
-            <CustomLink href="/blog">Study</CustomLink>
-            <CustomLink href="/contact">Other services</CustomLink>
-          </nav>
+            <MegaMenuBar/>
+         
 
           <div className="flex items-center space-x-4">
             <button className="px-6 py-2 rounded-full font-medium bg-primary text-primary-foreground transition-colors duration-300">
               Book a Consultation
             </button>
 
-            <button className="text-muted-foreground hover:text-primary transition-colors">
+            {/* <button className="text-muted-foreground hover:text-primary transition-colors">
               <Search size={20} />
-            </button>
+            </button> */}
           </div>
 
           <button className="md:hidden text-foreground">
@@ -73,25 +68,6 @@ export const HeaderHome: React.FC = () => {
         </div>
       </div>
     </header>
-  );
-};
-
-interface LinkProps {
-  href: string;
-  children: React.ReactNode;
-  isActive?: boolean;
-}
-
-const CustomLink: React.FC<LinkProps> = ({ href, children, isActive }) => {
-  return (
-    <a
-      href={href}
-      className={`font-medium transition-colors duration-300 ${
-        isActive ? "text-primary" : "text-foreground hover:text-primary"
-      }`}
-    >
-      {children}
-    </a>
   );
 };
 

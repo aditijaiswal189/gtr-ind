@@ -11,16 +11,9 @@ export interface NewsletterConfig {
   imageAlt: string;
 }
 
-const newsletterConfig: NewsletterConfig = {
-  label: "Newsletter",
-  heading:
-    "Subscribe to the free newsletter to receive the latest news & case studies!",
-  placeholder: "Your e-mail address",
-  buttonText: "Subscribe",
-  imageSrc:
-    "https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  imageAlt: "Newsletter illustration",
-};
+interface NewsletterProps {
+  config: NewsletterConfig;
+}
 
 // Reusable Input + Button form
 interface EmailFormProps {
@@ -35,15 +28,14 @@ const EmailForm: React.FC<EmailFormProps> = ({ placeholder, buttonText }) => (
       placeholder={placeholder}
       className="flex-1 px-4 py-3 rounded-l-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
     />
-    <button className="px-6 py-3 bg-primary text-primary-foreground rounded-r-lg hover:bg-primary/90 transition-colors">
+    <button className="px-3 py-3 bg-primary text-primary-foreground rounded-r-lg hover:bg-primary/90 transition-colors">
       {buttonText}
     </button>
   </div>
 );
 
-export const Newsletter: React.FC = () => {
-  const { label, heading, placeholder, buttonText, imageSrc, imageAlt } =
-    newsletterConfig;
+export const Newsletter: React.FC<NewsletterProps> = ({ config }) => {
+  const { label, heading, placeholder, buttonText, imageSrc, imageAlt } = config;
 
   return (
     <section className="py-16 bg-muted">

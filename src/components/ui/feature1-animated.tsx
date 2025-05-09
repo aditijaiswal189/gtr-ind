@@ -2,10 +2,15 @@
 "use client";
 import React from "react";
 import { ReactNode } from "react";
-import { UserCheck, Globe } from "lucide-react";
 import Link from "next/link";
 
-export const Feature1Animated: React.FC = () => (
+interface featureItems {
+  title: string;
+  description: string;
+  link: string;
+  icon: ReactNode;
+}
+export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({ featureItems }) => (
   <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div className="grid gap-8 row-gap-5 md:grid-cols-2">
       {featureItems.map((item, idx) => (
@@ -51,28 +56,6 @@ export const Feature1Animated: React.FC = () => (
 
 
 
-interface FeatureItem {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
-}
 
- const featureItems: FeatureItem[] = [
-  {
-    title: "The quick, brown fox jumps over a very lazy dog",
-    description:
-      "Cheese on toast airedale the big cheese. Danish fontina cheesy grin airedale danish fontina taleggio the big cheese macaroni cheese port-salut.",
-    link: "/",
-    icon: (
-      <UserCheck className="w-16 h-16 text-primary lg:w-20 lg:h-20" />
-    ),
-  },
-  {
-    title: "Disrupt inspire and think tank, social",
-    description:
-      "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn’t even know we were calling him Big Bear. We never had the chance to.",
-    link: "/",
-    icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
-  },
-];
+
+

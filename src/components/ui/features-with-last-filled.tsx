@@ -1,9 +1,10 @@
-// service-card.tsx
-import { Briefcase, FileCheck, Globe, Plane, UserCheck } from "lucide-react";
+// components/ui/service-card.tsx
+"use client";
+
 import Link from "next/link";
 import React from "react";
 
-interface Props {
+export interface Props {
   icon?: React.ReactNode;
   title: string;
   description: string;
@@ -11,7 +12,7 @@ interface Props {
   buttonText?: string;
 }
 
- const FeaturesCard: React.FC<Props> = ({
+const FeaturesCard: React.FC<Props> = ({
   icon,
   title,
   description,
@@ -73,55 +74,34 @@ interface Props {
   );
 };
 
-export const FeaturesWithLastFilled =() => {
-  return(
-  <div className="px-20 bg-background">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-    {services.map((svc, idx) => (
-      <FeaturesCard key={idx} {...svc} />
-    ))}
-  </div>
-  </div>
-  )
+interface FeaturesWithLastFilledProps {
+  services: Props[];
+  sectionTitle?: string;
+  sectionSubtitle?: string;
 }
 
-const  services: Props[] = [
-  {
-    title: 'Immigration Consulting',
-    description:
-      'Expert guidance on all immigration pathways, including skilled migration, family sponsorship, and humanitarian programs.',
-    icon: <UserCheck size={32} />,
-  },
-  {
-    title: 'Visa Processing',
-    description:
-      'End-to-end assistance with visa applications, ensuring accurate documentation and timely submission.',
-    icon: <FileCheck size={32} />,
-  },
-  {
-    title: 'Global Mobility',
-    description:
-      'Solutions for businesses and individuals looking to relocate or expand operations internationally.',
-    icon: <Globe size={32} />,
-  },
-  {
-    title: 'Business Immigration',
-    description:
-      'Specialized services for entrepreneurs, investors, and businesses seeking to establish presence abroad.',
-    icon: <Briefcase  size={32} />,
-  },
-  {
-    title: 'Student Visas',
-    description:
-      'Comprehensive support for international students pursuing education opportunities worldwide.',
-    icon: <Plane size={32} />,
-  },
-  {
-    title: 'Get Started Today',
-    description:
-      'Schedule a consultation with our immigration experts to discuss your visa and immigration needs.',
-    highlighted: true,
-    buttonText: 'Book Consultation',
-    icon: <Plane size={32} />,
-  },
-]
+export const FeaturesWithLastFilled: React.FC<FeaturesWithLastFilledProps> = ({
+  services,
+  sectionTitle,
+  sectionSubtitle,
+}) => {
+  return (
+    <section className="px-4 sm:px-8 lg:px-20 py-16 bg-background">
+      {sectionTitle && (
+        <div className="text-center mb-12">
+          <p className="text-sm font-bold tracking-wider text-primary uppercase mb-3">
+            {sectionTitle}
+          </p>
+          {sectionSubtitle && (
+            <h2 className="text-3xl font-bold text-foreground">{sectionSubtitle}</h2>
+          )}
+        </div>
+      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((svc, idx) => (
+          <FeaturesCard key={idx} {...svc} />
+        ))}
+      </div>
+    </section>
+  );
+};

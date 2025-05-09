@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { FileText, Users, Star, UserCheck } from "lucide-react";
-import { SectionHeader } from "./section-header";
 
 interface Stat {
   icon: React.ReactNode;
@@ -13,26 +12,26 @@ interface Stat {
 const stats: Stat[] = [
   {
     icon: <FileText className="w-12 h-12" />,
-    number: "20+",
-    label: "Visa Categories",
+    number: "100+",
+    label: "Successful Visas",
     color: "bg-red-50",
   },
   {
     icon: <Users className="w-12 h-12" />,
-    number: "30K+",
-    label: "Visa Process",
+    number: "14+",
+    label: "Start Up Visa",
     color: "bg-blue-50",
   },
   {
     icon: <Star className="w-12 h-12" />,
-    number: "40K+",
-    label: "Successful Project",
+    number: "95 %",
+    label: "Happy clients",
     color: "bg-green-50",
   },
   {
     icon: <UserCheck className="w-12 h-12" />,
-    number: "180K+",
-    label: "Pro Consultants",
+    number: "Top 1",
+    label: "Consultants in Saskatchewan",
     color: "bg-yellow-50",
   },
 ];
@@ -52,10 +51,10 @@ const StatCard: React.FC<Stat> = ({ icon, number, label, color }) => (
 export const Stats: React.FC = () => {
   return (
     <section className="py-16 bg-background">
-      <SectionHeader
+      {/* <SectionHeader
         title="Our Achievements"
         subtitle="We are proud of our accomplishments"
-      />
+      /> */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (

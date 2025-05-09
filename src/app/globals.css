@@ -240,7 +240,8 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-
+    --section-padding-x: 2rem;
+    --section-padding-y: 4rem;
     /* Light Theme */
     --background: #ffffff;
     --foreground: #1a1a1a;

@@ -4,24 +4,88 @@ import { SectionHeader } from './section-header';
 import React from 'react';
 import { Award, BookOpen } from 'lucide-react';
 
+interface Course {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
 interface Country {
   name: string;
   flag: string;
   description: React.ReactNode | string;
+  courses: Course[];
 }
 
 const countries: Country[] = [
-  { name: 'Canada', flag: 'https://flagcdn.com/w320/ca.png', description: 'Average time to resolve a cyber.' },
-  { name: 'India', flag: 'https://flagcdn.com/w320/in.png', description: 'Average time to resolve a cyber.' },
-  { name: 'Vietnam', flag: 'https://flagcdn.com/w320/vn.png', description: <>
-    Average time to resolve a cyber.
- 
-
-
-    </> }
-  // { name: 'Australia', flag: 'https://flagcdn.com/w320/au.png', description: 'Average time to resolve a cyber.' },
-  // { name: 'United States', flag: 'https://flagcdn.com/w320/us.png', description: 'Average time to resolve a cyber.' },
-  // { name: 'Dubai', flag: 'https://flagcdn.com/w320/ae.png', description: 'Average time to resolve a cyber.' },
+  { name: 'Canada', flag: 'https://flagcdn.com/w320/ca.png', description: 'Average time to resolve a cyber.' ,courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+    {
+      icon: <BookOpen className="w-6 h-6 text-primary" />,
+      title: 'Services',
+      description: 'Services we offer for students.',
+    },
+  ],},
+  { name: 'India', flag: 'https://flagcdn.com/w320/in.png', description: 'Average time to resolve a cyber.',courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+    {
+      icon: <BookOpen className="w-6 h-6 text-primary" />,
+      title: 'Services',
+      description: 'Services we offer for students.',
+    },
+  ], },
+  { name: 'Vietnam', flag: 'https://flagcdn.com/w320/vn.png', description: 'Average time to resolve a cyber.',courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+    {
+      icon: <BookOpen className="w-6 h-6 text-primary" />,
+      title: 'Services',
+      description: 'Services we offer for students.',
+    },
+  ], },
+  { name: 'Australia', flag: 'https://flagcdn.com/w320/au.png', description: 'Average time to resolve a cyber.',courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+   
+  ], },
+  { name: 'United States', flag: 'https://flagcdn.com/w320/us.png', description: 'Average time to resolve a cyber.' ,courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+   
+  ],},
+  { name: 'Europe', flag: 'https://flagcdn.com/w320/eu.png', description: 'Average time to resolve a cyber.',courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+   
+  ], },
+  { name: 'Germany', flag: 'https://flagcdn.com/w320/de.png', description: 'Average time to resolve a cyber.',courses: [
+    {
+      icon: <Award className="w-6 h-6 text-primary" />,
+      title: 'Immigration',
+      description: 'We provide immigration facilities for students.',
+    },
+   
+  ], },
 ];
 
 export const CountriesSection = () => {
@@ -69,7 +133,7 @@ export const CountriesSection = () => {
                 </div>
               </div>
               <div><div className="grid grid-cols-1 md:grid-cols-1 gap-2">
-              {courses.map((course, index) => (
+              {country.courses.map((course, index) => (
                 <div
                   key={index}
                   className="bg-card text-card-foreground p-4 rounded-lg  hover:shadow-xl transition-shadow"

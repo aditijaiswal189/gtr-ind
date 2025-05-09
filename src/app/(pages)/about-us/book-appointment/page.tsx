@@ -1,10 +1,11 @@
+import { Hero2 } from '@/components/ui/hero2';
 import React from 'react';
 
  const BookAppointment: React.FC = () => {
     return (
         <div>
-            <h1>Book Appointment</h1>
-        </div>
+                <Hero2 badgeText='GreenTech Resources' title='Book Appointment' description='GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan.' imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260' primaryCta={{ label: "About us?", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
+                </div>
     );
 };
 
