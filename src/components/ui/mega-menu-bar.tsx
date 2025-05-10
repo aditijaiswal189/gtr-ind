@@ -17,32 +17,40 @@ export const router = [
         path: "About Us",
 children:[
   {
-    path: "/about",
+    path: "/about-us/about/about",
     element: "About",
   },
   {
-    path: "/our-service",
+    path: "/about-us/about/our-services",
     element: "Our Service",
   },
   
   {
-    path: "/book-appointment",
+    path: "/about-us/about/book-appointment",
     element: "Book Appointment",
   },
   {
-    path: "/why-choose-us",
+    path: "/about-us/about/why-choose-us",
     element: "Why Choose Us",
   },
+  {
+    path:"/about-us/about/price-policy",
+    element: "Price Policy"
+  },
+  {
+    path: "/about-us/about/success-customers",
+    element: "Success Customers"
+  }
 ]
       },{
         path: "Certifications and Testimonials",
     
           children: [{
-          path: "/certificate-membership",
+          path: "/about-us/cert-testimonials/certificate-membership",
           element: "Certificate Membership",
         },
         {
-          path: "/customer-testimonials",
+          path: "/about-us/cert-testimonials/customer-testimonials",
           element: "Customer Testimonials",
         }]
       },]
@@ -74,28 +82,28 @@ children:[
           path: "Provincial Nominee Programs",
           children: [
             {
-              path: "/immigration/provincial-nominee-programs/alberta-immigration-aaip",
+              path: "/immigration/provincial-nominee-programs/alberta(aaip)",
               element: "Alberta (AAIP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/atlantic-immigration-aipp",
+              path: "/immigration/provincial-nominee-programs/atlantic-immigration(aipp)",
               element: "Atlantic Immigration (AIPP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/british-columbia-bcpnp",
+              path: "/immigration/provincial-nominee-programs/british-columbia(bc-pnp)",
   
               element: "British Colombia (BC PNP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/ontario-oinp",
+              path: "/immigration/provincial-nominee-programs/ontario(oinp)",
               element: "Ontario (OINP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/manitoba-mpnp",
+              path: "/immigration/provincial-nominee-programs/manitoba(mpnp)",
               element: "Manitoba (MPNP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/new-brunswick-nbpnp",
+              path: "/immigration/provincial-nominee-programs/new-brunswick(nbpnp)",
               element: "New Brunswick (NBPNP)",
             },
             {
@@ -103,7 +111,7 @@ children:[
               element: "Newfoundland and Labrador",
             },
             {
-              path: "/immigration/provincial-nominee-programs/saskatchewan-sinp",
+              path: "/immigration/provincial-nominee-programs/saskatchewan(sinp)",
               element: "Saskatchewan (SINP)",
             },
             {
@@ -111,20 +119,20 @@ children:[
               element: "Northwest Territories",
             },
             {
-              path: "/immigration/provincial-nominee-programs/nova-scotia-nsnp",
+              path: "/immigration/provincial-nominee-programs/nova-scotia(nsnp)",
               element: "Nova Scotia (NSNP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/prince-edward-island-peipnp",
+              path: "/immigration/provincial-nominee-programs/prince-edward-island(pei-pnp)",
               element: "Prince Edward Island (PEI PNP)",
             },
             {
-              path: "/immigration/provincial-nominee-programs/rural-and-northern-immigration-pilot-rnip",
+              path: "/immigration/provincial-nominee-programs/rural-and-northern-immigration-pilot(rnip)",
               element: "Rural & Northern Immigration Pilot (RNIP)",
             },
   
             {
-              path: "/immigration/provincial-nominee-programs/yukon-ynp",
+              path: "/immigration/provincial-nominee-programs/yukon(ynp)",
               element: "Yukon (YNP)",
             },
           ],
@@ -133,7 +141,7 @@ children:[
           path: "Immigration Challenges",
           children: [{
 
-            path: "/immigration/immigration-challenges",
+            path: "/immigration/overcome-immigration-challenges",
             element: "Immigration Challenges",
           }]
         },
@@ -150,7 +158,7 @@ children:[
               element: "Quebec Investor",
             },
             {
-              path: "/business/quebec/quebec-entrepreneur",
+              path: "/business/quebec/quebec-enterpreneur-program",
               element: "Quebec Entrepreneur",
             },
             {
@@ -163,23 +171,23 @@ children:[
           path: "Federal Programs",
           children: [
             {
-              path: "/business/federal-programs/start-up-visa",
+              path: "/business/federal-programs/start-up-visa(suv)",
               element: " Start-Up Visa (SUV)",
             },
             {
-              path: "/business/federal-programs/intra-company-transfer",
+              path: "/business/federal-programs/intra-company-transfer(ict)",
               element: "Intra-company transfer (ICT)",
             },
             {
-              path: "/business/federal-programs/benefit-to-canada",
+              path: "/business/federal-programs/significant-benefit-to-canada(c10)",
               element: "Significant Benefit to Canada (C10)",
             },
             {
-              path: "/business/federal-programs/owner-operator",
+              path: "/business/federal-programs/owner-operator-lmia",
               element: "Owner Operator LMIA",
             },
             {
-              path: "/business/federal-programs/self-employed-persons",
+              path: "/business/federal-programs/self-employed-persons(c11)",
               element: "Self-Employed Persons (C11)",
             },
           ],
@@ -229,15 +237,15 @@ children:[
         path: "Work",
 children:[
   {
-    path: "/work-and-jobs/work-permit",
+    path: "/work-and-jobs/work/work-permit",
     element: "Work Permit",
   },
   {
-    path: "/work-and-jobs/international-mobility-program",
+    path: "/work-and-jobs/work/international-mobility-program(imp)",
     element: "International Mobility Program (IMP)",
   },
   {
-    path: "/work-and-jobs/lmia",
+    path: "/work-and-jobs/work/lmia",
     element: "LMIA",
   },
 ]
@@ -245,17 +253,17 @@ children:[
         path: "Jobs",
     
           children: [  {
-            path: "/work-and-jobs/in-demand-jobs",
+            path: "/work-and-jobs/jobs/in-demand-jobs",
             element: "In Demand Jobs",
           },
           {
-            path: "/work-and-jobs/support-for-employers",
+            path: "/work-and-jobs/jobs/for-employers",
             element: "Support For Employers",
           },
     
         
           {
-            path: "/work-and-jobs/teer-categories-and-noc",
+            path: "/work-and-jobs/jobs/teer-categories-noc-codes",
             element: "TEER Categories & NOC Codes",
           },
            ]
@@ -272,20 +280,20 @@ children:[
         path: "Programs",
 children:[
   {
-    path: "/study/post-graduate-work-permit",
+    path: "/study/programs/post-graduate-wp",
     element: "Post Graduate Work Permit (PGWP)",
   },
   {
-    path: "/study/study-in-canada",
+    path: "/study/programs/study-in-canada",
     element: "Study In Canada",
   },
   
   {
-    path: "/study/designated-learning-institution",
+    path: "/study/programs/designated-learning-institution(dli)",
     element: "Designated Learning Institution (DLI)",
   },
   {
-    path: "/study/student-direct-stream",
+    path: "/study/programs/student-direct-stream(sds)",
     element: "Student Direct Stream (SDS)",
   },
 ]
@@ -293,7 +301,7 @@ children:[
         path: "Others",
     
           children: [{
-            path: "/study/pathway-from-study-to-pr",
+            path: "/study/others/study-to-pr",
             element: "Pathway From Study To PR",
           },
         ]
@@ -328,7 +336,7 @@ children:[
         path: "News",
     
           children: [{
-            path: "/other-services/news",
+            path: "/other-services/news-service/news",
             element: "News",
           },
         ]

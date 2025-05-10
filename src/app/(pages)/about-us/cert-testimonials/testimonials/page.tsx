@@ -2,7 +2,7 @@ import { AnimatedTestimonials } from '@/components/ui/animated-testimonials';
 import { CtaWithFeaturesRightImage } from '@/components/ui/cta-with-features-right-image';
 import { Hero2 } from '@/components/ui/hero2';
 import React from 'react';
-import { features } from '../about/page';
+import { features } from '../../about/about/page';
 
 const testimonials = [
    {
