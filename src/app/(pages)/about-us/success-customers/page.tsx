@@ -1,6 +1,6 @@
 import { Hero2 } from '@/components/ui/hero2';
 import { ImageCardReversible } from '@/components/ui/image-card-reversible';
-import { image } from 'framer-motion/client';
+
 
 import React from 'react';
 const teamData = [
@@ -211,7 +211,6 @@ const teamData = [
             name: '2022',
             role: 'GreenTech Resource',
             description: 'Success Customers',
-            
             image: "/images/success/3o.webp"
          },
          {
@@ -417,11 +416,11 @@ const teamData = [
                <Hero2 badgeText='GreenTech Resources' title='Success Customers' description='GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan.' imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260' primaryCta={{ label: "Why choose us?", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
                          {teamData.map((teamData) => (
                            <ImageCardReversible
-                           key={teamData.id}
-                                  heading={teamData.heading}
-                                  subtitle={teamData.subtitle}
-                                  description={teamData.description}
-                                  members={teamData.members}
+                           key={teamData?.id}
+                                  heading={teamData?.heading}
+                                  subtitle={teamData?.subtitle || ''}
+                                  description={teamData?.description || ''}
+                                  members={teamData?.members || []}
                                 />
                          ))} 
                             
