@@ -41,10 +41,12 @@ const steps: Step[] = [
   },
 ];
 
-const StepCard: React.FC<Step> = ({ number, icon, title, description, color }) => (
+const StepCard: React.FC<Step> = ({ number, title, description, color }) => (
   <div className="relative">
     <div className="bg-card p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-      <div className={`${color} w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4`}>
+      <div
+        className={`${color} w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold mb-4`}
+      >
         {number}
       </div>
       <h3 className="text-xl font-bold mb-2 text-foreground">{title}</h3>

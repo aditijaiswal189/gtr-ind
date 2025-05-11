@@ -10,17 +10,17 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   extends: [
-    "next/core-web-vitals",             // Next.js + React best practices
-    "plugin:@typescript-eslint/recommended" // TypeScript-specific linting
+    "next/core-web-vitals", // Next.js + React best practices
+    "plugin:@typescript-eslint/recommended", // TypeScript-specific linting
   ],
   rules: {
     // unused vars → warning
     "@typescript-eslint/no-unused-vars": "warn",
 
     // allow <img> (you can still migrate to next/image later)
-    "@next/next/no-img-element": "warn",
+    "@next/next/no-img-element": "off",
 
     // allow unescaped quotes in JSX text
-    "react/no-unescaped-entities": "warn"
-  }
+    "react/no-unescaped-entities": "warn",
+  },
 };

@@ -37,7 +37,7 @@ export const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
 
   const randomRotateY = () => Math.floor(Math.random() * 21) - 10;
 
@@ -61,7 +61,9 @@ export const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
                   scale: isActive(index) ? 1 : 0.95,
                   z: isActive(index) ? 0 : -100,
                   rotate: isActive(index) ? 0 : randomRotateY(),
-                  zIndex: isActive(index) ? 40 : testimonials.length + 2 - index,
+                  zIndex: isActive(index)
+                    ? 40
+                    : testimonials.length + 2 - index,
                   y: isActive(index) ? [0, -80, 0] : 0,
                 }}
                 exit={{
