@@ -3,10 +3,10 @@ import { CtaWithFeaturesRightImage } from '@/components/ui/cta-with-features-rig
 import { Hero2 } from '@/components/ui/hero2';
 import React from 'react';
 
- const WorkPermit: React.FC = () => {
+ const StudyToPR: React.FC = () => {
     return (
        <div className="min-h-screen bg-white flex gap-12 flex-col">
-                             <Hero2 badgeText='GreenTech Resources' title='' description='' imageUrl='/images/hero/s.avif' primaryCta={{ label: "", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
+                             <Hero2 badgeText='GreenTech Resources' title='' description='' imageUrl='/images/hero/i.avif' primaryCta={{ label: "", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
                             
                      
                      
@@ -23,4 +23,4 @@ import React from 'react';
     );
 };
 
-export default WorkPermit
+export default StudyToPR

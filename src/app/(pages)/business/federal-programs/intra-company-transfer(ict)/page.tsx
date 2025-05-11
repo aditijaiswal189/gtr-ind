@@ -1,11 +1,25 @@
+import { features } from '@/app/(pages)/about-us/about/about/page';
+import { CtaWithFeaturesRightImage } from '@/components/ui/cta-with-features-right-image';
+import { Hero2 } from '@/components/ui/hero2';
 import React from 'react';
 
  const IntraCompanyTransfer: React.FC = () => {
     return (
-        <div>
-            <h1>IntraCompanyTransfer</h1>
-            <p>Welcome to the IntraCompanyTransfer.</p>
-        </div>
+          <div className="min-h-screen bg-white flex gap-12 flex-col">
+                        <Hero2 badgeText='GreenTech Resources' title='' description='' imageUrl='/images/hero/j.avif' primaryCta={{ label: "", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
+                       
+                
+                
+                
+               
+                <CtaWithFeaturesRightImage
+                      badgeText="About Us"
+                      title=" GreenTech Resource Worldwide Canada"
+                      subtitle=""
+                      features={features}
+                    />
+               
+                        </div>
     );
 };
 export default IntraCompanyTransfer
