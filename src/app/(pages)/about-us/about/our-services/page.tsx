@@ -1,11 +1,20 @@
-import { Hero2 } from '@/components/ui/hero2';
-import React from 'react';
+import { Hero2 } from "@/components/ui/hero2";
+import React from "react";
 
 // data/services-data.tsx
-import { Briefcase, FileCheck, Globe, Notebook, Plane, UserCheck } from "lucide-react";
-import { FeaturesWithLastFilled, Props } from '@/components/ui/features-with-last-filled';
-import { Newsletter, NewsletterConfig } from '@/components/ui/news-letter';
-
+import {
+  Briefcase,
+  FileCheck,
+  Globe,
+  Notebook,
+  Plane,
+  UserCheck,
+} from "lucide-react";
+import {
+  FeaturesWithLastFilled,
+  Props,
+} from "@/components/ui/features-with-last-filled";
+import { Newsletter, NewsletterConfig } from "@/components/ui/news-letter";
 
 export const services: Props[] = [
   {
@@ -50,8 +59,7 @@ export const services: Props[] = [
 
 const aboutNewsletterConfig: NewsletterConfig = {
   label: "Connect with us",
-  heading:
-    "Book a session today and start changing your life!",
+  heading: "Book a session today and start changing your life!",
   placeholder: "Enter your email",
   buttonText: "Book an appointment",
   imageSrc:
@@ -59,26 +67,35 @@ const aboutNewsletterConfig: NewsletterConfig = {
   imageAlt: "Woman reading newsletter",
 };
 
-
 const OurServices: React.FC = () => {
-    return (
-      <>
-       <div className="min-h-screen bg-white flex gap-12 flex-col">
-               <Hero2 badgeText='GreenTech Resources' title='Our Services' description='GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan.'
-               imageUrl='/images/download.jfif'
-                // imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260'
-                primaryCta={{ label: "Why choose us?", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
-               <FeaturesWithLastFilled
-        services={services}
-        sectionTitle="We Provide Recruitment, Immigration and Settlement Services"
-        sectionSubtitle="Our goal is to provide customers with the best service, for us to help customers
+  return (
+    <>
+      <div className="min-h-screen bg-white flex gap-12 flex-col">
+        <Hero2
+          badgeText="GreenTech Resources"
+          title="Our Services"
+          description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
+          imageUrl="/images/download.jfif"
+          // imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260'
+          primaryCta={{
+            label: "Why choose us?",
+            href: "/about-us/about/why-choose-us",
+          }}
+          secondaryCta={{
+            label: "Learn More",
+            href: "/about-us/about/book-appointment",
+          }}
+        />
+        <FeaturesWithLastFilled
+          services={services}
+          sectionTitle="We Provide Recruitment, Immigration and Settlement Services"
+          sectionSubtitle="Our goal is to provide customers with the best service, for us to help customers
 overcome their barriers and obtain Permanent Residensy in Canada"
-      />
-
-               </div>
+        />
+      </div>
       <Newsletter config={aboutNewsletterConfig} />
-      </>
-    );
+    </>
+  );
 };
 
 export default OurServices;

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Plane } from "lucide-react";
+import Link from "next/link";
 
 interface ItemProps {
   title: string;
@@ -38,11 +39,11 @@ export const FAQ2: React.FC = () => (
   <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
       <div className="flex flex-col mb-16 sm:text-center">
-        <a href="/" className="mb-6 sm:mx-auto">
+        <Link href="/" className="mb-6 sm:mx-auto">
           <div className="flex items-center justify-center w-12 h-12 rounded-full bg-muted">
             <Plane className="w-8 h-8 text-primary" />
           </div>
-        </a>
+        </Link>
         <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
           <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-foreground sm:text-4xl md:mx-auto">
             The quick, brown fox jumps over a lazy dog

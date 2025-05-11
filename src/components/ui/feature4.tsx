@@ -2,6 +2,7 @@
 
 import React from "react";
 import * as Icons from "lucide-react";
+import Link from "next/link";
 
 interface FeatureItem {
   icon: keyof typeof Icons;
@@ -32,7 +33,9 @@ export const Feature4: React.FC<FeatureProps> = ({
           {badge}
         </p>
         <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          <span className="relative inline-block text-foreground">{heading}</span>{" "}
+          <span className="relative inline-block text-foreground">
+            {heading}
+          </span>{" "}
           <span className="inline-block text-primary">{highlight}</span>
         </h2>
         <p className="text-base mt-4 text-muted-foreground md:text-lg">
@@ -42,7 +45,8 @@ export const Feature4: React.FC<FeatureProps> = ({
 
       <div className="grid gap-10 row-gap-10 md:grid-cols-2 lg:grid-cols-2">
         {features.map((item, idx) => {
-          const Icon = (Icons[item.icon] as React.ElementType) || Icons.HelpCircle;
+          const Icon =
+            (Icons[item.icon] as React.ElementType) || Icons.HelpCircle;
           return (
             <div
               key={idx}
@@ -58,12 +62,12 @@ export const Feature4: React.FC<FeatureProps> = ({
                 {item.description}
               </p>
               {item.link && (
-                <a
+                <Link
                   href={item.link}
                   className="inline-flex items-center font-semibold transition-colors duration-200 text-primary hover:text-primary/80"
                 >
                   Learn more
-                </a>
+                </Link>
               )}
             </div>
           );

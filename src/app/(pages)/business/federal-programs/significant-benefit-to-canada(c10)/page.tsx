@@ -47,8 +47,14 @@ const SignificantBenefitToCanada: React.FC = () => {
         title="Significant Benefit to Canada (C10)"
         description="The Significant Benefit to Canada (C10) program grants temporary resident permits to foreign nationals who can demonstrate that their entry or continued stay in Canada would result in a significant benefit to Canada"
         imageUrl="/images/hero/m.avif"
-        primaryCta={{ label: "Start Up Visa", href: "/" }}
-        secondaryCta={{ label: "Learn More", href: "/" }}
+        primaryCta={{
+          label: "Start Up Visa",
+          href: "/business/federal-programs/start-up-visa(suv)",
+        }}
+        secondaryCta={{
+          label: "Learn More",
+          href: "/about-us/about/book-appointment",
+        }}
       />
       <FeatureList
         badgeText="Eligibility

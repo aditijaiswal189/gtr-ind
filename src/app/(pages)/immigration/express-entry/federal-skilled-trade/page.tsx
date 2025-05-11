@@ -147,7 +147,7 @@ const features: FeatureItemData[] = [
     return (
         <div className="min-h-screen bg-white flex gap-12 flex-col">
               
-                       <Hero2 badgeText='GreenTech Resources' title='Federal Skilled Trade Program (FSTP)' description='You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada.' imageUrl='/images/hero/d.avif' primaryCta={{ label: "Federal Skilled Worker", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
+                       <Hero2 badgeText='GreenTech Resources' title='Federal Skilled Trade Program (FSTP)' description='You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada.' imageUrl='/images/hero/d.avif' primaryCta={{ label: "Federal Skilled Worker", href: "/immigration/express-entry/federal-skilled-worker" }} secondaryCta={{ label: "Learn More", href: "/about-us/about/book-appointment", }}/>
                       
                        <Feature4
               badge=" Eligible Criteria"

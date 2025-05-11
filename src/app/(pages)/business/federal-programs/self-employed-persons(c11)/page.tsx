@@ -53,8 +53,11 @@ const SelfEmployedPersons: React.FC = () => {
         title="Federal Self-employed Persons Program (C11)"
         description="The International Mobility Program (IMP) grants the distinctive Canadian work permit visa, the C11 category work permit. It is offered to international business owners and investors who want to operate a business in Canada as self-employed persons."
         imageUrl="/images/hero/l.avif"
-        primaryCta={{ label: "Start Up Visa", href: "/" }}
-        secondaryCta={{ label: "Learn More", href: "/" }}
+        primaryCta={{ label: "Start Up Visa", href: "/business/federal-programs/start-up-visa(suv)" }}
+        secondaryCta={{
+          label: "Learn More",
+          href: "/about-us/about/book-appointment",
+        }}
       />
       <Feature2WithImage
         heading={

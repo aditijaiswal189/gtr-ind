@@ -50,8 +50,14 @@ const IntraCompanyTransfer: React.FC = () => {
         title="Intra-Company Transfer (ICT)"
         description="The Intra-Company Transfer (ICT) program in Canada allows multinational companies to transfer key personnel from their foreign operations to their Canadian branches, subsidiaries, or affiliates"
         imageUrl="/images/hero/j.avif"
-        primaryCta={{ label: "Start Up Visa", href: "/" }}
-        secondaryCta={{ label: "Learn More", href: "/" }}
+        primaryCta={{
+          label: "Start Up Visa",
+          href: "/business/federal-programs/start-up-visa(suv)",
+        }}
+        secondaryCta={{
+          label: "Learn More",
+          href: "/about-us/about/book-appointment",
+        }}
       />
 
       <Feature3
