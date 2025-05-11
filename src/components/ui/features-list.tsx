@@ -6,10 +6,10 @@ export interface FeatureSectionProps {
   badgeText: string
   heading: React.ReactNode
   subheading: string
-  items: FeatureItemProps[]
+  items: FeatureItemPropsList[]
 }
 
-export const FeatureSection: React.FC<FeatureSectionProps> = ({
+export const FeatureList: React.FC<FeatureSectionProps> = ({
   badgeText,
   heading,
   subheading,
@@ -22,7 +22,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
     "
   >
     {/* header */}
-    <div className="max-w-xl mb-10 mx-auto text-center">
+    <div className="max-w-4xl mb-10 mx-auto text-center">
       <span
         className="
           inline-block px-3 py-px mb-4 text-xs font-semibold uppercase rounded-full
@@ -46,7 +46,7 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
     </div>
 
     {/* list of features */}
-    <div className="max-w-lg space-y-3 mx-auto lg:max-w-xl">
+    <div className="max-w-3xl space-y-3 mx-auto lg:max-w-3xl">
       {items.map((item, idx) => (
         <FeatureItem key={idx} {...item} />
       ))}
@@ -55,14 +55,14 @@ export const FeatureSection: React.FC<FeatureSectionProps> = ({
 )
 
 
-export interface FeatureItemProps {
+export interface FeatureItemPropsList {
   /** Icon component (Lucide icon) */
   icon?: React.ElementType
   /** Text for this feature */
   text: string
 }
 
-const FeatureItem: React.FC<FeatureItemProps> = ({
+const FeatureItem: React.FC<FeatureItemPropsList> = ({
   icon: Icon = Check,
   text,
 }) => (
@@ -72,10 +72,10 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
       transition-colors duration-200 group hover:bg-[var(--accent)] hover:border-[var(--accent)]
     "
   >
-    <div className="mr-2 text-[var(--primary)] group-hover:text-white">
+    <div className="mr-4  ml-2 text-[var(--primary)] group-hover:text-primary/80">
       <Icon className="w-6 h-6" />
     </div>
-    <span className="text-[var(--foreground)] group-hover:text-white">
+    <span className="text-[var(--foreground)] group-hover:text-primary/80">
       {text}
     </span>
   </div>

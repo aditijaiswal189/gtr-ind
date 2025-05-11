@@ -25,19 +25,7 @@ const CanadianExperienceClass: React.FC = () => {
        
         <div className="min-h-screen bg-white flex gap-12 flex-col">
         <Hero2 badgeText='GreenTech Resources' title='Canadian Experience Class (CEC)' description='The Canadian Experience Class (CEC) is an economic immigration program that requires work experience in Canada. Applicants must have a minimum of 12 months of full-time work experience in a skilled occupation in Canada within the last 3 years.' imageUrl='/images/hero/f.avif' primaryCta={{ label: "Federal Skilled Worker", href: "/" }} secondaryCta={{ label: "Learn More", href: "/" }}/>
-             <Feature2WithImage
-                                         heading={
-                                           <>
-                                             Express 
-                                             <span className="text-primary pl-2">Entry</span>
-                                           </>
-                                         }
-                                         subheading="Canadian Experience Class (CEC)"
-                                         features={cards}
-                                         imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-                                         imageAlt="Fox in the wild"
-                                       />
-                            
+            
 
                        <Feature4
               badge=" Eligible Criteria"
@@ -71,6 +59,19 @@ job offer or certificate of qualification and language ability "
                   },
               ]}
             />
+             <Feature2WithImage
+                                         heading={
+                                           <>
+                                             Express 
+                                             <span className="text-primary pl-2">Entry</span>
+                                           </>
+                                         }
+                                         subheading="Canadian Experience Class (CEC)"
+                                         features={cards}
+                                         imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                         imageAlt="Fox in the wild"
+                                       />
+                            
              <FeaturesWithLastFilled
                                                services={services}
                                                sectionTitle="Factors that increase your chance to receive Invitation to Apply (ITA) in the Express Entry Program"
