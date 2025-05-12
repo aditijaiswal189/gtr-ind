@@ -106,7 +106,7 @@ export const StepsWithHeadingImageList: React.FC<StepSectionProps> = ({
     "
   >
     {/* header */}
-    <div className="max-w-2xl mx-auto mb-12 text-center">
+    <div className="max-w-4xl mx-auto mb-12 text-center">
       {badgeText && (
         <p
           className="
@@ -133,7 +133,7 @@ export const StepsWithHeadingImageList: React.FC<StepSectionProps> = ({
     </div>
 
     {/* steps list */}
-    <div className="grid gap-8 max-w-2xl mx-auto">
+    <div className="grid gap-8 max-w-4xl mx-auto">
       {steps.map((s, i) => (
         <StepItem key={i} number={i + 1} totalSteps={steps.length} {...s} />
       ))}

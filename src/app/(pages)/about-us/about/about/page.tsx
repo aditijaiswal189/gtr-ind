@@ -1,6 +1,10 @@
 import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter";
 import { CtaWith4Features } from "@/components/ui/cta-with-4-features";
 import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import {
+  FeatureWithList3Grid,
+  FeatureWithListProps,
+} from "@/components/ui/feature-with-list3-grid";
 import { Feature1Animated } from "@/components/ui/feature1-animated";
 import { Hero2 } from "@/components/ui/hero2";
 import { Stats } from "@/components/ui/stats";
@@ -11,6 +15,9 @@ import {
   BriefcaseBusiness,
   Contact,
   Globe,
+  Globe2,
+  LifeBuoy,
+  Navigation,
   Notebook,
   ShieldCheck,
   UserCheck,
@@ -133,6 +140,69 @@ export const features = [
   },
 ];
 
+export const featuresConfig2: FeatureWithListProps[] = [
+  {
+    icon: Globe2,
+    title: " Entrepreneurs",
+    description: "Providing services for.",
+    bullets: [
+      "Conduct initial assessment based on intake criteria",
+      "Develop & refine the innovative business concepts",
+      "Incubator selection",
+      "Pitch deck refinement",
+      "Pitch coaching",
+      "Closed Work Permit for Applicant",
+      "Open Work Permit for spouse",
+      "Visitor/ Study Permit for dependent children",
+      "PR application",
+      "Settlement",
+    ],
+    ctaHref: "/planet",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Employers",
+    description: "Steps for the",
+    bullets: [
+      "PNP/LMIA registration for employers",
+      "Planning, searching, and screening suitable candidates",
+      "Streamlining the interview process",
+      "Assisting with employment offers",
+      "Handling PNP/LMIA and work permit procedures for candidates",
+      "Settlement",
+    ],
+    ctaHref: "/life",
+  },
+  {
+    icon: Navigation,
+    title: "    Students",
+    description: "services we provide for",
+    bullets: [
+      "Study Permit",
+      "Post graduation work permit",
+      "Open Work Permit for spouses",
+      "Visitor/ Study Permit for dependent children",
+      "Consulting Pathway to PR",
+      "Settlement",
+    ],
+    ctaHref: "/explore",
+  },
+  {
+    icon: Briefcase,
+    title: " Foreign Workers",
+    description: "Steps for ",
+    bullets: [
+      "Recruitment at CIC Canada Jobs",
+      "Provincial nomination",
+      "Closed work permit for applicant",
+      "Open work permit for spouse",
+      " Visitor/ Study Permit for dependent children​",
+      "PR application",
+    ],
+    ctaHref: "/contact",
+  },
+];
+
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -154,6 +224,11 @@ const AboutPage: React.FC = () => {
       <Feature1Animated featureItems={featureItems} />
 
       <CtaWith4Features features={aboutFeatures} imageUrl="/images/ceo.jpg" />
+      <FeatureWithList3Grid
+        heading="Our Services"
+        subheading="Services we provide for"
+        items={featuresConfig2}
+      />
       <CtaWithFeaturesRightImage
         badgeText="About Us"
         title=" GreenTech Resource Worldwide Canada"

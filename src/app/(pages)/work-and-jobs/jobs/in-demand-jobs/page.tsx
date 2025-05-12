@@ -11,7 +11,7 @@ const InDemandJobs: React.FC = () => {
         title=""
         description=""
         imageUrl="/images/hero/n.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{ label: "Work Permit", href: "/work-and-jobs/work/work-permit" }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",

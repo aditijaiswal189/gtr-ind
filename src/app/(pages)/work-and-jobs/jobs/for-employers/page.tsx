@@ -11,7 +11,10 @@ const ForEmployers: React.FC = () => {
         title=""
         description=""
         imageUrl="/images/hero/m.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{
+          label: "Work Permit",
+          href: "/work-and-jobs/work/work-permit",
+        }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",

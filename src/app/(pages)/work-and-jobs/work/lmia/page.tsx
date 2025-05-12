@@ -11,7 +11,10 @@ const LMIA: React.FC = () => {
         title=""
         description=""
         imageUrl="/images/hero/r.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{
+          label: "Work Permit",
+          href: "/work-and-jobs/work/work-permit",
+        }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",
