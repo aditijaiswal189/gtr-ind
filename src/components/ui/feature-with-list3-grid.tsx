@@ -22,7 +22,7 @@ export const FeatureItem: React.FC<FeatureWithListProps> = ({
       <div
         className="
           flex items-center justify-center
-          w-16 h-16 mb-4 rounded-full
+          w-12 h-12 mb-4 rounded-full
           bg-primary/10
           sm:w-24 sm:h-24
         "

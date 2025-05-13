@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 
 export interface FeatureList4GridProps {
   /** Lucide icon component */
@@ -16,8 +16,6 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
   title,
   description,
   bullets = [],
-  ctaText = "Learn more",
-  ctaHref = "#",
 }) => (
   <div className="flex flex-col sm:flex-row">
     {/* Icon circle */}
@@ -25,12 +23,12 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
       <div
         className="
           flex items-center justify-center
-          w-16 h-16 mb-4 rounded-full
-          bg-[var(--secondary)]
-          sm:w-24 sm:h-24
+          w-12 h-12 mb-4 rounded-full
+          bg-primary/10
+          sm:w-12 sm:h-12
         "
       >
-        <Icon className="w-12 h-12 text-[var(--accent)] sm:w-16 sm:h-16" />
+        <Icon className="w-8 h-8 text-primary sm:w-8 sm:h-8" />
       </div>
     </div>
 
@@ -48,7 +46,7 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
         <ul className="mb-4 -ml-1 space-y-2">
           {bullets.map((b, i) => (
             <li key={i} className="flex items-start">
-              <Check className="w-5 h-5 mt-px text-[var(--accent)] flex-shrink-0" />
+              <Check className="w-5 h-5 mt-px text-primary flex-shrink-0" />
               <span className="ml-1 text-[var(--foreground)]">{b}</span>
             </li>
           ))}
@@ -56,7 +54,7 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
       )}
 
       {/* CTA */}
-      <a
+      {/* <a
         href={ctaHref}
         className="
           inline-flex items-center font-semibold
@@ -66,7 +64,7 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
       >
         {ctaText}
         <ArrowRight className="w-4 h-4 ml-2" />
-      </a>
+      </a> */}
     </div>
   </div>
 );
@@ -90,23 +88,19 @@ export const FeatureWithList4Grid: React.FC<FeatureSectionProps> = ({
     "
   >
     {/* Header */}
-    <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
-      <div className="lg:w-1/2">
-        <h2
-          className="
-            mb-4 text-3xl font-bold tracking-tight
-            text-[var(--foreground)] sm:text-4xl sm:leading-none xl:max-w-lg
-          "
-        >
-          {heading}
-        </h2>
-      </div>
+    <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2
+        className="
+          max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight
+          text-[var(--foreground)] sm:text-4xl md:mx-auto
+        "
+      >
+        {heading}
+      </h2>
       {subheading && (
-        <div className="lg:w-1/2">
-          <p className="text-base text-[var(--muted-foreground)] md:text-lg">
-            {subheading}
-          </p>
-        </div>
+        <p className="text-base text-[var(--muted-foreground)] md:text-lg">
+          {subheading}
+        </p>
       )}
     </div>
 

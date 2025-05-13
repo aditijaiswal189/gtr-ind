@@ -11,7 +11,10 @@ const NorthwestTerritories: React.FC = () => {
         title=""
         description=""
         imageUrl="/images/hero/l.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{
+          label: "Alberta (AAIP)",
+          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
+        }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",
