@@ -1,258 +1,267 @@
-"use client"
-import { ArrowRight, BookOpen, Briefcase, ChevronDown, GraduationCap, MapPin } from "lucide-react";
+"use client";
+import {
+  ArrowRight,
+  BookOpen,
+  Briefcase,
+  ChevronDown,
+  GraduationCap,
+  MapPin,
+} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Button } from "./button";
 
 export const router = [
-    {
-      path: "/",
-      element: "Home",
-    },
-    {
-      path: "About",
-      children: [
-        {
+  {
+    path: "/",
+    element: "Home",
+  },
+  {
+    path: "About",
+    children: [
+      {
         path: "About Us",
-children:[
-  {
-    path: "/about-us/about/about",
-    element: "About",
-  },
-  {
-    path: "/about-us/about/our-services",
-    element: "Our Service",
-  },
-  
-  {
-    path: "/about-us/about/book-appointment",
-    element: "Book Appointment",
-  },
-  {
-    path: "/about-us/about/why-choose-us",
-    element: "Why Choose Us",
-  },
-  {
-    path:"/about-us/about/price-policy",
-    element: "Price Policy"
-  },
-  {
-    path: "/about-us/about/success-customers",
-    element: "Success Customers"
-  }
-]
-      },{
-        path: "Certifications and Testimonials",
-    
-          children: [{
-          path: "/about-us/cert-testimonials/certificate-membership",
-          element: "Certificate Membership",
-        },
-        {
-          path: "/about-us/cert-testimonials/customer-testimonials",
-          element: "Customer Testimonials",
-        }]
-      },]
-      
-    },
-  
-    {
-      path: "Immigration",
-      children: [
-        {
-          path: "Express Entry",
-          element: `Express Entry`,
-          children: [
-            {
-              path: "/immigration/express-entry/federal-skilled-worker",
-              element: "Fedral Skilled Worker",
-            },
-            {
-              path: "/immigration/express-entry/federal-skilled-trade",
-              element: "Fedral Skilled Trade",
-            },
-            {
-              path: "/immigration/express-entry/canadian-experience-class",
-              element: "Canadian Experience Class",
-            },
-          ],
-        },
-        {
-          path: "Provincial Nominee Programs",
-          children: [
-            {
-              path: "/immigration/provincial-nominee-programs/alberta(aaip)",
-              element: "Alberta (AAIP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/atlantic-immigration(aipp)",
-              element: "Atlantic Immigration (AIPP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/british-columbia(bc-pnp)",
-  
-              element: "British Colombia (BC PNP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/ontario(oinp)",
-              element: "Ontario (OINP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/manitoba(mpnp)",
-              element: "Manitoba (MPNP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/new-brunswick(nbpnp)",
-              element: "New Brunswick (NBPNP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/newfoundland-and-labrador",
-              element: "Newfoundland and Labrador",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/saskatchewan(sinp)",
-              element: "Saskatchewan (SINP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/northwest-territories",
-              element: "Northwest Territories",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/nova-scotia(nsnp)",
-              element: "Nova Scotia (NSNP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/prince-edward-island(pei-pnp)",
-              element: "Prince Edward Island (PEI PNP)",
-            },
-            {
-              path: "/immigration/provincial-nominee-programs/rural-and-northern-immigration-pilot(rnip)",
-              element: "Rural & Northern Immigration Pilot (RNIP)",
-            },
-  
-            {
-              path: "/immigration/provincial-nominee-programs/yukon(ynp)",
-              element: "Yukon (YNP)",
-            },
-          ],
-        },
-        {
-          path: "Immigration Challenges",
-          children: [{
+        children: [
+          {
+            path: "/about-us/about/about",
+            element: "About",
+          },
+          {
+            path: "/about-us/about/our-services",
+            element: "Our Service",
+          },
 
+          {
+            path: "/about-us/about/book-appointment",
+            element: "Book Appointment",
+          },
+          {
+            path: "/about-us/about/why-choose-us",
+            element: "Why Choose Us",
+          },
+          {
+            path: "/about-us/about/price-policy",
+            element: "Price Policy",
+          },
+          {
+            path: "/about-us/about/success-customers",
+            element: "Success Customers",
+          },
+        ],
+      },
+      {
+        path: "Certifications and Testimonials",
+
+        children: [
+          {
+            path: "/about-us/cert-testimonials/certificate-membership",
+            element: "Certificate Membership",
+          },
+          {
+            path: "/about-us/cert-testimonials/customer-testimonials",
+            element: "Customer Testimonials",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    path: "Immigration",
+    children: [
+      {
+        path: "Express Entry",
+        element: `Express Entry`,
+        children: [
+          {
+            path: "/immigration/express-entry/federal-skilled-worker",
+            element: "Fedral Skilled Worker",
+          },
+          {
+            path: "/immigration/express-entry/federal-skilled-trade",
+            element: "Fedral Skilled Trade",
+          },
+          {
+            path: "/immigration/express-entry/canadian-experience-class",
+            element: "Canadian Experience Class",
+          },
+        ],
+      },
+      {
+        path: "Provincial Nominee Programs",
+        children: [
+          {
+            path: "/immigration/provincial-nominee-programs/alberta(aaip)",
+            element: "Alberta (AAIP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/atlantic-immigration(aipp)",
+            element: "Atlantic Immigration (AIPP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/british-columbia(bc-pnp)",
+
+            element: "British Colombia (BC PNP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/ontario(oinp)",
+            element: "Ontario (OINP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/manitoba(mpnp)",
+            element: "Manitoba (MPNP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/new-brunswick(nbpnp)",
+            element: "New Brunswick (NBPNP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/newfoundland-and-labrador",
+            element: "Newfoundland and Labrador",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/saskatchewan(sinp)",
+            element: "Saskatchewan (SINP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/northwest-territories",
+            element: "Northwest Territories",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/nova-scotia(nsnp)",
+            element: "Nova Scotia (NSNP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/prince-edward-island(pei-pnp)",
+            element: "Prince Edward Island (PEI PNP)",
+          },
+          {
+            path: "/immigration/provincial-nominee-programs/rural-northern-immigration-pilot(rnip)",
+            element: "Rural & Northern Immigration Pilot (RNIP)",
+          },
+
+          {
+            path: "/immigration/provincial-nominee-programs/yukon(ynp)",
+            element: "Yukon (YNP)",
+          },
+        ],
+      },
+      {
+        path: "Immigration Challenges",
+        children: [
+          {
             path: "/immigration/overcome-immigration-challenges",
             element: "Immigration Challenges",
-          }]
-        },
-      ],
-    },
-    {
-      path: "Business",
-      children: [
-        {
-          path: "Quebec",
-          children: [
-            {
-              path: "/business/quebec/quebec-investor",
-              element: "Quebec Investor",
-            },
-            {
-              path: "/business/quebec/quebec-enterpreneur-program",
-              element: "Quebec Entrepreneur",
-            },
-            {
-              path: "/business/quebec/quebec-self-employed",
-              element: "Self Employed",
-            },
-          ],
-        },
-        {
-          path: "Federal Programs",
-          children: [
-            {
-              path: "/business/federal-programs/start-up-visa(suv)",
-              element: " Start-Up Visa (SUV)",
-            },
-            {
-              path: "/business/federal-programs/intra-company-transfer(ict)",
-              element: "Intra-company transfer (ICT)",
-            },
-            {
-              path: "/business/federal-programs/significant-benefit-to-canada(c10)",
-              element: "Significant Benefit to Canada (C10)",
-            },
-            {
-              path: "/business/federal-programs/owner-operator-lmia",
-              element: "Owner Operator LMIA",
-            },
-            {
-              path: "/business/federal-programs/self-employed-persons(c11)",
-              element: "Self-Employed Persons (C11)",
-            },
-          ],
-        },
-        {
-          path: "Provincial Business Programs",
-          children: [
-            
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "Business",
+    children: [
+      {
+        path: "Quebec",
+        children: [
+          {
+            path: "/business/quebec/quebec-investor",
+            element: "Quebec Investor",
+          },
+          {
+            path: "/business/quebec/quebec-enterpreneur-program",
+            element: "Quebec Entrepreneur",
+          },
+          {
+            path: "/business/quebec/quebec-self-employed",
+            element: "Self Employed",
+          },
+        ],
+      },
+      {
+        path: "Federal Programs",
+        children: [
+          {
+            path: "/business/federal-programs/start-up-visa(suv)",
+            element: " Start-Up Visa (SUV)",
+          },
+          {
+            path: "/business/federal-programs/intra-company-transfer(ict)",
+            element: "Intra-company transfer (ICT)",
+          },
+          {
+            path: "/business/federal-programs/significant-benefit-to-canada(c10)",
+            element: "Significant Benefit to Canada (C10)",
+          },
+          {
+            path: "/business/federal-programs/owner-operator-lmia",
+            element: "Owner Operator LMIA",
+          },
+          {
+            path: "/business/federal-programs/self-employed-persons(c11)",
+            element: "Self-Employed Persons (C11)",
+          },
+        ],
+      },
+      {
+        path: "Provincial Business Programs",
+        children: [
+          {
+            path: "/business/provincial-business-programs/alberta-immigration-aaip",
+            element: "Alberta (AAIP)",
+          },
+          {
+            path: "/business/provincial-business-programs/atlantic-immigration-aipp",
+            element: "Atlantic Immigration (AIPP)",
+          },
+          {
+            path: "/business/provincial-business-programs/british-columbia-bcpnp",
 
-            {
-              path: "/business/provincial-business-programs/alberta-immigration-aaip",
-              element: "Alberta (AAIP)",
-            },
-            {
-              path: "/business/provincial-business-programs/atlantic-immigration-aipp",
-              element: "Atlantic Immigration (AIPP)",
-            },
-            {
-              path: "/business/provincial-business-programs/british-columbia-bcpnp",
-  
-              element: "British Colombia (BC PNP)",
-            },
-            
-            
-            {
-              path: "/business/provincial-business-programs/saskatchewan-sinp",
-              element: "Saskatchewan (SINP)",
-            },
-            {
-              path: "/business/provincial-business-programs/northwest-territories",
-              element: "Northwest Territories",
-            },
-           
-            {
-              path: "/business/provincial-business-programs/prince-edward-island-peipnp",
-              element: "Prince Edward Island (PEI PNP)",
-            },
-            
-          ],
-        },
-      ],
-    },
-    {
-      path: "Work And Jobs",
-      children: [
-        {
+            element: "British Colombia (BC PNP)",
+          },
+
+          {
+            path: "/business/provincial-business-programs/saskatchewan-sinp",
+            element: "Saskatchewan (SINP)",
+          },
+          {
+            path: "/business/provincial-business-programs/northwest-territories",
+            element: "Northwest Territories",
+          },
+
+          {
+            path: "/business/provincial-business-programs/prince-edward-island-peipnp",
+            element: "Prince Edward Island (PEI PNP)",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "Work And Jobs",
+    children: [
+      {
         path: "Work",
-children:[
-  {
-    path: "/work-and-jobs/work/work-permit",
-    element: "Work Permit",
-  },
-  {
-    path: "/work-and-jobs/work/international-mobility-program(imp)",
-    element: "International Mobility Program (IMP)",
-  },
-  {
-    path: "/work-and-jobs/work/lmia",
-    element: "LMIA",
-  },
-]
-      },{
+        children: [
+          {
+            path: "/work-and-jobs/work/work-permit",
+            element: "Work Permit",
+          },
+          {
+            path: "/work-and-jobs/work/international-mobility-program(imp)",
+            element: "International Mobility Program (IMP)",
+          },
+          {
+            path: "/work-and-jobs/work/lmia",
+            element: "LMIA",
+          },
+        ],
+      },
+      {
         path: "Jobs",
-    
-          children: [  {
+
+        children: [
+          {
             path: "/work-and-jobs/jobs/in-demand-jobs",
             element: "In Demand Jobs",
           },
@@ -260,90 +269,87 @@ children:[
             path: "/work-and-jobs/jobs/for-employers",
             element: "Support For Employers",
           },
-    
-        
+
           {
             path: "/work-and-jobs/jobs/teer-categories-noc-codes",
             element: "TEER Categories & NOC Codes",
           },
-           ]
-      },]
-       
-       
-      
-      
-    },
-    {
-      path: "Study",
-      children: [
-        {
+        ],
+      },
+    ],
+  },
+  {
+    path: "Study",
+    children: [
+      {
         path: "Programs",
-children:[
-  {
-    path: "/study/programs/post-graduate-wp",
-    element: "Post Graduate Work Permit (PGWP)",
-  },
-  {
-    path: "/study/programs/study-in-canada",
-    element: "Study In Canada",
-  },
-  
-  {
-    path: "/study/programs/designated-learning-institution(dli)",
-    element: "Designated Learning Institution (DLI)",
-  },
-  {
-    path: "/study/programs/student-direct-stream(sds)",
-    element: "Student Direct Stream (SDS)",
-  },
-]
-      },{
+        children: [
+          {
+            path: "/study/programs/post-graduate-wp",
+            element: "Post Graduate Work Permit (PGWP)",
+          },
+          {
+            path: "/study/programs/study-in-canada",
+            element: "Study In Canada",
+          },
+
+          {
+            path: "/study/programs/designated-learning-institution(dli)",
+            element: "Designated Learning Institution (DLI)",
+          },
+          {
+            path: "/study/programs/student-direct-stream(sds)",
+            element: "Student Direct Stream (SDS)",
+          },
+        ],
+      },
+      {
         path: "Others",
-    
-          children: [{
+
+        children: [
+          {
             path: "/study/others/study-to-pr",
             element: "Pathway From Study To PR",
           },
-        ]
-      },]
-      
-       
-    
-    },
-    {
-      path: "Other Services",
-      children: [
-        {
+        ],
+      },
+    ],
+  },
+  {
+    path: "Other Services",
+    children: [
+      {
         path: "Programs",
-children:[
-  {
-    path: "/other-services/programs/family-sponsorship",
-    element: "Family Sponsorship",
-   
-  },
-  {
-    path: "/other-services/programs/visitor",
-    element: "Visitor"
-  },
-  
-  {
-    path: "/other-services/programs/jobs-map",
-    element: "Jobs Map",
-  },
- 
-]
-      },{
+        children: [
+          {
+            path: "/other-services/programs/family-sponsorship",
+            element: "Family Sponsorship",
+          },
+          {
+            path: "/other-services/programs/visitor",
+            element: "Visitor",
+          },
+
+          {
+            path: "/other-services/programs/jobs-map",
+            element: "Jobs Map",
+          },
+        ],
+      },
+      {
         path: "News",
-    
-          children: [{
+
+        children: [
+          {
             path: "/other-services/news-service/news",
             element: "News",
           },
-        ]
-      },]
-    },
-  ];
-  
+        ],
+      },
+    ],
+  },
+];
+
 function cn(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
@@ -356,8 +362,13 @@ export function MegaMenuBar() {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const [menuPosition, setMenuPosition] = useState<{ left: number; width: number } | null>(null);
-  const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const [menuPosition, setMenuPosition] = useState<{
+    left: number;
+    width: number;
+  } | null>(null);
+  const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>(
+    {}
+  );
 
   useEffect(() => {
     setIsOpen(false);
@@ -367,7 +378,8 @@ export function MegaMenuBar() {
 
   useLayoutEffect(() => {
     if (activeMenu && menuButtonRefs.current[activeMenu]) {
-      const buttonRect = menuButtonRefs.current[activeMenu]!.getBoundingClientRect();
+      const buttonRect =
+        menuButtonRefs.current[activeMenu]!.getBoundingClientRect();
       const menuWidth = 900;
       let left = buttonRect.left + buttonRect.width / 2 - menuWidth / 2;
       left = Math.max(16, left);
@@ -415,7 +427,8 @@ export function MegaMenuBar() {
       case "Immigration":
         return {
           title: "Immigration Pathways",
-          description: "Discover various immigration programs for your situation.",
+          description:
+            "Discover various immigration programs for your situation.",
           image: "/images/customers/cu2.webp",
           cta: { text: "Assess Your Eligibility", link: "/immigration" },
           icon: <MapPin className={styles} />,
@@ -493,7 +506,9 @@ export function MegaMenuBar() {
                 href={item.path}
                 className={cn(
                   "px-3 py-2 rounded-md text-sm font-medium hover:bg-muted transition-colors",
-                  pathname === item.path ? "text-primary" : "text-muted-foreground"
+                  pathname === item.path
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 )}
               >
                 {item.element}
@@ -509,7 +524,9 @@ export function MegaMenuBar() {
                 onClick={() => handleMenuClick(item.path)}
                 className={cn(
                   "px-3 py-2 rounded-md text-sm font-medium inline-flex items-center hover:bg-muted transition-colors",
-                  activeMenu === item.path ? "text-primary" : "text-muted-foreground"
+                  activeMenu === item.path
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 )}
               >
                 {item.path}
@@ -522,7 +539,8 @@ export function MegaMenuBar() {
                   style={{
                     left: menuPosition.left,
                     top:
-                      menuButtonRefs.current[item.path]?.getBoundingClientRect().bottom || 70,
+                      menuButtonRefs.current[item.path]?.getBoundingClientRect()
+                        .bottom || 70,
                     width: menuPosition.width,
                     maxWidth: "98vw",
                   }}
@@ -530,7 +548,7 @@ export function MegaMenuBar() {
                   <div className="grid grid-cols-12 gap-4">
                     {(() => {
                       const children = item.children;
-                    //   const allDirectLinks = children.every((child) => !child.children);
+                      //   const allDirectLinks = children.every((child) => !child.children);
                       const featured = getFeaturedContent(item.path);
 
                       return (
@@ -564,16 +582,21 @@ export function MegaMenuBar() {
                                   href={featured.highlight.link}
                                   className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 mt-2"
                                 >
-                                  Learn more <ArrowRight className="ml-1 h-3 w-3" />
+                                  Learn more{" "}
+                                  <ArrowRight className="ml-1 h-3 w-3" />
                                 </Link>
                               </div>
                               <Button asChild className="w-full">
-                                <Link href={featured.cta.link}>{featured.cta.text}</Link>
+                                <Link href={featured.cta.link}>
+                                  {featured.cta.text}
+                                </Link>
                               </Button>
                             </div>
                           )}
 
-                          <div className={featured ? "col-span-8" : "col-span-12"}>
+                          <div
+                            className={featured ? "col-span-8" : "col-span-12"}
+                          >
                             {children.every((child) => !child.children) ? (
                               <div className="flex flex-wrap gap-x-8 gap-y-4 items-center h-full justify-start pl-8 border-l border-border min-h-[260px]">
                                 {children.map((child) => (
@@ -594,16 +617,18 @@ export function MegaMenuBar() {
                                       {child.path}
                                     </h3>
                                     <ul className="space-y-2">
-                                      {(child.children || []).map((subChild) => (
-                                        <li key={subChild.path}>
-                                          <Link
-                                            href={subChild.path}
-                                            className="block text-sm text-muted-foreground hover:text-primary"
-                                          >
-                                            {subChild.element}
-                                          </Link>
-                                        </li>
-                                      ))}
+                                      {(child.children || []).map(
+                                        (subChild) => (
+                                          <li key={subChild.path}>
+                                            <Link
+                                              href={subChild.path}
+                                              className="block text-sm text-muted-foreground hover:text-primary"
+                                            >
+                                              {subChild.element}
+                                            </Link>
+                                          </li>
+                                        )
+                                      )}
                                     </ul>
                                   </div>
                                 ))}

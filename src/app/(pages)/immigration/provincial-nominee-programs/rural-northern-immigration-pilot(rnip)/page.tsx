@@ -6,7 +6,18 @@ import {
   FeatureItemProps,
 } from "@/components/ui/features-2-with-image";
 import { Hero2 } from "@/components/ui/hero2";
-import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react";
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+import {
+  Award,
+  Briefcase,
+  Compass,
+  FileCheck,
+  FileText,
+  Heart,
+  Lightbulb,
+  Notebook,
+  Plane,
+} from "lucide-react";
 import React from "react";
 
 const cards: FeatureItemProps[] = [
@@ -47,6 +58,53 @@ const features2: FeatureItemData[] = [
     icon: <Heart />,
   },
 ];
+const featuresLink: FeatureItemData[] = [
+  {
+    title: "Vernon, BC",
+    description: "https://rnip-vernon-northok.ca/",
+  },
+  {
+    title: "Claresholm, AB",
+    description: "www.claresholm.ca",
+  },
+  {
+    title: " North Bay, ON",
+    description: "https://northbayrnip.ca/",
+  },
+  {
+    title: "Sudbury, ON ",
+    description: "https://investsudbury.ca/why-sudbury/move-to-sudbury/rnip/",
+  },
+
+  {
+    title: "Moose Jaw, SK",
+    description: "https://www.moosejawrnip.ca/",
+  },
+  {
+    title: "Altona/Rhineland, MB",
+    description: "www.seedrgpa.com",
+  },
+  {
+    title: "Brandon, MB",
+    description: "www.economicdevelopmentbrandon.com",
+  },
+  {
+    title: "Thunder Bay, ON",
+    description: "https://gotothunderbay.ca/",
+  },
+  {
+    title: "Sault Ste. Marie, ON",
+    description: "www.welcometossm.com",
+  },
+  {
+    title: "Timmins, ON",
+    description: "www.timminsedc.com",
+  },
+  {
+    title: "West Kootenay (Trail, Castlegar, Rossland, Nelson), BC",
+    description: "https://wk-rnip.ca/",
+  },
+];
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -73,13 +131,45 @@ const features3: FeatureItemData[] = [
     icon: <Heart />,
   },
 ];
+export interface StepConfigList {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+}
+const stepsRural: StepConfigList[] = [
+  {
+    icon: Lightbulb,
+    title: "Meet the Eligibility Requirements",
+    description:
+      "Before applying for the Rural and Northern Immigration Pilot, you must meet both the IRCC (Immigration, Refugees, and Citizenship Canada) eligibility requirements and the community-specific requirements. These general criteria include aspects like work experience, language proficiency, and education. Additionally, each participating community will have its own requirements, such as residency, specific skill sets, or the ability to integrate into the local community.",
+  },
+  {
+    icon: Award,
+    title: "Find an Eligible Job in a Participating Community",
+    description:
+      "The next step is to find an eligible job with an employer in one of the participating RNIP communities. It’s important to ensure the job offer is full-time, permanent, and meets the wage standards of that community. Only specific jobs are considered eligible under the RNIP, so it’s crucial that the position aligns with the community’s labor needs.",
+  },
+  {
+    icon: FileCheck,
+    title: "Submit Your Application for a Community Recommendation",
+    description:
+      "After securing a job offer, you will need to apply for a community recommendation. Each community participating in the Rural and Northern Immigration Pilot has its own process for evaluating candidates. In addition to standard requirements, they may assess your intent to live in the community, local connections, or family ties before issuing a recommendation.",
+  },
+  {
+    icon: Compass,
+    title: "Apply for Permanent Residence",
+    description:
+      "Once you receive a community recommendation, you can then apply for permanent residence through the IRCC. While the community recommendation significantly strengthens your application, you will still need to meet general IRCC criteria. Upon submission, your application will be reviewed, and if approved, you will be on your way to obtaining permanent residence in Canada.",
+  },
+];
 const RuralNorthernImmigrationPilot: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
       <Hero2
         badgeText="GreenTech Resources"
-        title=""
-        description=""
+        title="Rural and Northern Immigration Pilot (RNIP)
+"
+        description="The Rural and Northern Immigration Pilot is a community-driven program. It’s designed to spread the benefits of economic immigration to smaller communities by creating a path to permanent residence for skilled foreign workers who want to work and live in one of the participating communities."
         imageUrl="/images/hero/q.avif"
         primaryCta={{
           label: "Alberta (AAIP)",
@@ -90,15 +180,32 @@ const RuralNorthernImmigrationPilot: React.FC = () => {
           href: "/about-us/about/book-appointment",
         }}
       />
+
+      <FeatureGrid4
+        title="Rural and Northern Immigration Pilot (RNIP) "
+        description="
+The Rural and Northern Immigration Pilot is a community-driven program. It’s designed to spread the benefits of economic immigration to smaller communities by creating a path to permanent residence for skilled foreign workers who want to work and live in one of the participating communities.
+Participating communities
+"
+        features={featuresLink}
+      />
+      <StepsWithHeadingImageList
+        badgeText="Provincial Nominee Programs"
+        heading="RNIP Process"
+        subheading="The Rural and Northern Immigration Pilot (RNIP) is a unique, community-driven immigration program designed to attract skilled workers to rural and northern communities in Canada. If you’re looking to gain permanent residence in Canada through this program, follow these step-by-step guidelines to ensure a successful application:"
+        steps={stepsRural}
+      />
+
       <FeatureGrid4
         title=" Benefits for your family "
-        description="With , your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
+        description="With Rural and Northern Immigration Pilot (RNIP), your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
         features={features2}
       />
       <Feature2WithImage
         heading={
           <>
-            <span className="text-primary pl-2"></span>
+            Rural and Northern Immigration Pilot
+            <span className="text-primary pl-2">(RNIP)</span>
           </>
         }
         subheading="  During the wait for permanent residency, your family can apply to come, work and study in Canada"
@@ -107,12 +214,12 @@ const RuralNorthernImmigrationPilot: React.FC = () => {
         imageAlt="Fox in the wild"
       />
       <FeatureGrid4
-        title=""
+        title="Rural and Northern Immigration Pilot (RNIP)"
         description="When you become Canada Permanent Resident"
         features={features3}
       />
       <CtaWithFeaturesRightImage
-        badgeText="About Us"
+        badgeText="Rural and Northern Immigration Pilot (RNIP)"
         title=" GreenTech Resource Worldwide Canada"
         subtitle=""
         features={features}
