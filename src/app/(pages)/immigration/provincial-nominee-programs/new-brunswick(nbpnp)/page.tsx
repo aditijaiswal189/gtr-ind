@@ -131,7 +131,7 @@ const NewBrunswwick: React.FC = () => {
           href: "/about-us/about/book-appointment",
         }}
       />
-      \
+
       <Feature3
         badgeText="NBPNP"
         heading="New Brunswick Provincial Nominee "
