@@ -1,6 +1,7 @@
 import { features } from "@/app/(pages)/about-us/about/about/page";
 import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
 import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
@@ -73,13 +74,31 @@ const features3: FeatureItemData[] = [
     icon: <Heart />,
   },
 ];
+export const featuresNew = [
+  {
+    icon: "Send" as const,
+    title: "Northwest Territories Employer Driven Program",
+    description: "Express Entry System for Skilled Workers",
+  },
+  {
+    icon: "Globe" as const,
+    title: "Skilled Worker",
+    description: "Entry Level/Semi-Skilled Occupations",
+  },
+  {
+    icon: "Repeat" as const,
+    title: "Northwest Territories Business Immigration Program",
+    description: "Business Stream",
+  },
+];
+
 const NorthwestTerritories: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
       <Hero2
         badgeText="GreenTech Resources"
-        title=""
-        description=""
+        title="The Northwest Territories"
+        description="The northwest territories of Canada, or the Territoires du Nord-Ouest, are the Canadian federation’s federally recognized territory."
         imageUrl="/images/hero/l.avif"
         primaryCta={{
           label: "Alberta (AAIP)",
@@ -90,15 +109,24 @@ const NorthwestTerritories: React.FC = () => {
           href: "/about-us/about/book-appointment",
         }}
       />
-<FeatureGrid4
+      <FeatureGrid4
         title=" Benefits for your family "
-        description="With , your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
+        description="With
+          The Northwest Territories Program, your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
         features={features2}
+      />
+      <Feature3
+        badgeText="NBPNP"
+        heading="The Northwest Territories"
+        highlighted=" Program"
+        description="In terms of its land, it is the second-largest territory of Canada. In terms of its population, the northwest territories have the highest population among all the three federal territories of northern Canada. The Northwest Territories accepts applications under two programs, one of which has three distinct streams"
+        items={featuresNew}
       />
       <Feature2WithImage
         heading={
           <>
-            <span className="text-primary pl-2"></span>
+            The Northwest Territories Program{" "}
+            <span className="text-primary pl-2">(NBPNP)</span>
           </>
         }
         subheading="  During the wait for permanent residency, your family can apply to come, work and study in Canada"
@@ -107,12 +135,12 @@ const NorthwestTerritories: React.FC = () => {
         imageAlt="Fox in the wild"
       />
       <FeatureGrid4
-        title=""
+        title=" The Northwest Territories Program (NBPNP)"
         description="When you become Canada Permanent Resident"
         features={features3}
       />
       <CtaWithFeaturesRightImage
-        badgeText="About Us"
+        badgeText="(NBPNP)"
         title=" GreenTech Resource Worldwide Canada"
         subtitle=""
         features={features}

@@ -1,6 +1,7 @@
 import { features } from "@/app/(pages)/about-us/about/about/page";
 import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
 import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
@@ -73,13 +74,71 @@ const features3: FeatureItemData[] = [
     icon: <Heart />,
   },
 ];
+export const featuresNew = [
+  {
+    icon: "Send" as const,
+    title: " Nova Scotia Experience: Express Entry",
+    description:
+      "This stream is designed for highly skilled individuals with experience in Nova Scotia. By connecting to the Express Entry system, this program allows faster processing for those who meet the criteria, such as having skilled work experience and an intent to live in Nova Scotia.",
+  },
+  {
+    icon: "BriefcaseBusiness" as const,
+    title: " Nova Scotia Labour Market Priorities",
+    description:
+      "The Labour Market Priorities stream selects candidates from the Express Entry pool who meet Nova Scotia’s labor market needs. These priorities shift depending on the province’s economic requirements, making it an adaptable option for various professions.",
+  },
+  {
+    icon: "Notebook" as const,
+    title: "Nova Scotia Labour Market Priorities for Physicians",
+    description:
+      "Specifically designed for doctors, this stream addresses the demand for healthcare professionals in Nova Scotia. If you are a physician and meet the qualifications, this program can streamline your immigration process and help you practice in the province.",
+  },
+  {
+    icon: "Map" as const,
+    title: "Skilled Worker Stream",
+    description:
+      "The Skilled Worker Stream targets individuals with a job offer from a Nova Scotia employer. Whether you are a skilled professional, semi-skilled worker, or in an intermediate-skilled occupation, this stream could be the right path for you.",
+  },
+  {
+    icon: "Globe" as const,
+    title: "Occupation In-Demand Stream",
+    description:
+      "Focusing on specific in-demand occupations, this stream is ideal for workers in industries facing labor shortages, such as healthcare or construction. The Occupation In-Demand Stream helps fill critical gaps in Nova Scotia’s workforce.",
+  },
+  {
+    icon: "Repeat" as const,
+    title: "International Graduates In-Demand",
+    description:
+      "This stream is designed for recent international graduates from recognized institutions with job offers in high-demand fields. The International Graduates In-Demand stream focuses on attracting young talent to the province’s growing sectors.",
+  },
+  {
+    icon: "Briefcase" as const,
+    title: "Entrepreneur Stream",
+    description:
+      "For experienced business owners or senior managers, the Entrepreneur Stream offers an opportunity to establish or buy a business in Nova Scotia. This stream is ideal for those who wish to make a significant investment and actively manage their business.",
+  },
+  {
+    icon: "GraduationCap" as const,
+    title: "International Graduate Entrepreneur Stream",
+    description:
+      "Graduates from Nova Scotia institutions who have already started or purchased a business in the province may qualify for the International Graduate Entrepreneur Stream. It encourages graduates to stay and contribute to Nova Scotia’s economy.",
+  },
+  {
+    icon: "Award" as const,
+    title: "Physician Stream",
+    description:
+      "Like the Labour Market Priorities for Physicians, the Physician Stream targets medical professionals with job offers from Nova Scotia’s health authorities. This pathway is designed to fill vital positions in the healthcare sector.",
+  },
+];
+
 const NovaScotia: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
       <Hero2
         badgeText="GreenTech Resources"
-        title=""
-        description=""
+        title="Nova Scotia Nominee Program (NSNP)
+"
+        description="Nova Scotia is Canada’s second-smallest province in area, after Prince Edward Island. The province’s mainland is the Nova Scotia peninsula, surrounded by the Atlantic Ocean and including numerous bays and estuaries."
         imageUrl="/images/hero/m.avif"
         primaryCta={{
           label: "Alberta (AAIP)",
@@ -90,15 +149,26 @@ const NovaScotia: React.FC = () => {
           href: "/about-us/about/book-appointment",
         }}
       />
+      <Feature3
+        badgeText="Programs"
+        heading="The Nova Scotia Nominee Program "
+        highlighted="(NSNP)"
+        description="Nova Scotia, a picturesque province in eastern Canada, boasts a unique geographical feature: nowhere in Nova Scotia is more than 67 km (42 mi) from the ocean. This close proximity to the Atlantic coastline makes it a haven for beach lovers, sailors, and nature enthusiasts.
+The capital city, Halifax, stands out as a vibrant cultural hub. Known for its rich history, Halifax is home to numerous museums, galleries, and live performances. It is also renowned for offering a high standard of living, making it an attractive destination for residents and visitors alike. Whether you're drawn by its arts scene or natural beauty, Halifax promises a thriving, dynamic lifestyle.
+Nova Scotia Nominee Program Streams are as follows
+The Nova Scotia Nominee Program (NSNP) offers various streams to help individuals and families settle in Nova Scotia. If you’re looking for an immigration pathway, the NSNP provides tailored options depending on your background, work experience, and qualifications. Here are the key streams offered under the Nova Scotia Nominee Program:"
+        items={featuresNew}
+      />
       <FeatureGrid4
         title=" Benefits for your family "
-        description="With , your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
+        description="With Nova Scotia Nominee Program (NSNP), your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), can submit for Canada Permanent Resident to enjoy most of the benefits like Canada."
         features={features2}
       />
       <Feature2WithImage
         heading={
           <>
-            <span className="text-primary pl-2"></span>
+            Nova Scotia Nominee Program
+            <span className="text-primary pl-2">(NSNP)</span>
           </>
         }
         subheading="  During the wait for permanent residency, your family can apply to come, work and study in Canada"
@@ -107,12 +177,12 @@ const NovaScotia: React.FC = () => {
         imageAlt="Fox in the wild"
       />
       <FeatureGrid4
-        title=""
+        title="Nova Scotia Nominee Program (NSNP)"
         description="When you become Canada Permanent Resident"
         features={features3}
       />
       <CtaWithFeaturesRightImage
-        badgeText="About Us"
+        badgeText="Nova Scotia Nominee Program "
         title=" GreenTech Resource Worldwide Canada"
         subtitle=""
         features={features}
