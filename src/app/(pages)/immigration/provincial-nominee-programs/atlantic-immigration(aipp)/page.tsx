@@ -1,5 +1,6 @@
 import { features } from "@/app/(pages)/about-us/about/about/page";
 import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
 import { Feature1Animated } from "@/components/ui/feature1-animated";
 import { Feature3 } from "@/components/ui/feature3";
 import {
@@ -9,9 +10,16 @@ import {
 import { Hero2 } from "@/components/ui/hero2";
 import {
   Briefcase,
+  BriefcaseBusiness,
+  BriefcaseBusinessIcon,
+  ChartNetwork,
   FileText,
   Globe,
+  Heart,
+  Map,
+  Network,
   Notebook,
+  NotebookPen,
   Plane,
   UserCheck,
 } from "lucide-react";
@@ -53,6 +61,22 @@ const featureItems: FeatureItem[] = [
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
 ];
+const featureItemsNew: FeatureItem[] = [
+  {
+    title: " Prince Edward Island",
+    description:
+      "Just like the economy of P.E.I features a mix of traditional resources spanning agriculture, fisheries, and tourism. Over the years the province has witnessed lots of developments and changes in the areas of bioscience and advanced manufacturing. As of April 1, 2020, the minimum wage is $12.85 per hour and the provincial government has numerous programs available to help students get into the job market. According to the latest update on the AIP program, Prince Edward Island only accepts AIP applications for the Health Care, Construction and Manufacturing.(excluding NOC.73300)",
+    link: "/",
+    icon: <UserCheck className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
+  },
+  {
+    title: "Newfoundland and Labrador",
+    description:
+      "Fish farming is considered one of the most important economic activities in the province.Retail trade, Manufacturing, and transportation are also considered other significant economic industries.",
+    link: "/",
+    icon: <Notebook className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
+  },
+];
 
 const cards: FeatureItemProps[] = [
   {
@@ -86,6 +110,114 @@ const features3 = [
       " For international graduates who have completed their education in one of the Atlantic provinces.",
   },
 ];
+const features2: FeatureItemData[] = [
+  {
+    title: "Cultural Diversity",
+    description:
+      "New Brunswick, known for its rich cultural diversity and natural beauty, is the only officially bilingual province in Canada. This unique province forms the vital land bridge that connects Atlantic Canada to the rest of North America. It’s a province that boasts a balanced blend of industry and service sectors, making it a key player in Canada's economy.",
+    icon: <Plane />,
+  },
+
+  {
+    title: "A Thriving Goods-Producing Sector",
+    description:
+      "New Brunswick's goods-producing sector is robust, with industries that play a crucial role in the province’s economy. Agriculture and forestry are among the leading contributors, with fertile lands and vast forests supporting these industries. The province is known for producing high-quality agricultural products and timber, which are in demand both locally and internationally.",
+    icon: <Notebook />,
+  },
+  {
+    title: "Food processing",
+    description:
+      "Food processing is another key industry in New Brunswick, leveraging the province’s agricultural strength to create jobs and products that are exported around the world. The region is particularly known for its seafood processing industry, including lobster, scallops, and salmon, which are some of Canada’s top exports.",
+    icon: <NotebookPen />,
+  },
+  {
+    title: "Freight transport",
+    description:
+      "Freight transport is also a major industry in New Brunswick, with the province serving as a central hub for railways and trucking. Its strategic location as a land bridge makes it an important player in freight transport, connecting Atlantic Canada to the rest of North America.",
+    icon: <Network />,
+  },
+  {
+    title: "A Strong Services-Producing Sector",
+    description:
+      "While the goods-producing sector is significant, most of New Brunswick’s workforce is employed in the services-producing sector. This sector encompasses a wide range of industries, including media, health services, education, and tourism.",
+    icon: <BriefcaseBusiness />,
+  },
+  {
+    title: "Media Industry",
+    description:
+      "New Brunswick’s media industry is growing, with local television, radio, and newspapers playing a vital role in both English and French communities. The province’s tourism sector is also noteworthy, attracting visitors with its picturesque landscapes, rich history, and cultural experiences.",
+    icon: <ChartNetwork />,
+  },
+  {
+    title: "Key Industries: Oil and Shipbuilding",
+    description:
+      "New Brunswick’s economy is further strengthened by its oil and shipbuilding industries. The province is home to Canada’s largest oil refinery, located in Saint John, which plays a significant role in the country's energy sector. Shipbuilding is another key industry, with the province’s shipyards contributing to Canada’s naval and commercial fleets.",
+    icon: <BriefcaseBusinessIcon />,
+  },
+  {
+    title: "Latest Update",
+    description:
+      "According to the latest update from the province of Brunswick, it will only accept applications from foreigners living outside Canada in the fields of health care, construction and education. (excluding NOCs 12200, 13110, 14400, 60020, 60030, 62010, 62020, 63200, 63202, 64100, 64301, 64314, 64409, 94140, 94142).",
+    icon: <Map />,
+  },
+  {
+    title: "Why New Brunswick?",
+    description:
+      "New Brunswick offers a unique blend of natural beauty, cultural richness, and economic opportunity. Its diverse industries provide ample employment opportunities, and the province’s bilingual nature makes it an attractive destination for both Anglophone and Francophone professionals. Whether you're looking for career opportunities in agriculture, forestry, manufacturing, or services, New Brunswick’s dynamic economy is a place where growth and opportunity await.",
+    icon: <Briefcase />,
+  },
+  {
+    title: "Explore",
+    description:
+      "Explore the opportunities in New Brunswick today and discover why this province is not just a gateway to Atlantic Canada, but a thriving center of industry, culture, and innovation.",
+    icon: <Heart />,
+  },
+];
+const featuresNew: FeatureItemData[] = [
+  {
+    title: "A Strong Fishing Industry",
+    description:
+      "  Fishing is one of the oldest and most important industries in Nova Scotia, with the province being surrounded by the Atlantic Ocean. The waters off its coast are rich in marine life, making the province a leading producer of seafood such as lobster, scallops, and fish. The fishing industry not only provides jobs to thousands of Nova Scotians but also drives the province's export economy, with seafood products in high demand globally.",
+    icon: <Plane />,
+  },
+  {
+    title: "A Province with Opportunity",
+    description:
+      "With a population nearing 1 million, Nova Scotia offers a unique blend of natural beauty, cultural richness, and economic opportunity. The province’s diverse economy, driven by industries such as fishing, forestry, mining, and tourism, provides ample employment opportunities and contributes to its overall growth. Whether you’re looking to explore its stunning landscapes or take advantage of its economic potential, Nova Scotia is a province with a bright future.",
+    icon: <Notebook />,
+  },
+  {
+    title: " Strategic Location ",
+    description:
+      "Halifax’s strategic location on the Atlantic coast has made it one of Canada’s busiest ports, supporting industries such as shipping, trade, and logistics. In addition to its economic significance, Halifax is a major cultural center, with museums, theaters, and festivals that celebrate Nova Scotia’s heritage.",
+    icon: <Notebook />,
+  },
+  {
+    title: "Halifax: The Heart of Nova Scotia",
+    description:
+      "With a population of over 400,000 people, Halifax is Nova Scotia’s largest city and its political capital. As one of Canada’s major seaports, Halifax serves as a key gateway to the Atlantic Ocean, making it a central hub for trade and commerce. The city is known for its vibrant cultural scene, historic landmarks, and bustling waterfront.",
+    icon: <Notebook />,
+  },
+  {
+    title: "Forestry and Mining: Key Economic Drivers",
+    description:
+      "In addition to fishing, forestry and mining play crucial roles in Nova Scotia’s economy. The province’s vast forests provide raw materials for lumber, paper, and other wood products, while its mining sector produces valuable resources such as coal, gypsum, and limestone. These industries contribute significantly to local employment and the province’s export market.",
+    icon: <Notebook />,
+  },
+  {
+    title: "Tourism: A Growing Industry",
+    description:
+      "Nova Scotia’s scenic beauty, rich history, and vibrant culture attract visitors from across Canada and beyond. Domestic tourism is a major economic driver, with travelers coming to explore the province's stunning coastlines, historic landmarks, and charming towns. From the iconic Cabot Trail to the historic sites of Halifax, Nova Scotia offers a wide range of attractions for tourists.",
+    icon: <Notebook />,
+  },
+
+  {
+    title: "Opportunities",
+    description:
+      "Discover the opportunities Nova Scotia has to offer and experience life in one of Canada’s most dynamic coastal provinces.",
+    icon: <Briefcase />,
+  },
+];
 const AtlanticImmigration: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -116,6 +248,7 @@ const AtlanticImmigration: React.FC = () => {
         imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
         imageAlt="Fox in the wild"
       />
+
       <Feature3
         badgeText="AIPP"
         heading="How the AIPP"
@@ -123,6 +256,17 @@ const AtlanticImmigration: React.FC = () => {
         description="The AIPP is employer-driven, meaning that candidates must first secure a job offer from a designated employer in one of the Atlantic provinces. Once the job offer is in place, candidates can apply for permanent residency through the AIPP. The program is divided into three categories:"
         items={features3}
       />
+      <FeatureGrid4
+        title="  Discover New Brunswick:"
+        description="New Brunswick, known for its rich cultural diversity and natural beauty, is the only officially bilingual province in Canada."
+        features={features2}
+      />
+      <FeatureGrid4
+        title=" Nova Scotia"
+        description="Nova Scotia, located on Canada’s eastern coast, boasts a diversified economy and a rich cultural heritage. Known for its stunning landscapes that border both land and sea, this maritime province is a thriving center for industries such as fishing, forestry, mining, and tourism. Its coastal location, combined with a mix of natural resources and scenic beauty, makes Nova Scotia a significant contributor to Canada’s economy."
+        features={featuresNew}
+      />
+      <Feature1Animated featureItems={featureItemsNew} />
       <CtaWithFeaturesRightImage
         badgeText="About Us"
         title=" GreenTech Resource Worldwide Canada"
