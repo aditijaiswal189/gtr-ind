@@ -1,25 +1,31 @@
 "use client";
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp, Plane } from "lucide-react";
-import Link from "next/link";
 
-interface ItemProps {
+import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+
+export interface FAQItem {
   title: string;
-  children: React.ReactNode;
+  content: React.ReactNode;
 }
 
-const Item: React.FC<ItemProps> = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export interface FAQSectionProps {
+  badgeIcon?: React.ReactNode;
+  heading: React.ReactNode;
+  subheading?: React.ReactNode;
+  items: FAQItem[];
+}
 
+const Item: React.FC<FAQItem> = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border border-border rounded shadow-sm overflow-hidden">
+    <div className="w-full border border-border rounded shadow-sm overflow-hidden">
       <button
         type="button"
         aria-label="Toggle"
         className="flex items-center justify-between w-full p-4 bg-card hover:bg-muted transition-colors focus:outline-none"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((o) => !o)}
       >
-        <p className="text-lg font-medium text-foreground">{title}</p>
+        <span className="text-lg font-medium text-foreground">{title}</span>
         {isOpen ? (
           <ChevronUp className="w-5 h-5 text-muted-foreground" />
         ) : (
@@ -27,51 +33,48 @@ const Item: React.FC<ItemProps> = ({ title, children }) => {
         )}
       </button>
       {isOpen && (
-        <div className="p-4 pt-0 bg-muted">
-          <p className="text-muted-foreground">{children}</p>
+        <div className="bg-muted">
+          <div className="p-4 pt-0 text-muted-foreground whitespace-normal break-words">
+            {content}
+          </div>
         </div>
       )}
     </div>
   );
 };
 
-export const FAQ2: React.FC = () => (
-  <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
-      <div className="flex flex-col mb-16 sm:text-center">
-        <Link href="/" className="mb-6 sm:mx-auto">
-          <div className="flex items-center justify-center w-12 h-12 rounded-full bg-muted">
-            <Plane className="w-8 h-8 text-primary" />
+export const FAQSection: React.FC<FAQSectionProps> = ({
+  badgeIcon,
+  heading,
+  subheading,
+  items,
+}) => (
+  <section className="px-[var(--section-padding-x)] py-[var(--section-padding-y)]">
+    {/* Single fixed-width wrapper */}
+    <div className="max-w-3xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col items-center mb-12 text-center">
+        {badgeIcon && (
+          <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-muted">
+            {badgeIcon}
           </div>
-        </Link>
-        <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-foreground sm:text-4xl md:mx-auto">
-            The quick, brown fox jumps over a lazy dog
-          </h2>
+        )}
+        <h2 className="mb-4 font-sans text-3xl font-bold leading-none tracking-tight text-foreground sm:text-4xl">
+          {heading}
+        </h2>
+        {subheading && (
           <p className="text-base text-muted-foreground md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
+            {subheading}
           </p>
-        </div>
+        )}
       </div>
+
+      {/* FAQ items */}
       <div className="space-y-4">
-        <Item title="The quick, brown fox jumps over a lazy dog?">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
-        </Item>
-        <Item title="The first mate and his Skipper too will do?">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
-        </Item>
-        <Item title="Is the Space Pope reptilian!?">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
-        </Item>
-        <Item title="How much money you got on you?">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque rem aperiam, eaque ipsa quae.
-        </Item>
+        {items.map((faq) => (
+          <Item key={faq.title} {...faq} />
+        ))}
       </div>
     </div>
-  </div>
+  </section>
 );

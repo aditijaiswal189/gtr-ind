@@ -11,7 +11,10 @@ const DesignatedLearningInstitution: React.FC = () => {
         title=""
         description=""
         imageUrl="/images/hero/i.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{
+          label: "Study in Canada",
+          href: "/study/programs/study-in-canada",
+        }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",
