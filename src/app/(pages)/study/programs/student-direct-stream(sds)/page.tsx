@@ -5,7 +5,7 @@ import {
   FeatureList,
 } from "@/components/ui/features-list";
 import { Hero2 } from "@/components/ui/hero2";
-import { Award, Briefcase, Notebook, Smile, Star } from "lucide-react";
+import { Award, Briefcase, Notebook, Smile } from "lucide-react";
 import React from "react";
 
 const items: FeatureItemPropsList[] = [
@@ -46,7 +46,6 @@ Student Direct Stream (SDS) is a student permit facilitation program which will 
         heading={
           <>
             Student direct stream
-            {/* <br className="hidden md:block" /> */}
             <span className="text-primary">(SDS)</span>
           </>
         }
