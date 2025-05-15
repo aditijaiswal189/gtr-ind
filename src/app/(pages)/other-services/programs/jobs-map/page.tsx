@@ -13,7 +13,10 @@ const JobsMap: React.FC = () => {
 Job Map"
         description="Know more about us, book an appointment today"
         imageUrl="/images/hero/g.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{
+          label: "Family Sponsorship",
+          href: "/other-services/programs/family-sponsorship",
+        }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",
