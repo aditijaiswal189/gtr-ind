@@ -11,7 +11,6 @@ import { TopBar } from "@/components/ui/top-bar";
 import { HeaderHome } from "@/components/ui/header-home";
 import { ChevronRight } from "lucide-react";
 
-
 export default function HeroNav() {
   const path = usePathname();
   const lastPath = path.split("/").pop();
@@ -47,34 +46,11 @@ export default function HeroNav() {
         >
           HOME
         </Link>
-        <ChevronRight
-          className="text-white/60 -mt-0.5"
-        />
+        <ChevronRight className="text-white/60 -mt-0.5" />
         <span className="text-white relative  font-bold uppercase font-primary tracking-widest">
           {lastPath}
         </span>
       </div>
     </section>
   );
-}
-
-{
-  /* <div className="relative z-10 max-w-xl">
-<div className="inline-block bg-green-600 px-4 py-2 text-sm text-white mb-6">
-  Trusted Recruitment Agency
-</div>
-<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-  Achieve your family Canada dreams with us
-</h1>
-<p className="text-gray-300 mb-8">
-  We support companies in their digital transformation by creating
-  internal tools and providing software development consulting.
-</p>
-<Button
-  size="lg"
-  className="bg-green-600 rounded-none text-sm hover:bg-green-700 text-white"
->
-  DISCOVER MORE
-</Button>
-</div> */
 }

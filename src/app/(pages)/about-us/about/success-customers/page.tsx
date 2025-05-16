@@ -7,7 +7,6 @@ const teamData = [
     heading: (
       <>
         <span className="relative inline-block">2025</span>
-        {/* <span className="pl-3 relative inline-block text-[var(--primary)]"> Team</span>  */}
       </>
     ),
     subtitle: "Greentech Resources Worldwide Canada",

@@ -100,7 +100,7 @@ const BookAppointment: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Book Appointment"
         description="Book your appointment in a few simple steps: Choose a service, pick your date and time, and fill in your details. See you soon!"
-        imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+        imageUrl="/images/hero/d.avif"
         primaryCta={{ label: "About us?", href: "/about-us/about/about" }}
         secondaryCta={{
           label: "Learn More",
@@ -123,7 +123,7 @@ const BookAppointment: React.FC = () => {
         }
         subheading="Intra Company Transfer"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/hero/g.avif"
         imageAlt="Fox in the wild"
       />
 
