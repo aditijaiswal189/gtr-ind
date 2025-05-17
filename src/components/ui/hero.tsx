@@ -8,7 +8,6 @@ export const HeroSection = () => {
       {/* Diagonal stripes background */}
       <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 bg-[repeating-linear-gradient(135deg,transparent,transparent_20px,rgba(255,255,255,0.1)_20px,rgba(255,255,255,0.1)_40px)]" />
 
-
       {/* Red diagonal accent */}
       <motion.div
         className="absolute -top-40 -right-20 w-[400px] h-[800px] bg-[var(--primary)] opacity-90"
@@ -47,10 +46,12 @@ export const HeroSection = () => {
           className="max-w-3xl space-y-6"
         >
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-            Business In<br />Canada...
+            Business In
+            <br />
+            Canada...
           </h1>
 
-          <p className="text-lg max-w-2xl text-[var(--muted-foreground)]">
+          <p className="text-lg max-w-2xl text-white">
             C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K
           </p>
 
@@ -58,7 +59,7 @@ export const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 rounded-md font-semibold text-lg transition-colors bg-[var(--primary)] text-[var(--primary-foreground)]"
+              className="px-8 py-3 rounded-md font-semibold text-lg transition-colors bg-primary-green text-muted-foreground border "
             >
               Call Us: +1 855 477 9797
             </motion.button>
@@ -66,7 +67,7 @@ export const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border rounded-md font-semibold text-lg transition-colors border-white border-opacity-30 text-[var(--primary-foreground)] bg-transparent"
+              className="px-8 py-3 border rounded-md font-semibold text-lg transition-colors  border-opacity-30 text-muted-foreground bg-primary-yellow"
             >
               Book An Appointment
             </motion.button>
@@ -76,4 +77,3 @@ export const HeroSection = () => {
     </div>
   );
 };
-

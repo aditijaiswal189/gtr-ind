@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import {  Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
 // });
-
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,9 +25,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` ${inter.variable} antialiased`}
-      >
+      <body className={` ${inter.variable} antialiased`}>
+        <Script
+          id="zsiqchat"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            var $zoho = $zoho || {};
+            $zoho.salesiq = $zoho.salesiq || {
+              widgetcode: "siq7b1796ef88b9e62d65cb5df1c9a1034ef667c873da55c25b44bba41ee6cb7236",
+              values: {},
+              ready: function () {}
+            };
+            (function(d) {
+              var s = d.createElement("script");
+              s.type = "text/javascript";
+              s.id = "zsiqscript";
+              s.defer = true;
+              s.src = "https://salesiq.zohopublic.com/widget";
+              var t = d.getElementsByTagName("script")[0];
+              t.parentNode.insertBefore(s, t);
+            })(document);
+          `,
+          }}
+        />
         {children}
       </body>
     </html>

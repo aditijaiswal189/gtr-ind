@@ -1,8 +1,8 @@
 "use client";
-import { motion } from 'framer-motion';
-import { SectionHeader } from './section-header';
-import React from 'react';
-import { Award, BookOpen } from 'lucide-react';
+import { motion } from "framer-motion";
+import { SectionHeader } from "./section-header";
+import React from "react";
+import { Award } from "lucide-react";
 
 interface Course {
   icon: React.ReactNode;
@@ -18,74 +18,95 @@ interface Country {
 }
 
 const countries: Country[] = [
-  { name: 'Canada', flag: 'https://flagcdn.com/w320/ca.png', description: 'Average time to resolve a cyber.' ,courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-    {
-      icon: <BookOpen className="w-6 h-6 text-primary" />,
-      title: 'Services',
-      description: 'Services we offer for students.',
-    },
-  ],},
-  { name: 'India', flag: 'https://flagcdn.com/w320/in.png', description: 'Average time to resolve a cyber.',courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-    {
-      icon: <BookOpen className="w-6 h-6 text-primary" />,
-      title: 'Services',
-      description: 'Services we offer for students.',
-    },
-  ], },
-  { name: 'Vietnam', flag: 'https://flagcdn.com/w320/vn.png', description: 'Average time to resolve a cyber.',courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-    {
-      icon: <BookOpen className="w-6 h-6 text-primary" />,
-      title: 'Services',
-      description: 'Services we offer for students.',
-    },
-  ], },
-  { name: 'Australia', flag: 'https://flagcdn.com/w320/au.png', description: 'Average time to resolve a cyber.',courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-   
-  ], },
-  { name: 'United States', flag: 'https://flagcdn.com/w320/us.png', description: 'Average time to resolve a cyber.' ,courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-   
-  ],},
-  { name: 'Europe', flag: 'https://flagcdn.com/w320/eu.png', description: 'Average time to resolve a cyber.',courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-   
-  ], },
-  { name: 'Germany', flag: 'https://flagcdn.com/w320/de.png', description: 'Average time to resolve a cyber.',courses: [
-    {
-      icon: <Award className="w-6 h-6 text-primary" />,
-      title: 'Immigration',
-      description: 'We provide immigration facilities for students.',
-    },
-   
-  ], },
+  {
+    name: "Canada",
+    flag: "https://flagcdn.com/w320/ca.png",
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Award className="w-6 h-6 text-primary" />,
+        title: "Immigration",
+        description: "We provide immigration facilities for students.",
+      },
+      // {
+      //   icon: <BookOpen className="w-6 h-6 text-primary" />,
+      //   title: "Services",
+      //   description: "Services we offer for students.",
+      // },
+    ],
+  },
+  // { name: 'India', flag: 'https://flagcdn.com/w320/in.png', description: 'Average time to resolve a cyber.',courses: [
+  //   {
+  //     icon: <Award className="w-6 h-6 text-primary" />,
+  //     title: 'Immigration',
+  //     description: 'We provide immigration facilities for students.',
+  //   },
+  //   {
+  //     icon: <BookOpen className="w-6 h-6 text-primary" />,
+  //     title: 'Services',
+  //     description: 'Services we offer for students.',
+  //   },
+  // ], },
+  // { name: 'Vietnam', flag: 'https://flagcdn.com/w320/vn.png', description: 'Average time to resolve a cyber.',courses: [
+  //   {
+  //     icon: <Award className="w-6 h-6 text-primary" />,
+  //     title: 'Immigration',
+  //     description: 'We provide immigration facilities for students.',
+  //   },
+  //   {
+  //     icon: <BookOpen className="w-6 h-6 text-primary" />,
+  //     title: 'Services',
+  //     description: 'Services we offer for students.',
+  //   },
+  // ], },
+  {
+    name: "Australia",
+    flag: "https://flagcdn.com/w320/au.png",
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Award className="w-6 h-6 text-primary" />,
+        title: "Immigration",
+        description: "We provide immigration facilities for students.",
+      },
+    ],
+  },
+  {
+    name: "United States",
+    flag: "https://flagcdn.com/w320/us.png",
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Award className="w-6 h-6 text-primary" />,
+        title: "Immigration",
+        description: "We provide immigration facilities for students.",
+      },
+    ],
+  },
+  {
+    name: "Europe",
+    flag: "https://flagcdn.com/w320/eu.png",
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Award className="w-6 h-6 text-primary" />,
+        title: "Immigration",
+        description: "We provide immigration facilities for students.",
+      },
+    ],
+  },
+  {
+    name: "Germany",
+    flag: "https://flagcdn.com/w320/de.png",
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Award className="w-6 h-6 text-primary" />,
+        title: "Immigration",
+        description: "We provide immigration facilities for students.",
+      },
+    ],
+  },
 ];
 
 export const CountriesSection = () => {
@@ -112,39 +133,47 @@ export const CountriesSection = () => {
               className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4"> <motion.div
-                  className="w-16 h-16 overflow-hidden rounded-full"
-                  whileHover={{ rotate: 90 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <img
-                    src={country.flag}
-                    alt={`${country.name} flag`}
-                    className="w-full h-full object-cover"
-                  />
-                </motion.div>
+                <div className="flex items-center gap-4">
+                  {" "}
+                  <motion.div
+                    className="w-16 h-16 overflow-hidden rounded-full"
+                    whileHover={{ rotate: 90 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img
+                      src={country.flag}
+                      alt={`${country.name} flag`}
+                      className="w-full h-full object-cover"
+                    />
+                  </motion.div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground">
+                      {country.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {country.description}
+                    </p>
+                  </div>
+                </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {country.name}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {country.description}
-                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
+                    {country.courses.map((course, index) => (
+                      <div
+                        key={index}
+                        className="bg-card text-card-foreground p-4 rounded-lg  hover:shadow-xl transition-shadow"
+                      >
+                        {/* <div className="text-primary mb-2">{course.icon}</div> */}
+                        <h4 className="text-lg font-bold mb-2">
+                          {course.title}
+                        </h4>
+                        <p className="text-muted-foreground">
+                          {course.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div><div className="grid grid-cols-1 md:grid-cols-1 gap-2">
-              {country.courses.map((course, index) => (
-                <div
-                  key={index}
-                  className="bg-card text-card-foreground p-4 rounded-lg  hover:shadow-xl transition-shadow"
-                >
-                  {/* <div className="text-primary mb-2">{course.icon}</div> */}
-                  <h4 className="text-lg font-bold mb-2">{course.title}</h4>
-                  <p className="text-muted-foreground">{course.description}</p>
-                </div>
-              ))}
-            </div></div>
-              </div> 
             </motion.div>
           ))}
         </div>
@@ -152,25 +181,25 @@ export const CountriesSection = () => {
     </div>
   );
 };
-const courses = [
-  {
-    icon: <Award className="w-8 h-8" />,
-    title: 'Immigration',
-    description: 'We provide immigration facilities for students.',
-  },
-  {
-    icon: <BookOpen className="w-8 h-8" />,
-    title: 'Services',
-    description: 'Services we offer for students.',
-  },
-  // {
-  //   icon: <GraduationCap className="w-12 h-12" />,
-  //   title: 'IELTS Coaching',
-  //   description: 'Scoring method the band of 0-9.',
-  // },
-  // {
-  //   icon: <Brain className="w-12 h-12" />,
-  //   title: 'GMAT',
-  //   description: 'Master in management or business oriented studies.',
-  // },
-];
+// const courses = [
+//   {
+//     icon: <Award className="w-8 h-8" />,
+//     title: "Immigration",
+//     description: "We provide immigration facilities for students.",
+//   },
+//   {
+//     icon: <BookOpen className="w-8 h-8" />,
+//     title: "Services",
+//     description: "Services we offer for students.",
+//   },
+//   // {
+//   //   icon: <GraduationCap className="w-12 h-12" />,
+//   //   title: 'IELTS Coaching',
+//   //   description: 'Scoring method the band of 0-9.',
+//   // },
+//   // {
+//   //   icon: <Brain className="w-12 h-12" />,
+//   //   title: 'GMAT',
+//   //   description: 'Master in management or business oriented studies.',
+//   // },
+// ];
