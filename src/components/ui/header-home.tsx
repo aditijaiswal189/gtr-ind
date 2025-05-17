@@ -90,7 +90,7 @@ export const HeaderHome: React.FC = () => {
     <header
       className={`
         fixed w-full z-40
-        top-0 md:top-[48px]
+        top-0 md:top-[56px]
         transition-all duration-300
         ${isScrolled ? "bg-white shadow-md py-3" : "bg-white py-5"}
       `}
@@ -106,7 +106,7 @@ export const HeaderHome: React.FC = () => {
         <MegaMenuBar />
 
         <div className="flex items-center space-x-4">
-          <button className="px-6 py-2 rounded-full font-medium bg-primary-blue text-primary-foreground transition-colors duration-300">
+          <button className="px-6 py-2 rounded-full font-medium bg-primary text-primary-foreground transition-colors duration-300">
             Book a Consultation
           </button>
 

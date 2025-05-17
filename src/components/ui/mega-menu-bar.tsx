@@ -505,10 +505,8 @@ export function MegaMenuBar() {
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium hover:bg-muted transition-colors",
-                  pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
+                  "px-3 py-2 rounded-md text-sm font-medium hover:bg-primary  hover:text-white cursor-pointer transition-colors",
+                  pathname === item.path ? "text-primary" : "text-white"
                 )}
               >
                 {item.element}
@@ -523,9 +521,9 @@ export function MegaMenuBar() {
                 }}
                 onClick={() => handleMenuClick(item.path)}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium inline-flex items-center hover:bg-muted transition-colors",
+                  "px-3 py-2 rounded-md text-sm font-medium inline-flex items-center   hover:bg-primary transition-colors cursor-pointer hover:text-white",
                   activeMenu === item.path
-                    ? "text-primary"
+                    ? "text-primary "
                     : "text-muted-foreground"
                 )}
               >

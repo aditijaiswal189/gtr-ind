@@ -247,7 +247,8 @@
     --popover: #ffffff;
     --popover-foreground: #1a1a1a;
 
-    --primary: #c62828; /* red-800 */
+    --primary: #f76707;
+    /* --primary: #c62828; red-800 */
     --primary-foreground: #ffffff;
 
     --secondary: #fce7f3;

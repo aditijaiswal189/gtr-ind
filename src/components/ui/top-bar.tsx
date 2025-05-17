@@ -52,8 +52,7 @@ export function TopBar() {
   return (
     <div
       className="
-        hidden md:flex items-center justify-between
-        bg-white py-2 px-6  md:px-10
+        hidden md:flex items-center justify-between bg-primary py-2 px-6  md:px-10
         sticky top-0 left-0 w-full z-50
       "
     >
@@ -67,9 +66,9 @@ export function TopBar() {
       <div className="flex items-center space-x-4  text-white">
         <img src="/images/logo2.webp" className="w-35 h-10" />
         <img
-          src="/images/rciclogo.webp"
+          src="/images/rciclogo2.png"
           className="w-30
-         h-10"
+         h-12"
         />
         {[IconBrandWhatsapp].map((Icon, i) => (
           <Link
