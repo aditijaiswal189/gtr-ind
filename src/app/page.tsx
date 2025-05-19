@@ -39,13 +39,35 @@ const heroSlides: SlideData[] = [
     alt: "Professionals in a modern office",
   },
 ];
+const buttonsData = [
+  {
+    label: "Study",
+    // onClick: () => alert("Go!"),
+    href: "/study/programs/study-in-canada",
+    colorClass: "bg-primary-blue",
+  },
+  {
+    label: "Immigrate",
+    href: "immigration/express-entry/federal-skilled-worker",
+    colorClass: "bg-primary-green",
+  },
+  {
+    label: "Business",
+    href: "/business/quebec/quebec-investor",
+    colorClass: "bg-primary-red",
+  },
+  {
+    label: "Work and Jobs",
+    href: "/work-and-jobs/work/work-permit",
+    colorClass: "bg-primary",
+  },
+];
 export default function App() {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
       <TopBar />
       <HeaderHome />
-      {/* <MegaMenuBar/> */}
-      {/* <HeroSection /> */}
+
       <Hero1
         slides={heroSlides}
         title="Business in Canada"
@@ -62,29 +84,7 @@ export default function App() {
         description="We are a Canadian company with a global reach, dedicated to providing top-notch services to our clients. Our team of experts is here to assist you in navigating the complexities."
         bgColor="bg-card"
         textColor="text-primary"
-        buttons={[
-          {
-            label: "Study",
-            // onClick: () => alert("Go!"),
-            href: "/study/programs/study-in-canada",
-            colorClass: "bg-primary-blue",
-          },
-          {
-            label: "Immigrate",
-            href: "immigration/express-entry/federal-skilled-worker",
-            colorClass: "bg-primary-green",
-          },
-          {
-            label: "Business",
-            href: "/business/quebec/quebec-investor",
-            colorClass: "bg-primary-red",
-          },
-          {
-            label: "Work and Jobs",
-            href: "/work-and-jobs/work/work-permit",
-            colorClass: "bg-primary",
-          },
-        ]}
+        buttons={buttonsData}
       />
       <ImageWithTitleAndFeatures />
       <CountriesSection />
