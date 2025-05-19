@@ -510,7 +510,9 @@ export function MegaMenuBar() {
                 href={item.path}
                 className={cn(
                   "px-3 py-2 rounded-md text-sm font-medium text-primary hover:bg-primary  hover:text-white cursor-pointer transition-colors",
-                  pathname === item.path ? "text-primary" : "text-white"
+                  pathname === item.path
+                    ? "text-primary"
+                    : "text-muted-foreground"
                 )}
               >
                 {item.element}
