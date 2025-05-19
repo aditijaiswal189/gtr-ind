@@ -3,11 +3,14 @@ import { fadeIn } from "@/lib/animation";
 import React from "react";
 
 // import { fadeIn } from "../../utils/animations";
-
 export interface SlideData {
   id: number;
   imageUrl: string;
   alt: string;
+  title: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink: string;
 }
 interface HeroImageProps {
   slides: SlideData[];

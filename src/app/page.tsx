@@ -20,24 +20,67 @@ const heroSlides: SlideData[] = [
     imageUrl:
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     alt: "Business professionals in discussion",
+    title: "Business in Canada",
+    subtitle:
+      "C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K .Talk to our experts",
+    buttonText: "Book an Appointment",
+    buttonLink: "/about-us/about/book-appointment",
   },
   {
     id: 2,
     imageUrl:
-      "https://images.pexels.com/photos/3205570/pexels-photo-3205570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Business team working together",
+      "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Business professionals in discussion",
+    title: "Study in Canada",
+    subtitle:
+      "Studying in Canada offers a world-class education, diverse cultural experiences, and excellent opportunities for personal and professional growth",
+    buttonText: "Book an Appointment",
+    buttonLink: "/about-us/about/book-appointment",
   },
   {
     id: 3,
     imageUrl: "/images/hero/d.avif",
-    alt: "Professional team consulting with client",
+    alt: "Business professionals in discussion",
+    title: "Work in Canada",
+    subtitle:
+      "Working in Canada offers a wide array of opportunities for skilled workers from around the world",
+    buttonText: "Book an Appointment",
+    buttonLink: "/about-us/about/book-appointment",
   },
   {
     id: 4,
     imageUrl:
-      "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "Professionals in a modern office",
+      "https://images.pexels.com/photos/3205570/pexels-photo-3205570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "Business professionals in discussion",
+    title: "Immigrate to Canada",
+    subtitle:
+      "Invest and build your business while ensuring Canadian permanent residency for your family",
+    buttonText: "Book an Appointment",
+    buttonLink: "/about-us/about/book-appointment",
   },
+  // {
+  //   id: 1,
+  //   imageUrl:
+  //     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   alt: "Business professionals in discussion",
+  // },
+  // {
+  //   id: 2,
+  //   imageUrl:
+  //     "https://images.pexels.com/photos/3205570/pexels-photo-3205570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   alt: "Business team working together",
+  // },
+  // {
+  //   id: 3,
+  //   imageUrl: "/images/hero/d.avif",
+  //   alt: "Professional team consulting with client",
+  // },
+  // {
+  //   id: 4,
+  //   imageUrl:
+  //     "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //   alt: "Professionals in a modern office",
+  // },
 ];
 const buttonsData = [
   {
@@ -68,14 +111,7 @@ export default function App() {
       <TopBar />
       <HeaderHome />
 
-      <Hero1
-        slides={heroSlides}
-        title="Business in Canada"
-        subtitle="  C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K"
-        buttonText="Book an Appointment"
-        buttonLink="/about-us/about/book-appointment"
-        autoplaySpeed={6000}
-      />
+      <Hero1 slides={heroSlides} autoplaySpeed={6000} />
       <ContentWithButtons
         imageSrc="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
         brandText="GreenTech Resources"

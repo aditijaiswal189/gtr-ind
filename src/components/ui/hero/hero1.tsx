@@ -5,23 +5,14 @@ import useInterval from "@/hooks/use-interval";
 import HeroContent from "./hero-content";
 import SlideIndicators from "./slide-indicators";
 
-interface HeroComponentProps extends HeroProps {
+interface Hero1Props {
   slides: SlideData[];
   autoplaySpeed?: number;
 }
-export interface HeroProps {
-  title: string;
-  subtitle: string;
-  buttonText: string;
-  buttonLink: string;
-}
 
-const Hero1: React.FC<HeroComponentProps> = ({
+const Hero1: React.FC<Hero1Props> = ({
   slides,
-  title,
-  subtitle,
-  buttonText,
-  buttonLink,
+
   autoplaySpeed = 5000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,6 +28,7 @@ const Hero1: React.FC<HeroComponentProps> = ({
   // Setup interval for automatic slide change
   useInterval(nextSlide, autoplaySpeed);
 
+  const { title, subtitle, buttonText, buttonLink } = slides[currentIndex];
   return (
     <section className="relative h-screen max-h-[800px] w-full overflow-hidden">
       {/* Background Images */}
