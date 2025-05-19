@@ -70,7 +70,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/business/quebec/quebec-investor"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Business
@@ -78,7 +78,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/study/programs/study-in-canada"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Study
@@ -86,10 +86,10 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/work-and-jobs/work/work-permit"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Work{" "}
+                  Work
                 </Link>
               </li>
             </ul>
@@ -100,7 +100,8 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#"
+                  href="/other-services/news-service/news"
+                  target="_blank"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   News
@@ -108,7 +109,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact Us
@@ -116,15 +117,15 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/other-services/programs/jobs-map"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Jobs
+                  Jobs Map
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/other-services/programs/visitor"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Visitor
@@ -132,7 +133,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/other-services/programs/family-sponsorship"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Family sponsorship
