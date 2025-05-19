@@ -1,9 +1,4 @@
-// components/MegaMenuBar.tsx
 "use client";
-
-import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   ArrowRight,
   BookOpen,
@@ -12,24 +7,43 @@ import {
   GraduationCap,
   MapPin,
 } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Button } from "./button";
 
 export const router = [
-  { path: "/", element: "Home" },
+  {
+    path: "/",
+    element: "Home",
+  },
   {
     path: "About",
     children: [
       {
         path: "About Us",
         children: [
-          { path: "/about-us/about/about", element: "About" },
-          { path: "/about-us/about/our-services", element: "Our Service" },
+          {
+            path: "/about-us/about/about",
+            element: "About",
+          },
+          {
+            path: "/about-us/about/our-services",
+            element: "Our Service",
+          },
+
           {
             path: "/about-us/about/book-appointment",
             element: "Book Appointment",
           },
-          { path: "/about-us/about/why-choose-us", element: "Why Choose Us" },
-          { path: "/about-us/about/price-policy", element: "Price Policy" },
+          {
+            path: "/about-us/about/why-choose-us",
+            element: "Why Choose Us",
+          },
+          {
+            path: "/about-us/about/price-policy",
+            element: "Price Policy",
+          },
           {
             path: "/about-us/about/success-customers",
             element: "Success Customers",
@@ -38,6 +52,7 @@ export const router = [
       },
       {
         path: "Certifications and Testimonials",
+
         children: [
           {
             path: "/about-us/cert-testimonials/certificate-membership",
@@ -51,20 +66,21 @@ export const router = [
       },
     ],
   },
+
   {
     path: "Immigration",
     children: [
       {
         path: "Express Entry",
-        element: "Express Entry",
+        element: `Express Entry`,
         children: [
           {
             path: "/immigration/express-entry/federal-skilled-worker",
-            element: "Federal Skilled Worker",
+            element: "Fedral Skilled Worker",
           },
           {
             path: "/immigration/express-entry/federal-skilled-trade",
-            element: "Federal Skilled Trade",
+            element: "Fedral Skilled Trade",
           },
           {
             path: "/immigration/express-entry/canadian-experience-class",
@@ -85,7 +101,8 @@ export const router = [
           },
           {
             path: "/immigration/provincial-nominee-programs/british-columbia(bc-pnp)",
-            element: "British Columbia (BC PNP)",
+
+            element: "British Colombia (BC PNP)",
           },
           {
             path: "/immigration/provincial-nominee-programs/ontario(oinp)",
@@ -123,6 +140,7 @@ export const router = [
             path: "/immigration/provincial-nominee-programs/rural-northern-immigration-pilot(rnip)",
             element: "Rural & Northern Immigration Pilot (RNIP)",
           },
+
           {
             path: "/immigration/provincial-nominee-programs/yukon(ynp)",
             element: "Yukon (YNP)",
@@ -165,7 +183,7 @@ export const router = [
         children: [
           {
             path: "/business/federal-programs/start-up-visa(suv)",
-            element: "Start-Up Visa (SUV)",
+            element: " Start-Up Visa (SUV)",
           },
           {
             path: "/business/federal-programs/intra-company-transfer(ict)",
@@ -198,8 +216,10 @@ export const router = [
           },
           {
             path: "/business/provincial-business-programs/british-columbia-bcpnp",
-            element: "British Columbia (BC PNP)",
+
+            element: "British Colombia (BC PNP)",
           },
+
           {
             path: "/business/provincial-business-programs/saskatchewan-sinp",
             element: "Saskatchewan (SINP)",
@@ -208,6 +228,7 @@ export const router = [
             path: "/business/provincial-business-programs/northwest-territories",
             element: "Northwest Territories",
           },
+
           {
             path: "/business/provincial-business-programs/prince-edward-island-peipnp",
             element: "Prince Edward Island (PEI PNP)",
@@ -222,16 +243,23 @@ export const router = [
       {
         path: "Work",
         children: [
-          { path: "/work-and-jobs/work/work-permit", element: "Work Permit" },
+          {
+            path: "/work-and-jobs/work/work-permit",
+            element: "Work Permit",
+          },
           {
             path: "/work-and-jobs/work/international-mobility-program(imp)",
             element: "International Mobility Program (IMP)",
           },
-          { path: "/work-and-jobs/work/lmia", element: "LMIA" },
+          {
+            path: "/work-and-jobs/work/lmia",
+            element: "LMIA",
+          },
         ],
       },
       {
         path: "Jobs",
+
         children: [
           {
             path: "/work-and-jobs/jobs/in-demand-jobs",
@@ -241,6 +269,7 @@ export const router = [
             path: "/work-and-jobs/jobs/for-employers",
             element: "Support For Employers",
           },
+
           {
             path: "/work-and-jobs/jobs/teer-categories-noc-codes",
             element: "TEER Categories & NOC Codes",
@@ -263,6 +292,7 @@ export const router = [
             path: "/study/programs/study-in-canada",
             element: "Study In Canada",
           },
+
           {
             path: "/study/programs/designated-learning-institution(dli)",
             element: "Designated Learning Institution (DLI)",
@@ -275,6 +305,7 @@ export const router = [
       },
       {
         path: "Others",
+
         children: [
           {
             path: "/study/others/study-to-pr",
@@ -294,75 +325,88 @@ export const router = [
             path: "/other-services/programs/family-sponsorship",
             element: "Family Sponsorship",
           },
-          { path: "/other-services/programs/visitor", element: "Visitor" },
-          { path: "/other-services/programs/jobs-map", element: "Jobs Map" },
+          {
+            path: "/other-services/programs/visitor",
+            element: "Visitor",
+          },
+
+          {
+            path: "/other-services/programs/jobs-map",
+            element: "Jobs Map",
+          },
         ],
       },
       {
         path: "News",
+
         children: [
-          { path: "/other-services/news-service/news", element: "News" },
+          {
+            path: "/other-services/news-service/news",
+            element: "News",
+          },
         ],
       },
     ],
   },
 ];
 
-function cn(...classes: (string | undefined | null | false)[]) {
+function cn(...classes: (string | undefined | null | false)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-type MenuPosition = { left: number; width: number };
-
 export function MegaMenuBar() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const [menuPosition, setMenuPosition] = useState<MenuPosition | null>(null);
-  const menuButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+  const [menuPosition, setMenuPosition] = useState<{
+    left: number;
+    width: number;
+  } | null>(null);
+  const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>(
+    {}
+  );
 
-  // close on route change
   useEffect(() => {
+    setIsOpen(false);
     setActiveMenu(null);
+    setActiveSubmenu(null);
   }, [pathname]);
 
-  // click outside to close
-  useEffect(() => {
-    const onClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
-        setActiveMenu(null);
-      }
-    };
-    document.addEventListener("mousedown", onClickOutside);
-    return () => document.removeEventListener("mousedown", onClickOutside);
-  }, []);
-
-  // compute horizontal position on open
   useLayoutEffect(() => {
-    if (
-      activeMenu &&
-      menuButtonRefs.current[activeMenu] &&
-      wrapperRef.current
-    ) {
-      const btnRect =
+    if (activeMenu && menuButtonRefs.current[activeMenu]) {
+      const buttonRect =
         menuButtonRefs.current[activeMenu]!.getBoundingClientRect();
-      const wrapRect = wrapperRef.current.getBoundingClientRect();
-      const MENU_WIDTH = 900;
-
-      let left =
-        btnRect.left + btnRect.width / 2 - MENU_WIDTH / 2 - wrapRect.left;
-      left = Math.max(0, left);
-      left = Math.min(wrapRect.width - MENU_WIDTH, left);
-
-      setMenuPosition({ left, width: MENU_WIDTH });
+      const menuWidth = 900;
+      let left = buttonRect.left + buttonRect.width / 2 - menuWidth / 2;
+      left = Math.max(16, left);
+      const maxLeft = window.innerWidth - menuWidth - 16;
+      left = Math.min(left, maxLeft);
+      setMenuPosition({ left, width: menuWidth });
     } else {
       setMenuPosition(null);
     }
   }, [activeMenu]);
 
-  const handleMenuClick = (menu: string) =>
-    setActiveMenu((prev) => (prev === menu ? null : menu));
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setActiveMenu(null);
+        setActiveSubmenu(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleMenuClick = (menu: string) => {
+    setActiveMenu(activeMenu === menu ? null : menu);
+    setActiveSubmenu(null);
+  };
 
   const getFeaturedContent = (category: string) => {
     const styles = "h-8 w-8 text-primary";
@@ -452,10 +496,7 @@ export function MegaMenuBar() {
   };
 
   return (
-    <div
-      ref={wrapperRef}
-      className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-10 relative"
-    >
+    <div className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-10">
       <div className="flex items-center space-x-1">
         {router.map((item) => {
           if (!item.children) {
@@ -464,7 +505,7 @@ export function MegaMenuBar() {
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors",
+                  "px-3 py-2 rounded-md text-sm font-medium hover:bg-primary  hover:text-white cursor-pointer transition-colors",
                   pathname === item.path ? "text-primary" : "text-white"
                 )}
               >
@@ -472,38 +513,40 @@ export function MegaMenuBar() {
               </Link>
             );
           }
-
           return (
-            <div key={item.path} className="relative">
+            <div key={item.path} className="relative group">
               <button
                 ref={(el) => {
                   menuButtonRefs.current[item.path] = el;
                 }}
                 onClick={() => handleMenuClick(item.path)}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium inline-flex items-center hover:bg-primary hover:text-white transition-colors",
+                  "px-3 py-2 rounded-md text-sm font-medium inline-flex items-center   hover:bg-primary transition-colors cursor-pointer hover:text-white",
                   activeMenu === item.path
-                    ? "text-primary"
+                    ? "text-primary "
                     : "text-muted-foreground"
                 )}
               >
                 {item.path}
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-
               {activeMenu === item.path && menuPosition && (
                 <div
                   ref={menuRef}
-                  className="absolute top-full  mt-2 bg-card rounded-md shadow-2xl z-50 p-4"
+                  className="fixed mt-2 bg-card rounded-md shadow-2xl z-50 p-4"
                   style={{
                     left: menuPosition.left,
+                    top:
+                      menuButtonRefs.current[item.path]?.getBoundingClientRect()
+                        .bottom || 70,
                     width: menuPosition.width,
                     maxWidth: "98vw",
                   }}
                 >
                   <div className="grid grid-cols-12 gap-4">
                     {(() => {
-                      const children = item.children!;
+                      const children = item.children;
+                      //   const allDirectLinks = children.every((child) => !child.children);
                       const featured = getFeaturedContent(item.path);
 
                       return (
@@ -548,39 +591,42 @@ export function MegaMenuBar() {
                               </Button>
                             </div>
                           )}
+
                           <div
                             className={featured ? "col-span-8" : "col-span-12"}
                           >
-                            {children.every((c) => !c.children) ? (
-                              <div className="flex flex-wrap gap-x-8 gap-y-4 items-center justify-start pl-8 border-l border-border min-h-[260px]">
-                                {children.map((c) => (
+                            {children.every((child) => !child.children) ? (
+                              <div className="flex flex-wrap gap-x-8 gap-y-4 items-center h-full justify-start pl-8 border-l border-border min-h-[260px]">
+                                {children.map((child) => (
                                   <Link
-                                    key={c.path}
-                                    href={c.path}
+                                    key={child.path}
+                                    href={child.path}
                                     className="block text-base font-medium text-foreground hover:text-primary"
                                   >
-                                    {c.element}
+                                    {child.element}
                                   </Link>
                                 ))}
                               </div>
                             ) : (
                               <div className="grid gap-4 grid-cols-3">
-                                {children.map((c) => (
-                                  <div key={c.path} className="space-y-4">
+                                {children.map((child) => (
+                                  <div key={child.path} className="space-y-4">
                                     <h3 className="text-sm font-semibold text-foreground border-b border-border pb-1">
-                                      {c.path}
+                                      {child.path}
                                     </h3>
                                     <ul className="space-y-2">
-                                      {c.children!.map((sub) => (
-                                        <li key={sub.path}>
-                                          <Link
-                                            href={sub.path}
-                                            className="block text-sm text-muted-foreground hover:text-primary"
-                                          >
-                                            {sub.element}
-                                          </Link>
-                                        </li>
-                                      ))}
+                                      {(child.children || []).map(
+                                        (subChild) => (
+                                          <li key={subChild.path}>
+                                            <Link
+                                              href={subChild.path}
+                                              className="block text-sm text-muted-foreground hover:text-primary"
+                                            >
+                                              {subChild.element}
+                                            </Link>
+                                          </li>
+                                        )
+                                      )}
                                     </ul>
                                   </div>
                                 ))}
