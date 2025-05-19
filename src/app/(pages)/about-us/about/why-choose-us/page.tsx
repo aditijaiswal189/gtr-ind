@@ -3,7 +3,7 @@ import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-rig
 import { Feature1Animated } from "@/components/ui/feature1-animated";
 import { Hero2 } from "@/components/ui/hero2";
 import { Stats } from "@/components/ui/stats";
-import { Globe, UserCheck } from "lucide-react";
+import { Briefcase, Globe, Network, UserCheck } from "lucide-react";
 import React, { ReactNode } from "react";
 import { features } from "../about/page";
 
@@ -62,11 +62,25 @@ const featureItems: FeatureItem[] = [
     icon: <UserCheck className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
   {
-    title: "Multilingual Support",
+    title: "Branch Office in India",
     description:
-      "The GreenTech Resources Worldwide Canada team serves clients from diverse backgrounds worldwide and can provide support in languages such as Vietnamese, Tagalog, Arabic, Chinese, French, and Spanish.",
+      "Kolkata : WorkBravo ,  Little Russel St, Maidan, Midleton Row, Park Street area, Kolkata, West Bengal 700071",
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
+  },
+  {
+    title: "Branch Office in India",
+    description:
+      "Noida : Lets Connect Business Park, Sector 136 Noida, UP, 201305.",
+    link: "/",
+    icon: <Network className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
+  },
+  {
+    title: "Branch Office in Vietnam",
+    description:
+      "MDA building, 85 Nguyen Huu Cau, Tan Dinh Ward, District 1, Ho Chi Minh 92100, Vietnam",
+    link: "/",
+    icon: <Briefcase className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
 ];
 const WhyChooseUs: React.FC = () => {
