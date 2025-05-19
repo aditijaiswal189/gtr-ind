@@ -31,6 +31,10 @@ export const router = [
             path: "/about-us/about/our-services",
             element: "Our Service",
           },
+          {
+            path: "/about-us/about/contact-us",
+            element: "Contact us",
+          },
 
           {
             path: "/about-us/about/book-appointment",
