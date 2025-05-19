@@ -1,3 +1,4 @@
+"use client";
 import { BlogSection } from "@/components/ui/blog-section";
 import { Footer } from "@/components/ui/footer";
 // import {HeaderHome } from '@/components/ui/header-home';
@@ -11,6 +12,7 @@ import { TimelineSection } from "@/components/ui/timeline-section";
 import { TopBar } from "@/components/ui/top-bar";
 import Hero1 from "@/components/ui/hero/hero1";
 import { SlideData } from "@/components/ui/hero/hero-image";
+import { ContentWithButtons } from "@/components/ui/content-with-buttons";
 
 const heroSlides: SlideData[] = [
   {
@@ -51,6 +53,38 @@ export default function App() {
         buttonText="Book an Appointment"
         buttonLink="/about-us/about/book-appointment"
         autoplaySpeed={6000}
+      />
+      <ContentWithButtons
+        imageSrc="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+        brandText="GreenTech Resources"
+        title="Get to know us"
+        subtitle="GreenTech Resources Worldwide Canada"
+        description="We are a Canadian company with a global reach, dedicated to providing top-notch services to our clients. Our team of experts is here to assist you in navigating the complexities."
+        bgColor="bg-card"
+        textColor="text-primary"
+        buttons={[
+          {
+            label: "Study",
+            // onClick: () => alert("Go!"),
+            href: "/study/programs/study-in-canada",
+            colorClass: "bg-primary-blue",
+          },
+          {
+            label: "Immigrate",
+            href: "immigration/express-entry/federal-skilled-worker",
+            colorClass: "bg-primary-green",
+          },
+          {
+            label: "Business",
+            href: "/business/quebec/quebec-investor",
+            colorClass: "bg-primary-red",
+          },
+          {
+            label: "Work and Jobs",
+            href: "/work-and-jobs/work/work-permit",
+            colorClass: "bg-primary",
+          },
+        ]}
       />
       <ImageWithTitleAndFeatures />
       <CountriesSection />
