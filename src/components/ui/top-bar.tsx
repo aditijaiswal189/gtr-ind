@@ -18,7 +18,7 @@ export function TopBar() {
       className={`
         hidden md:flex items-center justify-between
         h-[var(--topbar-height)]
-        bg-gradient-to-r from-white via-orange-100/80 to-white
+        bg-gradient-to-r from-white via-orange-400 to-white
         px-6 md:px-10
         sticky top-0 left-0 w-full z-50
         transform transition-transform duration-300 ease-in-out

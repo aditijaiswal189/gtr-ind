@@ -1,4 +1,5 @@
 import { Hero2 } from "@/components/ui/hero2";
+import { Pricing } from "@/components/ui/pricing";
 import PricingSection, {
   PricingSectionConfig,
 } from "@/components/ui/pricing-section";
@@ -167,6 +168,7 @@ const PricePolicy: React.FC = () => {
           href: "/about-us/about/book-appointment",
         }}
       />
+      <Pricing />
       {aboutPricingConfig.map((config, index) => (
         <PricingSection key={index} {...config} />
       ))}
