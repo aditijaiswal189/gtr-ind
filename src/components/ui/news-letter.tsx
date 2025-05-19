@@ -35,14 +35,15 @@ const EmailForm: React.FC<EmailFormProps> = ({ placeholder, buttonText }) => (
 );
 
 export const Newsletter: React.FC<NewsletterProps> = ({ config }) => {
-  const { label, heading, placeholder, buttonText, imageSrc, imageAlt } = config;
+  const { label, heading, placeholder, buttonText, imageSrc, imageAlt } =
+    config;
 
   return (
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <span className="text-sm uppercase tracking-wider text-muted-foreground">
+            <span className="text-sm uppercase tracking-wider text-primary">
               {label}
             </span>
             <h2 className="text-3xl font-bold mt-2 mb-4 text-foreground">
@@ -55,7 +56,7 @@ export const Newsletter: React.FC<NewsletterProps> = ({ config }) => {
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-80 rounded-lg shadow-lg"
             />
           </div>
         </div>

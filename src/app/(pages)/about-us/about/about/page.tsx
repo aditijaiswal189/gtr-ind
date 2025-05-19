@@ -1,3 +1,4 @@
+"use client";
 import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter";
 import { CtaWith4Features } from "@/components/ui/cta-with-4-features";
 import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";

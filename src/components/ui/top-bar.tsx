@@ -1,86 +1,53 @@
-// "use client";
-// import React from "react";
-
-// import {
-//   Mail,
-//   MapPin,
-//   Facebook,
-//   Twitter,
-//   Linkedin,
-//   Instagram,
-// } from "lucide-react";
-// import Link from "next/link";
-
-// export function TopBar() {
-//   return (
-//     <div className="bg-foreground py-2 px-4 md:px-8 hidden md:block">
-//       <div className="container mx-auto flex justify-between items-center">
-//         <div className="flex items-center space-x-6">
-//           <div className="flex items-center text-muted-foreground text-sm">
-//             <Mail className="mr-2 text-muted-foreground" />
-//             <span>info@example.com</span>
-//           </div>
-//           <div className="flex items-center text-muted-foreground text-sm">
-//             <MapPin className="mr-2 text-muted-foreground" />
-//             <span>55 Main Street, 2nd block, Malborne, Australia</span>
-//           </div>
-//         </div>
-//         <div className="flex items-center space-x-4">
-//           {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-//             <Link
-//               key={i}
-//               href="#"
-//               className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-//               aria-label={Icon.name}
-//             >
-//               <Icon />
-//             </Link>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 // components/TopBar.tsx
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Mail } from "lucide-react";
 import Link from "next/link";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 export function TopBar() {
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setHidden(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div
-      className="
-        hidden md:flex items-center justify-between bg-primary py-2 px-6  md:px-10
+      className={`
+        hidden md:flex items-center justify-between
+        h-[var(--topbar-height)]
+        bg-gradient-to-r from-white via-orange-100/80 to-white
+        px-6 md:px-10
         sticky top-0 left-0 w-full z-50
-      "
+        transform transition-transform duration-300 ease-in-out
+        ${hidden ? "-translate-y-full" : "translate-y-0"}
+      `}
     >
       <div className="flex items-center space-x-6 text-black text-sm">
         <Mail className="ml-5 mr-2" />
         <span>info@gtrworldwide.com</span>
-
-        {/* <MapPin className="ml-8 mr-2" />
-        <span>55 Main Street, 2nd block, Malborne, Australia</span> */}
       </div>
-      <div className="flex items-center space-x-4  text-white">
-        <img src="/images/logo2.webp" className="w-35 h-10" />
+      <div className="flex items-center space-x-4">
+        <img
+          src="/images/logo2.webp"
+          alt="Visaland Logo"
+          className="h-10 w-auto"
+        />
         <img
           src="/images/rciclogo2.png"
-          className="w-30
-         h-12"
+          alt="RCIC Logo"
+          className="h-12 w-auto"
         />
-        {[IconBrandWhatsapp].map((Icon, i) => (
-          <Link
-            key={i}
-            target="_blank"
-            href="https://api.whatsapp.com/send?phone=16476197975"
-            aria-label={Icon.name}
-            className="hover:text-foreground bg-primary-green p-2  ml-4 mr-5 rounded-2xl transition-colors duration-200"
-          >
-            <Icon />
-          </Link>
-        ))}
+        <Link
+          href="https://api.whatsapp.com/send?phone=16476197975"
+          target="_blank"
+          aria-label="WhatsApp"
+          className="ml-4 mr-5 p-2 bg-primary-green rounded-2xl transition-colors duration-200 hover:bg-primary-green/90"
+        >
+          <IconBrandWhatsapp className="h-6 w-6 text-white" />
+        </Link>
       </div>
     </div>
   );

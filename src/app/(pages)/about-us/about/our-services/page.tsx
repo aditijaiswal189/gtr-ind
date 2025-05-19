@@ -62,8 +62,7 @@ const aboutNewsletterConfig: NewsletterConfig = {
   heading: "Book a session today and start changing your life!",
   placeholder: "Enter your email",
   buttonText: "Book an appointment",
-  imageSrc:
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+  imageSrc: "/images/hero/g.avif",
   imageAlt: "Woman reading newsletter",
 };
 

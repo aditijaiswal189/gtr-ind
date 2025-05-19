@@ -213,7 +213,7 @@ const StartUpVisa: React.FC = () => {
         }
         subheading="Your entire family, including your spouse and children under 22 years of age (at the time of submitting the provincial nomination application), will receive a Permanent Resident Card in Canada and enjoy most of the benefits like Canadian citizens."
         features={featuresConfig}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg"
+        imageSrc="/images/hero/d.avif"
         imageAlt="Lazy fox in nature"
       />
 

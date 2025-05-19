@@ -2,12 +2,7 @@
 import React from "react";
 import { StatCounter } from "./stat-counter";
 
-
 import { CheckCircle } from "lucide-react";
-
-
-
-
 
 interface FeaturesConfig {
   intro: {
@@ -30,8 +25,10 @@ interface FeaturesConfig {
   }[];
 }
 
-export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: FeaturesConfig }> = ({ featuresConfig }) => {
-  const { intro, images, stats} = featuresConfig;
+export const ContentWithImageDynamicCounter: React.FC<{
+  featuresConfig: FeaturesConfig;
+}> = ({ featuresConfig }) => {
+  const { intro, images, stats } = featuresConfig;
 
   return (
     <section className="py-20 bg-background">
@@ -58,7 +55,7 @@ export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: Features
               />
               <div className="absolute -bottom-6 -right-6 hidden md:block">
                 <img
-                  src={images.overlay || '/fallback-image.jpg'}
+                  src={images.overlay || "/fallback-image.jpg"}
                   alt="Passport and documents"
                   className="w-40 h-40 object-cover rounded-lg shadow-xl border-4 border-background"
                 />
@@ -76,10 +73,10 @@ export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: Features
 
           <div className="mr-10 md:w-2/4 md:pl-12">
             <p className="text-foreground mb-6">
-              
-              Our firm brings expertise and personalized attention to every case. 
-              We have successfully processed thousands of visa applications for clients 
-              from over 100 countries, maintaining a success rate that exceeds industry standards.
+              Our firm brings expertise and personalized attention to every
+              case. We have successfully processed thousands of visa
+              applications for clients from over 100 countries, maintaining a
+              success rate that exceeds industry standards.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               {stats.map(({ label, end, suffix }, i) => (
@@ -90,7 +87,7 @@ export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: Features
                     className="text-4xl font-bold text-primary"
                   />
                   <span className="ml-4 text-foreground font-medium">
-                    {label.split(' ').map((w, idx) => (
+                    {label.split(" ").map((w, idx) => (
                       <React.Fragment key={idx}>
                         {w}
                         <br />
@@ -102,13 +99,12 @@ export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: Features
             </div>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
-
-                'Free Immigration Assessment',
-                'Expert Document Preparation',
-                'Visa Application Assistance',
-                'Job Placement Services',
-                'Settlement Services',
-                'Appeal Support',
+                "Free Immigration Assessment",
+                "Expert Document Preparation",
+                "Visa Application Assistance",
+                "Job Placement Services",
+                "Settlement Services",
+                "Appeal Support",
               ].map((service, idx) => (
                 <li key={idx} className="flex items-start">
                   <CheckCircle
@@ -121,22 +117,7 @@ export const ContentWithImageDynamicCounter: React.FC<{ featuresConfig: Features
             </ul>
           </div>
         </div>
-
-      
       </div>
     </section>
   );
 };
-
-
-
-
-//  interface ServiceItem {
-//   title: string;
-//   description: string;
-//   icon: ReactNode;
-//   highlighted?: boolean;
-//   buttonText?: string;
-// }
-
-

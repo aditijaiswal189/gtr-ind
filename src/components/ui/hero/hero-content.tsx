@@ -14,7 +14,7 @@ const HeroContent: React.FC<HeroProps> = ({
   return (
     <div className="relative z-30 flex flex-col items-start justify-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="w-full md:max-w-2xl lg:max-w-3xl">
-        <div className="inline-block bg-primary-yellow px-4 py-2 mb-6">
+        <div className="inline-block bg-primary-red px-4 py-2 mb-6">
           <p className="text-white font-semibold">
             Recruitment | Immigration | Settlement
           </p>

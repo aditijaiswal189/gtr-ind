@@ -16,7 +16,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <div className={cn("text-center mb-16", className)}>
-      <p className="text-sm font-bold tracking-wider text-red-600 uppercase mb-3">
+      <p className="text-sm font-bold tracking-wider text-primary uppercase mb-3">
         {title}
       </p>
       <h2 className="text-4xl font-bold text-gray-900">{subtitle}</h2>
@@ -28,5 +28,3 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
     </div>
   );
 };
-
-

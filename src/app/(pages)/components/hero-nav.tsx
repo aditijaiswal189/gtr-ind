@@ -7,9 +7,10 @@ import React from "react";
 
 import Link from "next/link";
 // import { getCachedData } from "../custom";
-import { TopBar } from "@/components/ui/top-bar";
-import { HeaderHome } from "@/components/ui/header-home";
+
 import { ChevronRight } from "lucide-react";
+import { HeaderHome } from "@/components/ui/header-home";
+import { TopBar } from "@/components/ui/top-bar";
 
 export default function HeroNav() {
   const path = usePathname();

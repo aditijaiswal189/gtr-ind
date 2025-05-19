@@ -1,7 +1,8 @@
-import React from 'react';
-import { LucideIcon } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { SectionHeaderWithDescription } from './section-header-with-description';
+"use client";
+import React from "react";
+import { LucideIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { SectionHeaderWithDescription } from "./section-header-with-description";
 
 interface FeatureItemProps {
   title: string;
@@ -14,7 +15,11 @@ interface Feature {
   description: string;
   icon?: LucideIcon;
 }
-const FeatureItem: React.FC<FeatureItemProps> = ({ title, description, icon: Icon = ArrowRight }) => (
+const FeatureItem: React.FC<FeatureItemProps> = ({
+  title,
+  description,
+  icon: Icon = ArrowRight,
+}) => (
   <div className="flex">
     <div className="mr-4">
       <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-primary/10">
@@ -22,7 +27,9 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ title, description, icon: Ico
       </div>
     </div>
     <div>
-      <h6 className="mb-2 font-semibold leading-5 text-[var(--foreground)]">{title}</h6>
+      <h6 className="mb-2 font-semibold leading-5 text-[var(--foreground)]">
+        {title}
+      </h6>
       <p className="text-sm text-[var(--muted-foreground)]">{description}</p>
       <hr className="w-full my-6 border-[var(--border)]" />
     </div>
@@ -37,7 +44,9 @@ interface CtaWithFeaturesRightImageProps {
   images?: string[]; // optional override
 }
 
-export const CtaWithFeaturesRightImage: React.FC<CtaWithFeaturesRightImageProps> = ({
+export const CtaWithFeaturesRightImage: React.FC<
+  CtaWithFeaturesRightImageProps
+> = ({
   badgeText,
   title,
   subtitle,
@@ -84,5 +93,3 @@ export const CtaWithFeaturesRightImage: React.FC<CtaWithFeaturesRightImageProps>
     </div>
   );
 };
-
-

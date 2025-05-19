@@ -1,67 +1,87 @@
 "use client";
 import React from "react";
-import { FileText, Users, Star, UserCheck } from "lucide-react";
+import CountUp from "react-countup";
+import { FileText, Users, Star, User } from "lucide-react";
 
-interface Stat {
+interface StatItemProps {
   icon: React.ReactNode;
-  number: string;
+  value: number;
   label: string;
-  color: string; // still uses specific utility class (e.g., bg-red-50)
+  suffix?: string;
+  bgColor: string;
 }
 
-const stats: Stat[] = [
-  {
-    icon: <FileText className="w-12 h-12" />,
-    number: "100+",
-    label: "Successful Visas",
-    color: "bg-red-50",
-  },
-  {
-    icon: <Users className="w-12 h-12" />,
-    number: "14+",
-    label: "Start Up Visa",
-    color: "bg-blue-50",
-  },
-  {
-    icon: <Star className="w-12 h-12" />,
-    number: "95 %",
-    label: "Happy clients",
-    color: "bg-green-50",
-  },
-  {
-    icon: <UserCheck className="w-12 h-12" />,
-    number: "Top 1",
-    label: "Consultants in Saskatchewan",
-    color: "bg-yellow-50",
-  },
-];
-
-const StatCard: React.FC<Stat> = ({ icon, number, label, color }) => (
-  <div className="flex items-center p-6 rounded-lg border border-border bg-card hover:shadow-lg transition-shadow">
-    <div className={`${color} p-4 rounded-full mr-4`}>
-      <span className="text-primary">{icon}</span>
-    </div>
-    <div>
-      <h3 className="text-4xl font-bold mb-1 text-foreground">{number}</h3>
-      <p className="text-muted-foreground">{label}</p>
+const StatItem: React.FC<StatItemProps> = ({
+  icon,
+  value,
+  label,
+  suffix = "",
+  bgColor,
+}) => (
+  <div
+    className={`${bgColor} rounded-2xl p-6 transition-transform hover:scale-105`}
+  >
+    <div className="flex items-start gap-4">
+      <div className="text-primary">{icon}</div>
+      <div>
+        <div className="text-3xl font-bold text-muted-foreground mb-1">
+          <CountUp
+            end={value}
+            duration={2.5}
+            suffix={suffix}
+            enableScrollSpy
+            scrollSpyOnce
+          />
+        </div>
+        <div className="text-gray-600">{label}</div>
+      </div>
     </div>
   </div>
 );
 
-export const Stats: React.FC = () => {
+export const Stats = () => {
+  const stats = [
+    {
+      icon: <Star size={24} />,
+      value: 95,
+      label: "Happy clients",
+      suffix: " %",
+      bgColor: "bg-green-100",
+    },
+    {
+      icon: <FileText size={24} />,
+      value: 100,
+      label: "Successful Visas",
+      suffix: "+",
+      bgColor: "bg-primary/10 ",
+    },
+
+    {
+      icon: <Users size={24} />,
+      value: 14,
+      label: "Start Up Visa",
+      suffix: "+",
+      bgColor: "bg-blue-100",
+    },
+
+    {
+      icon: <User size={24} />,
+      value: 1,
+      label: "Consultants in Saskatchewan",
+      prefix: "Top ",
+      bgColor: "bg-yellow-100",
+    },
+  ];
+
   return (
-    <section className="py-16 bg-background">
-      {/* <SectionHeader
-        title="Our Achievements"
-        subtitle="We are proud of our accomplishments"
-      /> */}
-      <div className="container mx-auto px-4">
+    <div className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <StatCard key={index} {...stat} />
+            <StatItem key={index} {...stat} />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
