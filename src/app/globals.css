@@ -48,93 +48,13 @@
 /*
   ---break---
 */
-
-/* 1) Center & give it a max-width */
-.zoho-webform #crmWebToEntityForm {
-  max-width: 600px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
+.zoho-iframe-container {
+  max-width: 620px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-
-/* 2) Tidy up the table layout */
-.zoho-webform table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.zoho-webform td {
-  padding: 0.5rem 0.75rem;
-  vertical-align: top;
-}
-
-/* 3) Labels */
-.zoho-webform .zcwf_lblRight {
-  text-align: left;
-  font-weight: 600;
-  color: #374151;
-  width: 30%;
-}
-
-/* 4) Inputs & textarea */
-.zoho-webform input[type="text"],
-.zoho-webform input[type="email"],
-.zoho-webform input[type="tel"],
-.zoho-webform textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  color: #111827;
-  box-sizing: border-box;
-}
-
-/* 5) Textarea height */
-.zoho-webform textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-/* 6) Buttons */
-.zoho-webform #formsubmit,
-.zoho-webform #formreset {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.375rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.zoho-webform #formsubmit {
-  background-color: #10b981; /* your primary-green */
-  color: white;
-  border: none;
-}
-.zoho-webform #formsubmit:hover {
-  background-color: #059669;
-}
-.zoho-webform #formreset {
-  background: transparent;
-  color: #374151;
-  border: 1px solid #d1d5db;
-  margin-left: 0.5rem;
-}
-
-/* 7) Responsive tweaks */
-@media (max-width: 640px) {
-  .zoho-webform .zcwf_lblRight {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.25rem;
-  }
-  .zoho-webform td.zcwf_fieldCell {
-    display: block;
-    width: 100%;
-  }
-}
-
 @layer components {
   .primary-red {
     background-color: var(--btn-red);
