@@ -420,12 +420,15 @@ export function MegaMenuBar() {
           title: "About Our Services",
           description: "Learn more about our immigration consulting services.",
           image: "/images/customers/cu1.webp",
-          cta: { text: "Book a Consultation", link: "/book-appointment" },
+          cta: {
+            text: "Book a Consultation",
+            link: "/about-us/about/book-appointment",
+          },
           icon: <BookOpen className={styles} />,
           highlight: {
             title: "Why Choose Us",
             text: "15+ years of experience, helping thousands successfully immigrate.",
-            link: "/why-choose-us",
+            link: "/about-us/about/why-choose-us",
           },
         };
       case "Immigration":
@@ -434,12 +437,15 @@ export function MegaMenuBar() {
           description:
             "Discover various immigration programs for your situation.",
           image: "/images/customers/cu2.webp",
-          cta: { text: "Assess Your Eligibility", link: "/immigration" },
+          cta: {
+            text: "Assess Your Eligibility",
+            link: "/immigration/express-entry/federal-skilled-trade",
+          },
           icon: <MapPin className={styles} />,
           highlight: {
             title: "Express Entry",
             text: "Fastest PR path for skilled workers.",
-            link: "/immigration/express-entry",
+            link: "/immigration/express-entry/federal-skilled-worker",
           },
         };
       case "Business":
@@ -447,12 +453,15 @@ export function MegaMenuBar() {
           title: "Business Immigration",
           description: "Start or expand your business in Canada.",
           image: "/images/customers/cu3.jpeg",
-          cta: { text: "Business Options", link: "/business" },
+          cta: {
+            text: "Business Options",
+            link: "/business/quebec/quebec-investor",
+          },
           icon: <Briefcase className={styles} />,
           highlight: {
             title: "Start-Up Visa Program",
             text: "Launch innovative ideas with Canadian support.",
-            link: "/business/start-up-visa",
+            link: "/business/federal-programs/start-up-visa(suv)",
           },
         };
       case "Work And Jobs":
@@ -460,12 +469,15 @@ export function MegaMenuBar() {
           title: "Canadian Work Opportunities",
           description: "From work permits to permanent jobs.",
           image: "/images/customers/cu4.webp",
-          cta: { text: "In-Demand Jobs", link: "/work-and-jobs" },
+          cta: {
+            text: "In-Demand Jobs",
+            link: "/work-and-jobs/jobs/in-demand-jobs",
+          },
           icon: <Briefcase className={styles} />,
           highlight: {
             title: "LMIA Work Permits",
             text: "Understand LMIA process for work permits.",
-            link: "/work-and-jobs/lmia",
+            link: "/work-and-jobs/work/lmia",
           },
         };
       case "Study":
@@ -473,12 +485,15 @@ export function MegaMenuBar() {
           title: "Study in Canada",
           description: "World-class education + PR pathways.",
           image: "/images/customers/cu5.webp",
-          cta: { text: "Find Programs", link: "/study" },
+          cta: {
+            text: "Find Programs",
+            link: "/study/programs/study-in-canada",
+          },
           icon: <GraduationCap className={styles} />,
           highlight: {
             title: "Post-Graduation Work Permit",
             text: "Gain Canadian work experience.",
-            link: "/study/post-graduate-work-permit",
+            link: "/study/programs/post-graduate-wp",
           },
         };
       case "Other Services":
@@ -486,12 +501,15 @@ export function MegaMenuBar() {
           title: "Other Services",
           description: "News and updates",
           image: "/images/customers/cu6.webp",
-          cta: { text: "Find Programs", link: "/other-services" },
+          cta: {
+            text: "Find Programs",
+            link: "/other-services/programs/family-sponsorship",
+          },
           icon: <GraduationCap className={styles} />,
           highlight: {
             title: "News and Updates",
             text: "Stay informed",
-            link: "/other-services/news",
+            link: "/other-services/news-service/news",
           },
         };
       default:

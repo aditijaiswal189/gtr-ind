@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface TeamCardProps {
   name: string;
@@ -7,7 +7,12 @@ interface TeamCardProps {
   image: string;
 }
 
-const TeamCard: React.FC<TeamCardProps> = ({ name, role, description, image }) => (
+const TeamCard: React.FC<TeamCardProps> = ({
+  name,
+  role,
+  description,
+  image,
+}) => (
   <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
     <img
       className="object-cover w-full h-56 md:h-64 xl:h-80"
@@ -57,4 +62,3 @@ export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({
     </div>
   );
 };
-
