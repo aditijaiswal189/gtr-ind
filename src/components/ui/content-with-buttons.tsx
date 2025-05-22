@@ -121,3 +121,37 @@ export const ContentWithButtons = ({
     </div>
   );
 };
+
+//  <ContentWithButtons
+//         imageSrc="/images/hero/g.avif"
+//         brandText="GreenTech Resources"
+//         title="Get to know us"
+//         subtitle="GreenTech Resources Worldwide Canada"
+//         description="We are a Canadian company with a global reach, dedicated to providing top-notch services to our clients. Our team of experts is here to assist you in navigating the complexities."
+//         bgColor="bg-card"
+//         textColor="text-primary"
+//         buttons={buttonsData}
+//       />
+// const buttonsData = [
+//   {
+//     label: "Study",
+//     // onClick: () => alert("Go!"),
+//     href: "/study/programs/study-in-canada",
+//     colorClass: "bg-primary-blue",
+//   },
+//   {
+//     label: "Immigrate",
+//     href: "immigration/express-entry/federal-skilled-worker",
+//     colorClass: "bg-primary-green",
+//   },
+//   {
+//     label: "Business",
+//     href: "/business/quebec/quebec-investor",
+//     colorClass: "bg-primary-red",
+//   },
+//   {
+//     label: "Work and Jobs",
+//     href: "/work-and-jobs/work/work-permit",
+//     colorClass: "bg-primary",
+//   },
+// ];

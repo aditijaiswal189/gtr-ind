@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { MegaMenuBar } from "./mega-menu-bar";
 import Link from "next/link";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 export const HeaderHome: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,20 +26,30 @@ export const HeaderHome: React.FC = () => {
       `}
     >
       <div className="container mx-auto px-2 md:px-2 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <img src="/logo3.png" alt="Your Logo" className="h-10 w-auto" />
-        </Link>
+        <div>
+          {" "}
+          <Link href="/" className="flex items-center">
+            <img src="/logo3.png" alt="Your Logo" className="h-10 w-auto" />
+          </Link>
+        </div>
 
         <MegaMenuBar />
 
         <div className="flex items-center space-x-4">
           <Link href="/about-us/about/book-appointment">
-            <button className="px-6 py-2 rounded-lg font-medium bg-primary text-primary-foreground transition-colors duration-300 hover:bg-primary/90">
+            <button className="px-4 py-2 rounded-lg font-medium bg-primary text-primary-foreground transition-colors duration-300 hover:bg-primary/90">
               Book a Consultation
             </button>
           </Link>
-
-          <button className="md:hidden text-foreground">
+          <Link
+            href="https://api.whatsapp.com/send?phone=16476197975"
+            target="_blank"
+            aria-label="WhatsApp"
+            className=" p-2 bg-primary-green rounded-lg transition-colors duration-200 hover:bg-primary-green/90"
+          >
+            <IconBrandWhatsapp className="h-6 w-6 text-white" />
+          </Link>
+          {/* <button className="md:hidden text-foreground">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -53,7 +64,7 @@ export const HeaderHome: React.FC = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

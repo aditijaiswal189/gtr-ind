@@ -518,7 +518,7 @@ export function MegaMenuBar() {
   };
 
   return (
-    <div className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-10">
+    <div className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-5 md:mr-2">
       <div className="flex items-center space-x-1">
         {router.map((item) => {
           if (!item.children) {

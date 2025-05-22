@@ -76,7 +76,12 @@
     color: var(--btn-foreground);
   }
 }
-
+.fixed.bg-card {
+  pointer-events: none;
+}
+.fixed.bg-card * {
+  pointer-events: auto;
+}
 @layer utilities {
   .bg-primary-green {
     background-color: var(--btn-green);

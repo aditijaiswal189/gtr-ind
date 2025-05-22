@@ -40,14 +40,6 @@ export function TopBar() {
           alt="RCIC Logo"
           className="h-12 w-auto"
         />
-        <Link
-          href="https://api.whatsapp.com/send?phone=16476197975"
-          target="_blank"
-          aria-label="WhatsApp"
-          className="ml-4 mr-5 p-2 bg-primary-green rounded-2xl transition-colors duration-200 hover:bg-primary-green/90"
-        >
-          <IconBrandWhatsapp className="h-6 w-6 text-white" />
-        </Link>
       </div>
     </div>
   );
