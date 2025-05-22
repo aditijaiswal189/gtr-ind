@@ -604,7 +604,7 @@ export function MegaMenuBar() {
                                   href={featured.highlight.link}
                                   className="inline-flex items-center text-sm font-medium text-primary hover:text-primary/80 mt-2"
                                 >
-                                  Learn more{" "}
+                                  Learn more
                                   <ArrowRight className="ml-1 h-3 w-3" />
                                 </Link>
                               </div>

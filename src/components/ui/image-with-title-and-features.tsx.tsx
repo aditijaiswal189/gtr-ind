@@ -176,7 +176,7 @@ const cards = [
         icon: <ChartNetwork className="w-4 h-4" />,
         title: "In Demand Jobs",
         description: "Get full information about jobs in demand",
-        href: "/work-and-jobs/work/in-demand-jobs",
+        href: "/work-and-jobs/jobs/in-demand-jobs",
       },
       {
         icon: <BriefcaseBusiness className="w-4 h-4" />,

@@ -15,7 +15,7 @@ export const FeatureItem: React.FC<Cta4FeatureItemProps> = ({
   title,
   description,
   ctaText = 'Learn more',
-  ctaHref = '#',
+  ctaHref = '/about-us/about/book-appointment',
 }) => (
   <div className="flex flex-col justify-between p-5 border rounded shadow-sm">
     <div>

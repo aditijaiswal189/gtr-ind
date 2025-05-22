@@ -55,14 +55,12 @@ job offer or certificate of qualification and language ability "
               "Work experience in Canada in occupations classified under NOC skill levels 0, A, or B with a minimum of 1 year of experience in the last 3 years",
             //   link: "/global"
           },
-
           {
             icon: "Notebook",
-            title: "Education",
+            title: "Language",
             description:
-              "Have a credential issued in Canada or possess a recognized equivalent to a Canadian credential",
+              "Meet the minimum language proficiency requirements in either English or French-For NOC skill level 0 or A occupations: Minimum CLB/NCLC 7.For NOC skill level B occupations: Minimum CLB/NCLC 5",
           },
-
           {
             icon: "Users",
             title: "  CRS",
@@ -71,9 +69,9 @@ job offer or certificate of qualification and language ability "
           },
           {
             icon: "Notebook",
-            title: "Language",
+            title: "Education",
             description:
-              "Meet the minimum language proficiency requirements in either English or French-For NOC skill level 0 or A occupations: Minimum CLB/NCLC 7.For NOC skill level B occupations: Minimum CLB/NCLC 5",
+              "Have a credential issued in Canada or possess a recognized equivalent to a Canadian credential",
           },
         ]}
       />

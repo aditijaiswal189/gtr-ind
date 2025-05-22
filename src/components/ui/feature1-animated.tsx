@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import { ReactNode } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 
 interface featureItems {
   title: string;
@@ -10,7 +10,9 @@ interface featureItems {
   link: string;
   icon: ReactNode;
 }
-export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({ featureItems }) => (
+export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({
+  featureItems,
+}) => (
   <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div className="grid gap-8 row-gap-5 md:grid-cols-2">
       {featureItems.map((item, idx) => (
@@ -39,13 +41,13 @@ export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({ f
                   {item.description}
                 </p>
               </div>
-              <Link
+              {/* <Link
                 href={item.link}
                 aria-label={item.title}
                 className="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-primary hover:text-primary-foreground"
               >
                 Learn more
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -53,9 +55,3 @@ export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({ f
     </div>
   </div>
 );
-
-
-
-
-
-

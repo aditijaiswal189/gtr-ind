@@ -33,7 +33,9 @@ const FeaturesCard: React.FC<Props> = ({
           className={`w-16 h-16 rounded-full mb-6 flex items-center justify-center
             ${highlighted ? "bg-primary-foreground/20" : "bg-muted"}`}
         >
-          <span className={highlighted ? "text-primary-foreground" : "text-primary"}>
+          <span
+            className={highlighted ? "text-primary-foreground" : "text-primary"}
+          >
             {icon}
           </span>
         </div>
@@ -55,12 +57,14 @@ const FeaturesCard: React.FC<Props> = ({
       </p>
 
       {buttonText ? (
-        <button className="mt-auto inline-block bg-card text-primary hover:bg-muted font-medium px-6 py-3 rounded-md transition-colors duration-300">
-          {buttonText}
-        </button>
+        <Link href="/about-us/about/book-appointment">
+          <button className="mt-auto inline-block bg-card text-primary hover:bg-muted font-medium px-6 py-3 rounded-md transition-colors duration-300">
+            {buttonText}
+          </button>
+        </Link>
       ) : (
         <Link
-          href="#"
+          href="/about-us/about/book-appointment"
           className={`mt-auto inline-block font-medium ${
             highlighted
               ? "text-primary-foreground"
@@ -93,7 +97,9 @@ export const FeaturesWithLastFilled: React.FC<FeaturesWithLastFilledProps> = ({
             {sectionTitle}
           </p>
           {sectionSubtitle && (
-            <h2 className="text-3xl font-bold text-foreground">{sectionSubtitle}</h2>
+            <h2 className="text-3xl font-bold text-foreground">
+              {sectionSubtitle}
+            </h2>
           )}
         </div>
       )}

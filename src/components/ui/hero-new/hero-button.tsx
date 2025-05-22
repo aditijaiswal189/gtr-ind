@@ -7,7 +7,7 @@ interface ButtonProps {
   bgColor: string;
   hoverColor: string;
   icon: React.ReactNode;
-  href?: string; // Optional href for links
+  href: string; // Optional href for links
 }
 
 const HeroButton: React.FC<ButtonProps> = ({
@@ -18,7 +18,7 @@ const HeroButton: React.FC<ButtonProps> = ({
   href,
 }) => {
   return (
-    <Link href={href ?? "#"}>
+    <Link href={href}>
       <button
         className={`${bgColor} ${hoverColor} w-full flex items-center justify-center gap-2 py-4 px-6 rounded-lg text-white font-medium shadow-md transition-all duration-300 transform hover:scale-105`}
       >
@@ -74,6 +74,7 @@ const HeroButtons: React.FC = () => {
             bgColor={button.bgColor}
             hoverColor={button.hoverColor}
             icon={button.icon}
+            href={button.href}
           />
         ))}
       </div>

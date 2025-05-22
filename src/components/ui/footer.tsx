@@ -109,7 +109,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/about-us/about/contact-us"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact Us

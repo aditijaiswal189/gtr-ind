@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { SectionHeader } from "./section-header";
 import React from "react";
-import { Award } from "lucide-react";
+import { Award, Notebook } from "lucide-react";
 
 interface Course {
   icon: React.ReactNode;
@@ -28,11 +28,6 @@ const countries: Country[] = [
         title: "Immigration",
         description: "We provide immigration facilities for students.",
       },
-      // {
-      //   icon: <BookOpen className="w-6 h-6 text-primary" />,
-      //   title: "Services",
-      //   description: "Services we offer for students.",
-      // },
     ],
   },
   // { name: 'India', flag: 'https://flagcdn.com/w320/in.png', description: 'Average time to resolve a cyber.',courses: [
@@ -59,21 +54,22 @@ const countries: Country[] = [
   //     description: 'Services we offer for students.',
   //   },
   // ], },
+
   {
-    name: "Australia",
-    flag: "https://flagcdn.com/w320/au.png",
+    name: "United States",
+    flag: "https://flagcdn.com/w320/us.png",
     description: "Average time to resolve a cyber.",
     courses: [
       {
         icon: <Award className="w-6 h-6 text-primary" />,
-        title: "Immigration",
-        description: "We provide immigration facilities for students.",
+        title: "Study",
+        description: "We provide guidance for students.Study in the USA.",
       },
     ],
   },
   {
-    name: "United States",
-    flag: "https://flagcdn.com/w320/us.png",
+    name: "Australia",
+    flag: "https://flagcdn.com/w320/au.png",
     description: "Average time to resolve a cyber.",
     courses: [
       {
@@ -90,8 +86,22 @@ const countries: Country[] = [
     courses: [
       {
         icon: <Award className="w-6 h-6 text-primary" />,
-        title: "Immigration",
-        description: "We provide immigration facilities for students.",
+        title: "Study",
+        description:
+          "We provide study facilities for students.Study in Europe.",
+      },
+    ],
+  },
+  {
+    name: "United Kingdom",
+    flag: "https://flagcdn.com/w320/gb.png",
+
+    description: "Average time to resolve a cyber.",
+    courses: [
+      {
+        icon: <Notebook className="w-6 h-6 text-primary" />,
+        title: "Study",
+        description: "Study in the UK. Study abroad, succeed anywhere.",
       },
     ],
   },
@@ -102,8 +112,8 @@ const countries: Country[] = [
     courses: [
       {
         icon: <Award className="w-6 h-6 text-primary" />,
-        title: "Immigration",
-        description: "We provide immigration facilities for students.",
+        title: "Study",
+        description: "We provide study visas for students.Study in Germany.",
       },
     ],
   },
