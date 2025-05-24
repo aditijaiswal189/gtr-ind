@@ -1,3 +1,4 @@
+import { services } from "@/app/(pages)/about-us/about/our-services/page";
 import { Feature4 } from "@/components/ui/feature4";
 import {
   Feature2WithImage,
@@ -7,7 +8,6 @@ import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-fille
 import { Hero2 } from "@/components/ui/hero2";
 import { Briefcase, Notebook } from "lucide-react";
 import React from "react";
-import { services } from "../federal-skilled-worker/page";
 
 const cards: FeatureItemProps[] = [
   {

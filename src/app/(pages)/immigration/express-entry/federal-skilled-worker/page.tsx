@@ -1,24 +1,14 @@
+import { services } from "@/app/(pages)/about-us/about/our-services/page";
 import { Feature3 } from "@/components/ui/feature3";
 import { Feature4 } from "@/components/ui/feature4";
 import {
   Feature2WithImage,
   FeatureItemProps,
 } from "@/components/ui/features-2-with-image";
-import {
-  FeaturesWithLastFilled,
-  Props,
-} from "@/components/ui/features-with-last-filled";
+import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
 import { Hero2 } from "@/components/ui/hero2";
 
-import {
-  BookOpen,
-  Briefcase,
-  FileCheck,
-  Globe,
-  Notebook,
-  Plane,
-  UserCheck,
-} from "lucide-react";
+import { BookOpen, Notebook } from "lucide-react";
 
 import React from "react";
 export const features = [
@@ -38,46 +28,6 @@ export const features = [
     title: "French-Language Advantage",
     description:
       "Proficiency in French, in addition to English, is highly valued by Canada. Demonstrating strong French language skills through recognized tests can earn extra points in the Comprehensive Ranking System (CRS). This boosts your chances of receiving an Invitation to Apply (ITA) for permanent residency in Canada",
-  },
-];
-export const services: Props[] = [
-  {
-    title: "Profile Assessment",
-    description:
-      "Our RCIC and expert team can evaluate your qualifications, work experience, and personal circumstances to identify areas where you can improve your CRS score",
-    icon: <UserCheck size={32} />,
-  },
-  {
-    title: "Language Proficiency",
-    description:
-      "We can provide guidance on improving your language skills in English and/or French, as higher language test scores can significantly boost your CRS points.",
-    icon: <FileCheck size={32} />,
-  },
-  {
-    title: "Educational credential assessment",
-    description:
-      "We can help you navigate the process of obtaining an ECA for your foreign educational credentials, which can add points to your CRS score.",
-    icon: <Globe size={32} />,
-  },
-  {
-    title: "Secure a Job Offers",
-    description:
-      "We can assist in searching for job in Canada, which can be worth a substantial number of CRS points. We can also help you understand the requirements for a valid job offer, resume preparation and interview coaching.",
-    icon: <Notebook size={32} />,
-  },
-  {
-    title: "Provincial Nominee Programs (PNPs)",
-    description:
-      "We can advise on PNPs and help you prepare for provincial nominations, which can add valuable points to your CRS score.",
-    icon: <Briefcase size={32} />,
-  },
-  {
-    title: "Claim extra score for family connection",
-    description:
-      "If you have a sibling in Canada who is a citizen or permanent resident, we can help you understand how to claim additional points for this family connection.Book a consultation today to  secure your family's future in Canada.",
-    highlighted: true,
-    buttonText: "Book Consultation",
-    icon: <Plane size={32} />,
   },
 ];
 
