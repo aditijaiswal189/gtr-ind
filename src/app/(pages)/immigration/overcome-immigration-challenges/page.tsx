@@ -1,8 +1,8 @@
 import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
 import React from "react";
-import { services } from "../../components/page";
 import { Hero2 } from "@/components/ui/hero2";
 import { Feature4 } from "@/components/ui/feature4";
+import { services } from "../../about-us/about/our-services/page";
 
 const OvercomeImmigrationChallenges: React.FC = () => {
   return (
