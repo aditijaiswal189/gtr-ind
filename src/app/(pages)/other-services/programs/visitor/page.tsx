@@ -71,7 +71,7 @@ const Visitor: React.FC = () => {
         title="Visitor Visa"
         description="Canada, known for its breathtaking landscapes, vibrant cities, and welcoming atmosphere, has become an increasingly popular destination for tourists worldwide. If you're considering a visit to the Great White North, you may need to acquaint yourself with the process of obtaining a Canadian Visitor Visa, also known as a Temporary Resident Visa (TRV)"
         imageUrl="/images/hero/h.avif"
-        primaryCta={{ label: "", href: "/" }}
+        primaryCta={{ label: "About us", href: "/about-us/about/about" }}
         secondaryCta={{
           label: "Learn More",
           href: "/about-us/about/book-appointment",
