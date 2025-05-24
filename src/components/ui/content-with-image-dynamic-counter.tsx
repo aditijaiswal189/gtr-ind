@@ -31,7 +31,7 @@ export const ContentWithImageDynamicCounter: React.FC<{
   const { intro, images, stats } = featuresConfig;
 
   return (
-    <section className="py-20 bg-background">
+    <section className=" bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <div className="inline-block text-primary font-semibold mb-2">
@@ -45,7 +45,7 @@ export const ContentWithImageDynamicCounter: React.FC<{
           </p>
         </div>
 
-        <div className="flex flex-col justify-between md:flex-row items-center mb-16">
+        <div className="flex flex-col pl-10 gap-20 md:flex-row items-center mb-16">
           <div className="ml-10 md:w-1/4 mb-8 md:mb-0 relative">
             <div className="relative">
               <img

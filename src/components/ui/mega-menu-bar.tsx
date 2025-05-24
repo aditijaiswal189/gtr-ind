@@ -63,7 +63,7 @@ export const router = [
             element: "Certificate Membership",
           },
           {
-            path: "/about-us/cert-testimonials/customer-testimonials",
+            path: "/about-us/cert-testimonials/testimonials",
             element: "Customer Testimonials",
           },
         ],

@@ -10,6 +10,7 @@ export interface Props {
   description: string;
   highlighted?: boolean;
   buttonText?: string;
+  href: string; // Optional URL
 }
 
 const FeaturesCard: React.FC<Props> = ({
@@ -18,6 +19,7 @@ const FeaturesCard: React.FC<Props> = ({
   description,
   highlighted = false,
   buttonText,
+  href,
 }) => {
   return (
     <div
@@ -57,14 +59,14 @@ const FeaturesCard: React.FC<Props> = ({
       </p>
 
       {buttonText ? (
-        <Link href="/about-us/about/book-appointment">
+        <Link href={href}>
           <button className="mt-auto inline-block bg-card text-primary hover:bg-muted font-medium px-6 py-3 rounded-md transition-colors duration-300">
             {buttonText}
           </button>
         </Link>
       ) : (
         <Link
-          href="/about-us/about/book-appointment"
+          href={href}
           className={`mt-auto inline-block font-medium ${
             highlighted
               ? "text-primary-foreground"

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 // Configurable props for newsletter
@@ -49,7 +50,9 @@ export const Newsletter: React.FC<NewsletterProps> = ({ config }) => {
             <h2 className="text-3xl font-bold mt-2 mb-4 text-foreground">
               {heading}
             </h2>
-            <EmailForm placeholder={placeholder} buttonText={buttonText} />
+            <Link href="/about-us/about/book-appointment">
+              <EmailForm placeholder={placeholder} buttonText={buttonText} />
+            </Link>
           </div>
 
           <div className="lg:w-1/2 lg:pl-12">

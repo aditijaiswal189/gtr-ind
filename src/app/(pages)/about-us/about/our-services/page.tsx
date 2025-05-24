@@ -22,30 +22,35 @@ export const services: Props[] = [
     description:
       "Exploring Canada for immigration is an exciting and life-altering choice. Renowned for its quality of life, cultural diversity, and opportunities, let's find your best immigration fit.",
     icon: <UserCheck size={32} />,
+    href: "/immigration/express-entry/federal-skilled-worker",
   },
   {
     title: "Work in Canada",
     description:
       "Canada offers diverse work opportunities, fostering career growth and global experiences in a vibrant, welcoming country for skilled professionals and temporary workers.",
     icon: <FileCheck size={32} />,
+    href: "/work-and-jobs/work/work-permit",
   },
   {
     title: "Business in Canada",
     description:
       "Expanding or starting a business in Canada taps into a robust economy and a skilled workforce while enjoying a supportive business environment with your family",
     icon: <Globe size={32} />,
+    href: "/business/quebec/quebec-investor",
   },
   {
     title: "Study in Canada",
     description:
       "Studying in Canada promises world-class education, rich cultural diversity, and a pathway to a promising future, all within a welcoming and inclusive environment.",
     icon: <Notebook size={32} />,
+    href: "/study/programs/study-in-canada",
   },
   {
     title: "Sponsor family to Canada",
     description:
       "We specialize in facilitating the compassionate reuniting of your loved ones through Canada's immigration policies, ensuring that your family can be together in Canada.",
     icon: <Briefcase size={32} />,
+    href: "/other-services/programs/family-sponsorship",
   },
   {
     title: "Not sure?",
@@ -53,6 +58,7 @@ export const services: Props[] = [
       "Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!",
     highlighted: true,
     buttonText: "Book Consultation",
+    href: "/about-us/about/book-appointment",
     icon: <Plane size={32} />,
   },
 ];

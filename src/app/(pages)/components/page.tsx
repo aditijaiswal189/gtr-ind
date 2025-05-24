@@ -6,10 +6,7 @@ import { CountriesSection } from "@/components/ui/countries-section";
 import { CtaWith4Features } from "@/components/ui/cta-with-4-features";
 import { FAQ } from "@/components/ui/FAQ";
 import { Feature1Animated } from "@/components/ui/feature1-animated";
-import {
-  FeaturesWithLastFilled,
-  Props,
-} from "@/components/ui/features-with-last-filled";
+
 import { Features2 } from "@/components/ui/features2";
 import { Footer } from "@/components/ui/footer";
 import { HeroSection } from "@/components/ui/hero";
@@ -25,7 +22,6 @@ import { TopBar } from "@/components/ui/top-bar";
 import {
   Briefcase,
   Contact,
-  FileCheck,
   Globe,
   Notebook,
   Plane,
@@ -106,46 +102,46 @@ const aboutNewsletterConfig: NewsletterConfig = {
     "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
   imageAlt: "Woman reading newsletter",
 };
-export const services: Props[] = [
-  {
-    title: "Immigrate to Canada",
-    description:
-      "Exploring Canada for immigration is an exciting and life-altering choice. Renowned for its quality of life, cultural diversity, and opportunities, let's find your best immigration fit.",
-    icon: <UserCheck size={32} />,
-  },
-  {
-    title: "Work in Canada",
-    description:
-      "Canada offers diverse work opportunities, fostering career growth and global experiences in a vibrant, welcoming country for skilled professionals and temporary workers.",
-    icon: <FileCheck size={32} />,
-  },
-  {
-    title: "Business in Canada",
-    description:
-      "Expanding or starting a business in Canada taps into a robust economy and a skilled workforce while enjoying a supportive business environment with your family",
-    icon: <Globe size={32} />,
-  },
-  {
-    title: "Study in Canada",
-    description:
-      "Studying in Canada promises world-class education, rich cultural diversity, and a pathway to a promising future, all within a welcoming and inclusive environment.",
-    icon: <Notebook size={32} />,
-  },
-  {
-    title: "Sponsor family to Canada",
-    description:
-      "We specialize in facilitating the compassionate reuniting of your loved ones through Canada's immigration policies, ensuring that your family can be together in Canada.",
-    icon: <Briefcase size={32} />,
-  },
-  {
-    title: "Not sure?",
-    description:
-      "Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!",
-    highlighted: true,
-    buttonText: "Book Consultation",
-    icon: <Plane size={32} />,
-  },
-];
+// export const services: Props[] = [
+//   {
+//     title: "Immigrate to Canada",
+//     description:
+//       "Exploring Canada for immigration is an exciting and life-altering choice. Renowned for its quality of life, cultural diversity, and opportunities, let's find your best immigration fit.",
+//     icon: <UserCheck size={32} />,
+//   },
+//   {
+//     title: "Work in Canada",
+//     description:
+//       "Canada offers diverse work opportunities, fostering career growth and global experiences in a vibrant, welcoming country for skilled professionals and temporary workers.",
+//     icon: <FileCheck size={32} />,
+//   },
+//   {
+//     title: "Business in Canada",
+//     description:
+//       "Expanding or starting a business in Canada taps into a robust economy and a skilled workforce while enjoying a supportive business environment with your family",
+//     icon: <Globe size={32} />,
+//   },
+//   {
+//     title: "Study in Canada",
+//     description:
+//       "Studying in Canada promises world-class education, rich cultural diversity, and a pathway to a promising future, all within a welcoming and inclusive environment.",
+//     icon: <Notebook size={32} />,
+//   },
+//   {
+//     title: "Sponsor family to Canada",
+//     description:
+//       "We specialize in facilitating the compassionate reuniting of your loved ones through Canada's immigration policies, ensuring that your family can be together in Canada.",
+//     icon: <Briefcase size={32} />,
+//   },
+//   {
+//     title: "Not sure?",
+//     description:
+//       "Feeling uncertain about your immigration journey? Our experienced team of GreenTech Resource Worldwide Canada is here to provide expert guidance and support you!",
+//     highlighted: true,
+//     buttonText: "Book Consultation",
+//     icon: <Plane size={32} />,
+//   },
+// ];
 const aboutFeatures = [
   {
     title: "About Our Team",
@@ -231,12 +227,12 @@ const Page: React.FC = () => {
       <h1 className="text-center text-3xl">ContentWithImageDynamicCounter</h1>
       <ContentWithImageDynamicCounter featuresConfig={featuresConfig} />
       <h1 className="text-center text-3xl">FeaturesWithLastFilled</h1>
-      <FeaturesWithLastFilled
+      {/* <FeaturesWithLastFilled
         services={services}
         sectionTitle="We Provide Recruitment, Immigration and Settlement Services"
         sectionSubtitle="Our goal is to provide customers with the best service, for us to help customers
   overcome their barriers and obtain Permanent Residensy in Canada"
-      />
+      /> */}
       <Footer />
     </div>
   );

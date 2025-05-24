@@ -38,7 +38,7 @@ const testimonials = [
       "Superb experience!! I am very grateful for all the hard work GTR Immigration did on my file .I strongly recommend GTR Immigration to all because they are helpful, professional and their work is very detailed. I really like that client satisfaction is most important thing for them . Thank you for bringing me and family to Canada!! Really love your service !!! Aaron",
     name: "Nee Nay",
     designation: "Engineering Lead at DataPro",
-    src: "/images/customers/cu2.webp",
+    src: "/images/customers/cu8.webp",
   },
   {
     quote:
@@ -57,7 +57,10 @@ const Testimonials: React.FC = () => {
           title="Testimonials"
           description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
           imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-          primaryCta={{ label: "Why choose us?", href: "/about-us/about/why-choose-us" }}
+          primaryCta={{
+            label: "Why choose us?",
+            href: "/about-us/about/why-choose-us",
+          }}
           secondaryCta={{
             label: "Learn More",
             href: "/about-us/about/book-appointment",
