@@ -1,16 +1,17 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
+} from "@/components/ui/features-2-with-image"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import { Hero2 } from "@/components/ui/hero2";
-import { Award, Briefcase, Notebook, Smile, Star } from "lucide-react";
-import React from "react";
+} from "@/components/ui/features-list"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Award, Briefcase, Notebook, Smile, Star } from "lucide-react"
+import React from "react"
 const cards: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -24,7 +25,7 @@ const cards: FeatureItemProps[] = [
     description:
       "This provision is typically used for temporary situations rather than permanent immigration. Foreign professionals can use the C10 work permit to come to Canada and gain valuable work experience. They can then use this experience to apply for permanent residence through Express Entry’s Canadian Experience Class program",
   },
-];
+]
 
 const items: FeatureItemPropsList[] = [
   {
@@ -38,7 +39,7 @@ const items: FeatureItemPropsList[] = [
     icon: Award,
     text: "Proof of significant contributions, awards, patents, academic publications, and a comprehensive business plan is crucial",
   },
-];
+]
 const SignificantBenefitToCanada: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -47,14 +48,8 @@ const SignificantBenefitToCanada: React.FC = () => {
         title="Significant Benefit to Canada (C10)"
         description="The Significant Benefit to Canada (C10) program grants temporary resident permits to foreign nationals who can demonstrate that their entry or continued stay in Canada would result in a significant benefit to Canada"
         imageUrl="/images/hero/m.avif"
-        primaryCta={{
-          label: "Start Up Visa",
-          href: "/business/federal-programs/start-up-visa(suv)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <FeatureList
         badgeText="Eligibility
@@ -89,7 +84,7 @@ const SignificantBenefitToCanada: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default SignificantBenefitToCanada;
+export default SignificantBenefitToCanada

@@ -1,10 +1,11 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FAQItem, FAQSection } from "@/components/ui/FAQ2";
-import { Feature3 } from "@/components/ui/feature3";
-import { Hero2 } from "@/components/ui/hero2";
-import { Plane } from "lucide-react";
-import React from "react";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FAQItem, FAQSection } from "@/components/ui/FAQ2"
+import { Feature3 } from "@/components/ui/feature3"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Plane } from "lucide-react"
+import React from "react"
 const faqItems: FAQItem[] = [
   {
     title: " If your passport expires before your PGWP?",
@@ -35,7 +36,7 @@ const faqItems: FAQItem[] = [
       </>
     ),
   },
-];
+]
 
 const features3 = [
   {
@@ -57,7 +58,7 @@ const features3 = [
     description:
       " You must apply for the PGWP within 180 days (approximately 6 months) of receiving written confirmation of completing your program and being awarded your degree, diploma, or certificate.",
   },
-];
+]
 const PostGraduate: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -66,14 +67,8 @@ const PostGraduate: React.FC = () => {
         title="Post Graduate Work Permit"
         description="Canada offers a Post-Graduation Work Permit (PGWP) program to international students who have completed a program of study at a designated learning institution in Canada."
         imageUrl="/images/hero/j.avif"
-        primaryCta={{
-          label: "Study in Canada",
-          href: "/study/programs/study-in-canada",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Feature3
         badgeText="PGWP"
@@ -97,7 +92,7 @@ Work experience gained through the PGWP increases your opportunities when you ap
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default PostGraduate;
+export default PostGraduate

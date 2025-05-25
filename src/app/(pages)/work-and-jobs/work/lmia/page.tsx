@@ -1,19 +1,20 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { Feature1Animated } from "@/components/ui/feature1-animated";
-import { Feature3 } from "@/components/ui/feature3";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { Feature1Animated } from "@/components/ui/feature1-animated"
+import { Feature3 } from "@/components/ui/feature3"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
-import { Briefcase, FileText, Globe, UserCheck } from "lucide-react";
-import React, { ReactNode } from "react";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Briefcase, FileText, Globe, UserCheck } from "lucide-react"
+import React, { ReactNode } from "react"
 interface FeatureItem {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
+  title: string
+  description: string
+  link: string
+  icon: ReactNode
 }
 const featureItems: FeatureItem[] = [
   {
@@ -30,7 +31,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-];
+]
 const cards: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -42,7 +43,7 @@ const cards: FeatureItemProps[] = [
     title: "Law of Canada",
     description: `According to the Canada law, you can not hire someone from outside Canada if there are candidates within Canada. Canada always gives priority to them who living in Canada as a citizen or with work-permit or holding permanent residence. So as you can see it’s quite difficult to get an LMIA and costly as well. Any employer must go through a 3-4 advertisement before applying for the LMIA.`,
   },
-];
+]
 const features2 = [
   {
     icon: "Briefcase" as const,
@@ -62,7 +63,7 @@ const features2 = [
     description:
       "In the case of international students with an open work permit, they are free with all these.",
   },
-];
+]
 const LMIA: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -71,14 +72,8 @@ const LMIA: React.FC = () => {
         title="LMIA"
         description="LMIA job offer, where LMIA stands for Labour Market Impact Assessment .LMIA job offer is basically two types"
         imageUrl="/images/hero/r.avif"
-        primaryCta={{
-          label: "Work Permit",
-          href: "/work-and-jobs/work/work-permit",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Feature1Animated featureItems={featureItems} />
       <Feature2WithImage
@@ -107,7 +102,7 @@ const LMIA: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default LMIA;
+export default LMIA

@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import { Check } from "lucide-react";
+"use client"
+import React from "react"
+import { Check } from "lucide-react"
 
 interface Package {
-  name: string;
-  price: string;
-  period: string;
-  features: string[];
-  highlighted?: boolean;
+  name: string
+  price: string
+  period: string
+  features: string[]
+  highlighted?: boolean
 }
 
 const packages: Package[] = [
@@ -45,10 +45,10 @@ const packages: Package[] = [
       "Preparing applications for family",
     ],
   },
-];
+]
 
 interface PriceCardProps {
-  pkg: Package;
+  pkg: Package
 }
 
 const PriceCard: React.FC<PriceCardProps> = ({ pkg }) => {
@@ -90,12 +90,12 @@ const PriceCard: React.FC<PriceCardProps> = ({ pkg }) => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export const Pricing: React.FC = () => {
   return (
-    <section className="py-20 bg-muted">
+    <section id="first-section" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-foreground">
@@ -113,5 +113,5 @@ export const Pricing: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

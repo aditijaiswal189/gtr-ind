@@ -1,22 +1,22 @@
-"use client";
+"use client"
 
-import React from "react";
-import * as Icons from "lucide-react";
-import Link from "next/link";
+import React from "react"
+import * as Icons from "lucide-react"
+import Link from "next/link"
 
 interface FeatureItem {
-  icon: keyof typeof Icons;
-  title: string;
-  description: string;
-  link?: string;
+  icon: keyof typeof Icons
+  title: string
+  description: string
+  link?: string
 }
 
 interface FeatureProps {
-  badge?: string;
-  heading: string;
-  highlight: string;
-  description: string;
-  features: FeatureItem[];
+  badge?: string
+  heading: string
+  highlight: string
+  description: string
+  features: FeatureItem[]
 }
 
 export const Feature4: React.FC<FeatureProps> = ({
@@ -27,7 +27,10 @@ export const Feature4: React.FC<FeatureProps> = ({
   features,
 }) => {
   return (
-    <div className="px-[var(--section-padding-x)] py-[var(--section-padding-y)] mx-auto max-w-screen-xl">
+    <div
+      id="first-section"
+      className="px-[var(--section-padding-x)] py-[var(--section-padding-y)] mx-auto max-w-screen-xl"
+    >
       <div className="max-w-2xl mb-10 text-center mx-auto">
         <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase rounded-full bg-primary/10">
           {badge}
@@ -46,7 +49,7 @@ export const Feature4: React.FC<FeatureProps> = ({
       <div className="grid gap-10 row-gap-10 md:grid-cols-2 lg:grid-cols-2">
         {features.map((item, idx) => {
           const Icon =
-            (Icons[item.icon] as React.ElementType) || Icons.HelpCircle;
+            (Icons[item.icon] as React.ElementType) || Icons.HelpCircle
           return (
             <div
               key={idx}
@@ -70,9 +73,9 @@ export const Feature4: React.FC<FeatureProps> = ({
                 </Link>
               )}
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}

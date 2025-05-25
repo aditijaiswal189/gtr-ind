@@ -1,13 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
-import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react";
-import React from "react";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react"
+import React from "react"
 
 const cards: FeatureItemProps[] = [
   {
@@ -20,7 +21,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-];
+]
 const cardsNew: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -34,7 +35,7 @@ The MPNP offers several pathways, including Skilled Worker Overseas, Skilled Wor
     title: "IRCC",
     description: `Each stream targets candidates with specific qualifications, skills, and experience aligned with Manitoba’s workforce needs. Once selected, candidates receive a Nomination Certificate, enabling them to apply for Canadian permanent residence through Immigration, Refugees, and Citizenship Canada (IRCC). This program not only addresses labor shortages but also strengthens Manitoba’s population growth and economic development.`,
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -60,7 +61,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-];
+]
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -86,7 +87,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-];
+]
 const Manitoba: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -95,14 +96,8 @@ const Manitoba: React.FC = () => {
         title="Manitoba Provincial Nominee Program (MPNP)"
         description="Manitoba, located in the heart of Canada, is known for its diverse landscapes, including prairies, forests, and lakes. Winnipeg, the provincial capital, is a cultural and economic hub, and Manitoba offers a rich blend of outdoor activities, cultural experiences, and a welcoming community."
         imageUrl="/images/hero/i.avif"
-        primaryCta={{
-          label: "Alberta (AAIP)",
-          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Feature2WithImage
         heading={
@@ -145,7 +140,7 @@ const Manitoba: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Manitoba;
+export default Manitoba

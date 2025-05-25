@@ -1,6 +1,5 @@
-
-import React from 'react'
-import { Check } from 'lucide-react'
+import React from "react"
+import { Check } from "lucide-react"
 
 export interface FeatureSectionProps {
   badgeText: string
@@ -16,6 +15,7 @@ export const FeatureList: React.FC<FeatureSectionProps> = ({
   items,
 }) => (
   <section
+    id="first-section"
     className="
       px-[var(--section-padding-x)] py-[var(--section-padding-y)]
       mx-auto max-w-screen-xl
@@ -53,7 +53,6 @@ export const FeatureList: React.FC<FeatureSectionProps> = ({
     </div>
   </section>
 )
-
 
 export interface FeatureItemPropsList {
   /** Icon component (Lucide icon) */

@@ -1,14 +1,14 @@
-import React from "react";
-import { Check } from "lucide-react";
+import React from "react"
+import { Check } from "lucide-react"
 
 export interface FeatureList4GridProps {
   /** Lucide icon component */
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
-  bullets?: string[];
-  ctaText?: string;
-  ctaHref?: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
+  description: string
+  bullets?: string[]
+  ctaText?: string
+  ctaHref?: string
 }
 
 export const FeatureItem: React.FC<FeatureList4GridProps> = ({
@@ -67,12 +67,12 @@ export const FeatureItem: React.FC<FeatureList4GridProps> = ({
       </a> */}
     </div>
   </div>
-);
+)
 
 export interface FeatureSectionProps {
-  heading: React.ReactNode;
-  subheading?: string;
-  items: FeatureList4GridProps[];
+  heading: React.ReactNode
+  subheading?: string
+  items: FeatureList4GridProps[]
 }
 
 export const FeatureWithList4Grid: React.FC<FeatureSectionProps> = ({
@@ -81,6 +81,7 @@ export const FeatureWithList4Grid: React.FC<FeatureSectionProps> = ({
   items,
 }) => (
   <section
+    id="first-section"
     className="
       px-[var(--section-padding-x)] py-[var(--section-padding-y)]
       mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl
@@ -111,4 +112,4 @@ export const FeatureWithList4Grid: React.FC<FeatureSectionProps> = ({
       ))}
     </div>
   </section>
-);
+)

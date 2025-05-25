@@ -1,10 +1,11 @@
-import { Hero2 } from "@/components/ui/hero2";
-import { Pricing } from "@/components/ui/pricing";
+import { Hero2 } from "@/components/ui/hero2"
+import { Pricing } from "@/components/ui/pricing"
 import PricingSection, {
   PricingSectionConfig,
-} from "@/components/ui/pricing-section";
+} from "@/components/ui/pricing-section"
+import { commonProps } from "@/constant/commonProps"
 
-import React from "react";
+import React from "react"
 
 const aboutPricingConfig: PricingSectionConfig[] = [
   {
@@ -149,7 +150,7 @@ const aboutPricingConfig: PricingSectionConfig[] = [
       { title: "Parents/Grandparent", description: "", price: 3500 },
     ],
   },
-];
+]
 
 const PricePolicy: React.FC = () => {
   return (
@@ -159,21 +160,15 @@ const PricePolicy: React.FC = () => {
         title="Price Policy"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
         imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-        primaryCta={{
-          label: "Why choose us?",
-          href: "/about-us/about/why-choose-us",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Pricing />
       {aboutPricingConfig.map((config, index) => (
         <PricingSection key={index} {...config} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default PricePolicy;
+export default PricePolicy

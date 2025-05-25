@@ -1,37 +1,37 @@
-"use client";
-import React from "react";
-import { StatCounter } from "./stat-counter";
+"use client"
+import React from "react"
+import { StatCounter } from "./stat-counter"
 
-import { CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react"
 
 interface FeaturesConfig {
   intro: {
-    eyebrow: string;
-    heading: string;
-    text: string;
-  };
+    eyebrow: string
+    heading: string
+    text: string
+  }
   images: {
-    main: string;
-    overlay?: string;
+    main: string
+    overlay?: string
     badge?: {
-      value: string;
-      label: string;
-    };
-  };
+      value: string
+      label: string
+    }
+  }
   stats: {
-    label: string;
-    end: number;
-    suffix?: string;
-  }[];
+    label: string
+    end: number
+    suffix?: string
+  }[]
 }
 
 export const ContentWithImageDynamicCounter: React.FC<{
-  featuresConfig: FeaturesConfig;
+  featuresConfig: FeaturesConfig
 }> = ({ featuresConfig }) => {
-  const { intro, images, stats } = featuresConfig;
+  const { intro, images, stats } = featuresConfig
 
   return (
-    <section className=" bg-background">
+    <section id="first-section" className=" bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <div className="inline-block text-primary font-semibold mb-2">
@@ -119,5 +119,5 @@ export const ContentWithImageDynamicCounter: React.FC<{
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

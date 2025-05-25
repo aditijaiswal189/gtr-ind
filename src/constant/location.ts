@@ -1,4 +1,8 @@
-import { Location } from "../types/location";
+"use client"
+
+import { Location } from "@/components/ui/location-section"
+
+// import { Location } from "../types/location"
 
 export const locations: Location[] = [
   {
@@ -18,7 +22,7 @@ export const locations: Location[] = [
     city: " Regina, Saskatchewan",
     country: "Canada",
     phone: "+1-855-477-9797",
-    email: "info@gtrworldwide.com",
+    email: "admin@gtrworldwide.in",
     coordinates: [50.44496, -104.6], // Toronto coordinates
   },
   {
@@ -29,7 +33,7 @@ export const locations: Location[] = [
     city: "Noida, UP",
     country: "India",
     phone: "+91 88106 86447",
-    email: "info@gtrworldwide.com",
+    email: "admin@gtrworldwide.in",
     coordinates: [28.5, 77.401], // Melbourne coordinates
   },
-];
+]

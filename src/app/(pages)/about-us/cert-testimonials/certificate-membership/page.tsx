@@ -1,6 +1,7 @@
-import { Hero2 } from "@/components/ui/hero2";
-import { ImageCardReversible } from "@/components/ui/image-card-reversible";
-import React from "react";
+import { Hero2 } from "@/components/ui/hero2"
+import { ImageCardReversible } from "@/components/ui/image-card-reversible"
+import { commonProps } from "@/constant/commonProps"
+import React from "react"
 
 const teamData = {
   heading: (
@@ -72,7 +73,7 @@ const teamData = {
       image: "/images/cer9.jpg",
     },
   ],
-};
+}
 const CertificateMembership: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -81,14 +82,8 @@ const CertificateMembership: React.FC = () => {
         title="Certificate and Membership"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
         imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-        primaryCta={{
-          label: "Why choose us?",
-          href: "/about-us/about/why-choose-us",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <ImageCardReversible
         heading={teamData.heading}
@@ -97,7 +92,7 @@ const CertificateMembership: React.FC = () => {
         members={teamData.members}
       />
     </div>
-  );
-};
+  )
+}
 
-export default CertificateMembership;
+export default CertificateMembership

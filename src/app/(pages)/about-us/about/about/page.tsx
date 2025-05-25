@@ -1,15 +1,15 @@
-"use client";
-import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter";
-import { CtaWith4Features } from "@/components/ui/cta-with-4-features";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+"use client"
+import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter"
+import { CtaWith4Features } from "@/components/ui/cta-with-4-features"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
 import {
   FeatureWithList3Grid,
   FeatureWithListProps,
-} from "@/components/ui/feature-with-list3-grid";
-import { Feature1Animated } from "@/components/ui/feature1-animated";
-import { Hero2 } from "@/components/ui/hero2";
-import { Stats } from "@/components/ui/stats";
-
+} from "@/components/ui/feature-with-list3-grid"
+import { Feature1Animated } from "@/components/ui/feature1-animated"
+import { Hero2 } from "@/components/ui/hero2"
+import { Stats } from "@/components/ui/stats"
+import { commonProps } from "@/constant/commonProps"
 import {
   BadgePercent,
   Briefcase,
@@ -22,27 +22,27 @@ import {
   Notebook,
   ShieldCheck,
   UserCheck,
-} from "lucide-react";
-import { Plane } from "lucide-react";
-import React, { ReactNode } from "react";
+} from "lucide-react"
+import { Plane } from "lucide-react"
+import React, { ReactNode } from "react"
 
 interface StatItem {
-  label: string;
-  end: number;
-  suffix?: string;
+  label: string
+  end: number
+  suffix?: string
 }
 interface FeaturesConfig {
   intro: {
-    eyebrow: string;
-    heading: string;
-    text: string;
-  };
+    eyebrow: string
+    heading: string
+    text: string
+  }
   images: {
-    main: string;
-    overlay?: string;
-    badge?: { value: string; label: string };
-  };
-  stats: StatItem[];
+    main: string
+    overlay?: string
+    badge?: { value: string; label: string }
+  }
+  stats: StatItem[]
 }
 
 const featuresConfig: FeaturesConfig = {
@@ -64,12 +64,12 @@ const featuresConfig: FeaturesConfig = {
     { label: "Success Rate", end: 96, suffix: "%" },
     { label: "Customer Support", end: 24, suffix: "/7" },
   ],
-};
+}
 interface FeatureItem {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
+  title: string
+  description: string
+  link: string
+  icon: ReactNode
 }
 
 const featureItems: FeatureItem[] = [
@@ -87,7 +87,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-];
+]
 const aboutFeatures = [
   {
     title: "About Our Team",
@@ -113,7 +113,7 @@ const aboutFeatures = [
       "We take immense pride in our collaboration with licensed immigration experts certified by RCIC, Manoj Goswami, an immigrant to Canada since the early 2000s, brings nearly two decades of experience to his role.",
     icon: <Briefcase className="w-6 h-6" />,
   },
-];
+]
 export const features = [
   {
     title: "Government of Canada Licensed",
@@ -139,7 +139,7 @@ export const features = [
       "At GreenTech Resource Worldwide Canada, we offer high-quality immigration services at affordable rates, ensuring your journey towards a new beginning is both accessible and excellent. We have transparent refund policy, emphasizing our commitment to your satisfaction. Your dreams of a new life are well within your reach with GreenTech Resource Worldwide Canada by your side.",
     icon: ShieldCheck,
   },
-];
+]
 
 export const featuresConfig2: FeatureWithListProps[] = [
   {
@@ -202,7 +202,7 @@ export const featuresConfig2: FeatureWithListProps[] = [
     ],
     ctaHref: "/contact",
   },
-];
+]
 
 const AboutPage: React.FC = () => {
   return (
@@ -212,14 +212,8 @@ const AboutPage: React.FC = () => {
         title="About Us"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
         imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-        primaryCta={{
-          label: "Why choose us?",
-          href: "/about-us/about/why-choose-us",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <ContentWithImageDynamicCounter featuresConfig={featuresConfig} />
       <Feature1Animated featureItems={featureItems} />
@@ -238,7 +232,7 @@ const AboutPage: React.FC = () => {
       />
       <Stats />
     </div>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

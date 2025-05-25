@@ -1,8 +1,9 @@
-"use client";
-import React from "react";
-import { Hero2 } from "@/components/ui/hero2";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { features } from "@/app/(pages)/about-us/about/about/page";
+"use client"
+import React from "react"
+import { Hero2 } from "@/components/ui/hero2"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { commonProps } from "@/constant/commonProps"
 
 const JobsMap: React.FC = () => {
   return (
@@ -13,18 +14,12 @@ const JobsMap: React.FC = () => {
 Job Map"
         description="Know more about us, book an appointment today"
         imageUrl="/images/hero/g.avif"
-        primaryCta={{
-          label: "Family Sponsorship",
-          href: "/other-services/programs/family-sponsorship",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       {/* ── Power BI Report Embed ── */}
-      <div className="w-full max-w-7xl mx-auto px-4">
+      <div id="first-section" className="w-full max-w-7xl mx-auto px-4">
         <iframe
           title="GTR Sask Report_V1.3"
           src="https://app.powerbi.com/view?r=eyJrIjoiZDkwNGJlMjItODRlYi00YzExLWEwNzEtYTE4NGEwZDY2YzE1IiwidCI6Ijg5ZTUzNjdhLTQ4ZTUtNGQzYy05ZTEzLWZmNTA4OTZlNDJlMCJ9"
@@ -43,7 +38,7 @@ Job Map"
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default JobsMap;
+export default JobsMap

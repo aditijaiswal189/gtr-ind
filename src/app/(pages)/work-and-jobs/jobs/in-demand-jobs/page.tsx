@@ -1,11 +1,12 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureWithListProps } from "@/components/ui/feature-with-list3-grid";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureWithListProps } from "@/components/ui/feature-with-list3-grid"
 import {
   FeatureList4GridProps,
   FeatureWithList4Grid,
-} from "@/components/ui/feature-with-list4-grid";
-import { Hero2 } from "@/components/ui/hero2";
+} from "@/components/ui/feature-with-list4-grid"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
 import {
   Briefcase,
   Globe2,
@@ -15,8 +16,8 @@ import {
   Network,
   NotebookPen,
   NotebookTabsIcon,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 
 export const featuresConfig2: FeatureList4GridProps[] = [
   {
@@ -159,8 +160,8 @@ export const featuresConfig2: FeatureList4GridProps[] = [
       "Chefs and Cooks",
     ],
   },
-];
-export const featuresConfig3: FeatureWithListProps[] = [];
+]
+export const featuresConfig3: FeatureWithListProps[] = []
 const InDemandJobs: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -170,14 +171,8 @@ const InDemandJobs: React.FC = () => {
         description="GreenTech Resources Worldwide Canada's partners currently have a demand for hiring foreign workers for the following positions.
 Please contact us to submit your application and arrange for interviews"
         imageUrl="/images/hero/n.avif"
-        primaryCta={{
-          label: "Work Permit",
-          href: "/work-and-jobs/work/work-permit",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <FeatureWithList4Grid
@@ -193,7 +188,7 @@ Please contact us to submit your application and arrange for interviews"
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default InDemandJobs;
+export default InDemandJobs

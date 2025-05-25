@@ -1,7 +1,9 @@
-import { Hero2 } from "@/components/ui/hero2";
-import { ImageCardReversible } from "@/components/ui/image-card-reversible";
+import { FocusCards } from "@/components/ui/focus-cards"
+import { Hero2 } from "@/components/ui/hero2"
+import { ImageCardReversible } from "@/components/ui/image-card-reversible"
+import { commonProps } from "@/constant/commonProps"
 
-import React from "react";
+import React from "react"
 const teamData = [
   {
     heading: (
@@ -395,7 +397,7 @@ const teamData = [
       },
     ],
   },
-];
+]
 
 const SuccessCustomers: React.FC = () => {
   return (
@@ -405,26 +407,13 @@ const SuccessCustomers: React.FC = () => {
         title="Success Customers"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
         imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-        primaryCta={{
-          label: "Why choose us?",
-          href: "/about-us/about/why-choose-us",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
-      {teamData.map((teamData) => (
-        <ImageCardReversible
-          key={teamData?.id}
-          heading={teamData?.heading}
-          subtitle={teamData?.subtitle || ""}
-          description={teamData?.description || ""}
-          members={teamData?.members || []}
-        />
-      ))}
-    </div>
-  );
-};
 
-export default SuccessCustomers;
+      <FocusCards cards={teamData} />
+    </div>
+  )
+}
+
+export default SuccessCustomers

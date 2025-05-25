@@ -1,8 +1,9 @@
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { Hero2 } from "@/components/ui/hero2";
-import React from "react";
-import { features } from "../../about/about/page";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { Hero2 } from "@/components/ui/hero2"
+import React from "react"
+import { features } from "../../about/about/page"
+import { commonProps } from "@/constant/commonProps"
 
 const testimonials = [
   {
@@ -47,7 +48,7 @@ const testimonials = [
     designation: "VP of Technology at FutureNet",
     src: "/images/customers/cu1.webp",
   },
-];
+]
 const Testimonials: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -57,14 +58,8 @@ const Testimonials: React.FC = () => {
           title="Testimonials"
           description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
           imageUrl="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-          primaryCta={{
-            label: "Why choose us?",
-            href: "/about-us/about/why-choose-us",
-          }}
-          secondaryCta={{
-            label: "Learn More",
-            href: "/about-us/about/book-appointment",
-          }}
+          primaryCta={commonProps?.primaryCta}
+          secondaryCta={commonProps?.secondaryCta}
         />
         <AnimatedTestimonials testimonials={testimonials} />
         <CtaWithFeaturesRightImage
@@ -75,7 +70,7 @@ const Testimonials: React.FC = () => {
         />
       </>
     </div>
-  );
-};
+  )
+}
 
-export default Testimonials;
+export default Testimonials

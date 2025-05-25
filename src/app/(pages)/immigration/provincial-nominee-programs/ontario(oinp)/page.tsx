@@ -1,11 +1,12 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   BookOpen,
@@ -21,8 +22,8 @@ import {
   TrendingUp,
   UserCheck,
   UserPlus,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 
 const cards: FeatureItemProps[] = [
   {
@@ -35,7 +36,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -61,7 +62,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-];
+]
 
 const features3: FeatureItemData[] = [
   {
@@ -88,7 +89,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-];
+]
 export const streamsConfig: FeatureItemData[] = [
   {
     icon: <UserCheck />,
@@ -149,7 +150,7 @@ export const streamsConfig: FeatureItemData[] = [
     description:
       "Apply for the French-Speaking Skilled Worker stream if you are a French-speaking foreign worker with strong English language abilities.",
   },
-];
+]
 const Ontario: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -158,14 +159,8 @@ const Ontario: React.FC = () => {
         title="Ontario Immigrant Nominee Program (OINP)"
         description="Ontario, the most populous province in Canada, is known for its diverse landscapes, vibrant cities, and robust economy. Home to the country’s largest city, Toronto, as well as the national capital, Ottawa, Ontario is a cultural and economic hub"
         imageUrl="/images/hero/n.avif"
-        primaryCta={{
-          label: "Alberta (AAIP)",
-          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <FeatureGrid4
         title="Ontario Immigrant Nominee Program (OINP)"
@@ -203,7 +198,7 @@ The OINP has various streams, including those for skilled workers, entrepreneurs
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Ontario;
+export default Ontario
