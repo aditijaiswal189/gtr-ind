@@ -1,3 +1,4 @@
+"use client";
 import { Footer } from "@/components/ui/footer";
 import { ReactNode } from "react";
 import { HeaderHome } from "@/components/ui/header-home";
