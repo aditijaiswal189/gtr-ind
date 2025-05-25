@@ -1,7 +1,11 @@
 "use client"
 import { LocationSection } from "@/components/ui/location-section"
 import { SectionHeader } from "@/components/ui/section-header"
-import { ZohoIframeForm } from "@/components/ui/zoho-lead-form"
+
+import dynamic from "next/dynamic"
+const ZohoIframeForm = dynamic(() => import("@/components/ui/zoho-lead-form"), {
+  ssr: false,
+})
 
 export default function ContactPage() {
   return (
