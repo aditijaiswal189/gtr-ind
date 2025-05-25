@@ -1,17 +1,17 @@
 // components/TopBar.tsx
-"use client";
-import React, { useState, useEffect } from "react";
-import { Mail } from "lucide-react";
-import Link from "next/link";
-import { IconBrandWhatsapp } from "@tabler/icons-react";
+"use client"
+import React, { useState, useEffect } from "react"
+import { Mail } from "lucide-react"
+import Link from "next/link"
+import { IconBrandWhatsapp } from "@tabler/icons-react"
 
 export function TopBar() {
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(false)
   useEffect(() => {
-    const onScroll = () => setHidden(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const onScroll = () => setHidden(window.scrollY > 10)
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
     <div
@@ -27,7 +27,7 @@ export function TopBar() {
     >
       <div className="flex items-center space-x-6 text-black text-sm">
         <Mail className="ml-5 mr-2" />
-        <span>info@gtrworldwide.com</span>
+        <span>admin@gtrworldwide.in</span>
       </div>
       <div className="flex items-center space-x-4">
         <img
@@ -42,5 +42,5 @@ export function TopBar() {
         />
       </div>
     </div>
-  );
+  )
 }

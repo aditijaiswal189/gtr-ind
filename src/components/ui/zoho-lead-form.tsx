@@ -1,54 +1,14 @@
-// // // components/ZohoLeadForm.tsx
-// // "use client";
-// // import Script from "next/script";
+"use client"
 
-// // export default function ZohoLeadForm() {
-// //   return (
-// //     <>
-// //       <div className="zoho-webform">
-// //         <div id="zoho-form-container" />
-// //         <Script
-// //           strategy="afterInteractive"
-// //           id="formScript919410000000639005"
-// //           src="https://crm.zoho.in/crm/WebFormServeServlet?rid=6667a61d6f3563323baffaa6973706c35f8b7caa4d9d61495177d02da81e2a6f42cf08db21db81adf900962b1e4711c1gid43d23f8c64c6c86a0a9ff895c763c752e904df81f167d860aaf591ea7ffc7bd4&script=$sYG"
-// //         />
-// //       </div>
-// //     </>
-// //   );
-// // }
-
-// "use client";
-// import Script from "next/script";
-
-// export default function ZohoLeadForm() {
-//   return (
-//     <>
-//       <div className="zoho-webform">
-//         {/* This DIV ID is required by Zoho’s embed script */}
-//         <div id="crmWebToEntityForm"></div>
-
-//         <Script
-//           strategy="afterInteractive"
-//           id="formScript919410000000639005"
-//           src="https://crm.zoho.in/crm/WebFormServeServlet?rid=6667a61d6f3563323baffaa6973706c35f8b7caa4d9d61495177d02da81e2a6f42cf08db21db81adf900962b1e4711c1gid43d23f8c64c6c86a0a9ff895c763c752e904df81f167d860aaf591ea7ffc7bd4&script=$sYG"
-//         />
-//       </div>
-//     </>
-//   );
-// }
-// components/ZohoIframeForm.tsx
-// components/ZohoIframeForm.tsx
-"use client";
-
-import Script from "next/script";
-import React from "react";
+import Script from "next/script"
+import React from "react"
 
 interface ZohoIframeFormProps {
   /** The exact URL Zoho gave you in its iFrame snippet */
-  src: string;
+  src: string
   /** Optional width/height overrides */
-  width?: string;
-  height?: string;
+  width?: string
+  height?: string
 }
 
 export default function ZohoIframeForm({
@@ -93,6 +53,68 @@ export default function ZohoIframeForm({
           scrolling="no"
         />
       </div>
+      <style jsx global>{`
+        .zcwf_col_lab label {
+          font-size: 0.875rem;
+          color: #374151;
+          font-weight: 500;
+        }
+
+        .zcwf_col_fld input[type="text"],
+        .zcwf_col_fld textarea,
+        .zcwf_col_fld select {
+          width: 100%;
+          padding: 0.5rem 0.75rem;
+          border: 1px solid #d1d5db;
+          border-radius: 0.375rem;
+          font-size: 0.875rem;
+          outline: none;
+          transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .zcwf_col_fld input[type="text"]:focus,
+        .zcwf_col_fld textarea:focus,
+        .zcwf_col_fld select:focus {
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 1px #3b82f6;
+        }
+
+        .zcwf_button.formsubmit {
+          background-color: #2563eb;
+          color: white;
+          font-weight: 600;
+          padding: 0.5rem 1rem;
+          border-radius: 0.375rem;
+          transition: background-color 0.2s;
+        }
+
+        .zcwf_button.formsubmit:hover {
+          background-color: #1d4ed8;
+        }
+
+        .zcwf_button[type="reset"] {
+          background-color: #e5e7eb;
+          color: #1f2937;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 0.375rem;
+          margin-left: 0.5rem;
+          transition: background-color 0.2s;
+        }
+
+        .zcwf_button[type="reset"]:hover {
+          background-color: #d1d5db;
+        }
+
+        #crmWebToEntityForm {
+          background-color: white;
+          padding: 1.5rem;
+          border-radius: 0.5rem;
+          max-width: 40rem;
+          margin: 2rem auto;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+      `}</style>
     </>
-  );
+  )
 }

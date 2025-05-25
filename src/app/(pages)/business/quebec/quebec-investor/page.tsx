@@ -1,12 +1,13 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { Feature1Animated } from "@/components/ui/feature1-animated";
-import { Feature2WithImage } from "@/components/ui/features-2-with-image";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { Feature1Animated } from "@/components/ui/feature1-animated"
+import { Feature2WithImage } from "@/components/ui/features-2-with-image"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import { Hero2 } from "@/components/ui/hero2";
+} from "@/components/ui/features-list"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   Briefcase,
@@ -18,8 +19,8 @@ import {
   Star,
   UserCheck,
   Zap,
-} from "lucide-react";
-import React, { ReactNode } from "react";
+} from "lucide-react"
+import React, { ReactNode } from "react"
 
 const items: FeatureItemPropsList[] = [
   {
@@ -44,7 +45,7 @@ const items: FeatureItemPropsList[] = [
     icon: Notebook,
     text: "Obtain an attestation of learning about democratic values and Québec values",
   },
-];
+]
 
 const cards = [
   {
@@ -59,12 +60,12 @@ const cards = [
     description:
       "However, the Quebec Immigrant Investor Program QIIP is currently closed to new applicants. It was suspended in 2019 and was supposed to open in April 2023. However, it was announced last March that the program would remain closed until January 2024",
   },
-];
+]
 interface FeatureItem {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
+  title: string
+  description: string
+  link: string
+  icon: ReactNode
 }
 
 const featureItems: FeatureItem[] = [
@@ -82,7 +83,7 @@ const featureItems: FeatureItem[] = [
     link: "/about-us/about/book-appointment",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-];
+]
 
 const QuInvestor: React.FC = () => {
   return (
@@ -92,11 +93,8 @@ const QuInvestor: React.FC = () => {
         title="Québec Immigrant Investor Program (QIIP)"
         description="This program is designed for high-net-worth individuals who wish to invest in the Quebec economy Applicants must have these qualifications"
         imageUrl="/images/hero/g.avif"
-        primaryCta={{ label: "Quebec Enterpreneur Program", href: "/business/quebec/quebec-enterpreneur-program" }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <FeatureList
@@ -134,7 +132,7 @@ The Business Immigration Programs serve as a bridge for those seeking to contrib
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default QuInvestor;
+export default QuInvestor

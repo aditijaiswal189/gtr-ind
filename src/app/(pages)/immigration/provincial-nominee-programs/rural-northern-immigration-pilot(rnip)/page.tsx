@@ -1,12 +1,13 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   Briefcase,
@@ -17,8 +18,8 @@ import {
   Lightbulb,
   Notebook,
   Plane,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 
 const cards: FeatureItemProps[] = [
   {
@@ -31,7 +32,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -57,7 +58,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-];
+]
 const featuresLink: FeatureItemData[] = [
   {
     title: "Vernon, BC",
@@ -104,7 +105,7 @@ const featuresLink: FeatureItemData[] = [
     title: "West Kootenay (Trail, Castlegar, Rossland, Nelson), BC",
     description: "https://wk-rnip.ca/",
   },
-];
+]
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -130,11 +131,11 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-];
+]
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
+  description: string
 }
 const stepsRural: StepConfigList[] = [
   {
@@ -161,7 +162,7 @@ const stepsRural: StepConfigList[] = [
     description:
       "Once you receive a community recommendation, you can then apply for permanent residence through the IRCC. While the community recommendation significantly strengthens your application, you will still need to meet general IRCC criteria. Upon submission, your application will be reviewed, and if approved, you will be on your way to obtaining permanent residence in Canada.",
   },
-];
+]
 const RuralNorthernImmigrationPilot: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -171,14 +172,8 @@ const RuralNorthernImmigrationPilot: React.FC = () => {
 "
         description="The Rural and Northern Immigration Pilot is a community-driven program. It’s designed to spread the benefits of economic immigration to smaller communities by creating a path to permanent residence for skilled foreign workers who want to work and live in one of the participating communities."
         imageUrl="/images/hero/q.avif"
-        primaryCta={{
-          label: "Alberta (AAIP)",
-          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <FeatureGrid4
@@ -225,7 +220,7 @@ Participating communities
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default RuralNorthernImmigrationPilot;
+export default RuralNorthernImmigrationPilot

@@ -1,16 +1,17 @@
-import { Cta4FeaturesWithoutImage } from "@/components/ui/cta4-features-without-image";
-import { Feature3 } from "@/components/ui/feature3";
-import { Feature2WithImage } from "@/components/ui/features-2-with-image";
+import { Cta4FeaturesWithoutImage } from "@/components/ui/cta4-features-without-image"
+import { Feature3 } from "@/components/ui/feature3"
+import { Feature2WithImage } from "@/components/ui/features-2-with-image"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import type { Cta4FeatureItemProps } from "@/components/ui/cta4-features-without-image";
-import { Hero2 } from "@/components/ui/hero2";
-import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3";
-import { Award, Briefcase, Heart, Notebook, Smile, Star } from "lucide-react";
-import React from "react";
-import { Users, ClipboardCheck, MapPin, FileCheck } from "lucide-react";
+} from "@/components/ui/features-list"
+import type { Cta4FeatureItemProps } from "@/components/ui/cta4-features-without-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3"
+import { Award, Briefcase, Heart, Notebook, Smile, Star } from "lucide-react"
+import React from "react"
+import { Users, ClipboardCheck, MapPin, FileCheck } from "lucide-react"
+import { commonProps } from "@/constant/commonProps"
 
 const items: FeatureItemPropsList[] = [
   {
@@ -28,7 +29,7 @@ const items: FeatureItemPropsList[] = [
     icon: Notebook,
     text: "Obtain an attestation of learning about democratic values ",
   },
-];
+]
 const features2 = [
   {
     icon: "Briefcase" as const,
@@ -47,7 +48,7 @@ const features2 = [
     description:
       "An organization managed by an institution of higher learning incorporated under the laws of Québec or another province of Canada. It may also be an organization affiliated with such an institution that offers coaching services to entrepreneurs",
   },
-];
+]
 
 const cards = [
   {
@@ -62,7 +63,7 @@ const cards = [
     description:
       "Successful candidates will receive a Québec Selection Certificate (CSQ) and can apply for Canadian permanent residency. Applicants must have a legally acquired net worth of at least CAD 900,000 and have experience in managing a business.",
   },
-];
+]
 
 const steps = [
   {
@@ -80,7 +81,7 @@ const steps = [
     description:
       "Direction du regroupement familial et de l’enregistrement Ministère de l’Immigration, de la Francisation et de l’Intégration 285, rue Notre-Dame Ouest, 4e étage Montréal (Québec) H2Y 1T8 CANADA",
   },
-];
+]
 
 export const items2: Cta4FeatureItemProps[] = [
   {
@@ -111,7 +112,7 @@ export const items2: Cta4FeatureItemProps[] = [
       "Our RCIC navigators help you assemble and submit all required documentation correctly. From forms to supporting materials, we provide ongoing support so you’re fully prepared and informed at every stage of the application process.",
     ctaHref: "/",
   },
-];
+]
 
 const QuEnterpreneurProgram: React.FC = () => {
   return (
@@ -121,14 +122,8 @@ const QuEnterpreneurProgram: React.FC = () => {
         title="Québec Entrepreneur Program"
         description="The Québec Entrepreneur Program is tailored for individuals interested in owning and managing a business in Quebec"
         imageUrl="/images/hero/h.avif"
-        primaryCta={{
-          label: "Quebec Immigrant Investor Program",
-          href: "/business/quebec/quebec-investor",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <FeatureList
@@ -191,7 +186,7 @@ GreenTech Resources Worldwide Canada can assist with Québec immigration by prov
         items={items2}
       />
     </div>
-  );
-};
+  )
+}
 
-export default QuEnterpreneurProgram;
+export default QuEnterpreneurProgram

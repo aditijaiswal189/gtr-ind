@@ -1,7 +1,7 @@
-"use client";
-import React from "react";
-import { SectionHeader } from "./section-header";
-import { BlogCard } from "./blog-card";
+"use client"
+import React from "react"
+import { SectionHeader } from "./section-header"
+import { BlogCard } from "./blog-card"
 
 export function BlogSection() {
   const blogPosts = [
@@ -40,10 +40,10 @@ export function BlogSection() {
       image:
         "https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg",
     },
-  ];
+  ]
 
   return (
-    <section className="py-16 bg-background">
+    <section id="first-section" className="py-16 bg-background">
       <SectionHeader
         title="CANADA IMMIGRATION NEWS"
         subtitle="Latest News & Events"
@@ -56,5 +56,5 @@ export function BlogSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

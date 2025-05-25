@@ -1,15 +1,15 @@
-import React from "react";
-import { ComponentType, SVGProps } from "react";
+import React from "react"
+import { ComponentType, SVGProps } from "react"
 
 export interface StepItemProps {
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
+  icon: ComponentType<SVGProps<SVGSVGElement>>
+  title: string
+  description: string
 }
 
 interface StepItemWithNumberProps extends StepItemProps {
-  number: number;
-  totalSteps: number;
+  number: number
+  totalSteps: number
 }
 
 /**
@@ -26,8 +26,8 @@ export const StepItem: React.FC<StepItemWithNumberProps> = ({
   title,
   description,
 }) => {
-  const isFirst = number === 1;
-  const isLast = number === totalSteps;
+  const isFirst = number === 1
+  const isLast = number === totalSteps
 
   return (
     <div className="flex">
@@ -82,14 +82,14 @@ export const StepItem: React.FC<StepItemWithNumberProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export interface StepSectionProps {
-  badgeText?: string;
-  heading: React.ReactNode;
-  subheading?: string;
-  steps: StepItemProps[];
+  badgeText?: string
+  heading: React.ReactNode
+  subheading?: string
+  steps: StepItemProps[]
 }
 
 export const StepsWithHeadingImageList: React.FC<StepSectionProps> = ({
@@ -99,6 +99,7 @@ export const StepsWithHeadingImageList: React.FC<StepSectionProps> = ({
   steps,
 }) => (
   <section
+    id="first-section"
     className="
       px-[var(--section-padding-x)] py-[var(--section-padding-y)]
       mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl
@@ -139,4 +140,4 @@ export const StepsWithHeadingImageList: React.FC<StepSectionProps> = ({
       ))}
     </div>
   </section>
-);
+)

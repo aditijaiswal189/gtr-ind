@@ -1,19 +1,13 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
 import {
   FeatureItemListProps,
   FeatureListWithImage,
-} from "@/components/ui/feature-list-with-image";
-import { Hero2 } from "@/components/ui/hero2";
-import {
-  CheckSquare,
-  Contact,
-  Globe2,
-  Notebook,
-  Star,
-  Zap,
-} from "lucide-react";
-import React from "react";
+} from "@/components/ui/feature-list-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { CheckSquare, Contact, Globe2, Notebook, Star, Zap } from "lucide-react"
+import React from "react"
 export const featuresConfig: FeatureItemListProps[] = [
   {
     text: "Ensure of PNP/LMIA registration for employers",
@@ -38,7 +32,7 @@ export const featuresConfig: FeatureItemListProps[] = [
     text: "Guiding candidates through settlement processes",
     Icon: Globe2,
   },
-];
+]
 const ForEmployers: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -47,14 +41,8 @@ const ForEmployers: React.FC = () => {
         title="Are you looking for LMIA/PNP applicants?"
         description="Hiring foreign workers adds fresh skills and perspectives, enhancing business innovation and diversity"
         imageUrl="/images/hero/m.avif"
-        primaryCta={{
-          label: "Work Permit",
-          href: "/work-and-jobs/work/work-permit",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <FeatureListWithImage
         badgeText="Supports for Employers"
@@ -81,7 +69,7 @@ const ForEmployers: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default ForEmployers;
+export default ForEmployers

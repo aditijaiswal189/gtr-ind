@@ -1,13 +1,13 @@
-import React from "react";
-import { BookOpen, Briefcase, Users, Map } from "lucide-react";
-import Link from "next/link";
+import React from "react"
+import { BookOpen, Briefcase, Users, Map } from "lucide-react"
+import Link from "next/link"
 
 interface ButtonProps {
-  text: string;
-  bgColor: string;
-  hoverColor: string;
-  icon: React.ReactNode;
-  href: string; // Optional href for links
+  text: string
+  bgColor: string
+  hoverColor: string
+  icon: React.ReactNode
+  href: string // Optional href for links
 }
 
 const HeroButton: React.FC<ButtonProps> = ({
@@ -26,8 +26,8 @@ const HeroButton: React.FC<ButtonProps> = ({
         <span>{text}</span>
       </button>
     </Link>
-  );
-};
+  )
+}
 
 const HeroButtons: React.FC = () => {
   const buttons: ButtonProps[] = [
@@ -48,7 +48,7 @@ const HeroButtons: React.FC = () => {
     {
       text: "Business",
       bgColor: "bg-primary-red",
-      hoverColor: "hover:bg-red-600",
+      hoverColor: "hover:bg-red-700",
       href: "/business/quebec/quebec-investor",
       icon: <Briefcase className="w-5 h-5" />,
     },
@@ -59,7 +59,7 @@ const HeroButtons: React.FC = () => {
       href: "/work-and-jobs/work/work-permit",
       icon: <Users className="w-5 h-5" />,
     },
-  ];
+  ]
 
   return (
     <div className="w-full max-w-md">
@@ -79,7 +79,7 @@ const HeroButtons: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroButtons;
+export default HeroButtons

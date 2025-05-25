@@ -1,16 +1,16 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from "react"
+import { cn } from "@/lib/utils"
 
 export interface FeatureItemData {
-  title: string;
-  description: string;
-  icon?: React.ReactElement<{ className?: string }>;
+  title: string
+  description: string
+  icon?: React.ReactElement<{ className?: string }>
 }
 
 interface FeatureItemProps extends FeatureItemData {
-  index: number;
-  total: number;
-  columns: number;
+  index: number
+  total: number
+  columns: number
 }
 
 /**
@@ -28,12 +28,12 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
   total,
   columns,
 }) => {
-  const row = Math.floor(index / columns);
-  const col = index % columns;
-  const rows = Math.ceil(total / columns);
+  const row = Math.floor(index / columns)
+  const col = index % columns
+  const rows = Math.ceil(total / columns)
 
-  const hasRightBorder = col < columns - 1;
-  const hasBottomBorder = row < rows - 1;
+  const hasRightBorder = col < columns - 1
+  const hasBottomBorder = row < rows - 1
 
   return (
     <div
@@ -86,15 +86,15 @@ export const FeatureItem: React.FC<FeatureItemProps> = ({
         {description}
       </p>
     </div>
-  );
-};
+  )
+}
 
 export interface FeatureGridProps {
-  title: string;
-  description: string;
-  features: FeatureItemData[];
+  title: string
+  description: string
+  features: FeatureItemData[]
   /** default 4. You can pass 2 or 3 if you want fewer columns on lg. */
-  columns?: number;
+  columns?: number
 }
 
 /**
@@ -112,11 +112,11 @@ export const FeatureGrid4: React.FC<FeatureGridProps> = ({
     2: "lg:grid-cols-2",
     3: "lg:grid-cols-3",
     4: "lg:grid-cols-4",
-  }[columns];
+  }[columns]
 
   return (
     <>
-      <div className="max-w-2xl  sm:mx-auto text-center">
+      <div id="first-section" className="max-w-2xl  sm:mx-auto text-center">
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
           {title}
         </h2>
@@ -141,5 +141,5 @@ export const FeatureGrid4: React.FC<FeatureGridProps> = ({
         ))}
       </div>
     </>
-  );
-};
+  )
+}

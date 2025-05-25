@@ -1,16 +1,16 @@
 // components/ui/service-card.tsx
-"use client";
+"use client"
 
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import React from "react"
 
 export interface Props {
-  icon?: React.ReactNode;
-  title: string;
-  description: string;
-  highlighted?: boolean;
-  buttonText?: string;
-  href: string; // Optional URL
+  icon?: React.ReactNode
+  title: string
+  description: string
+  highlighted?: boolean
+  buttonText?: string
+  href: string // Optional URL
 }
 
 const FeaturesCard: React.FC<Props> = ({
@@ -77,13 +77,13 @@ const FeaturesCard: React.FC<Props> = ({
         </Link>
       )}
     </div>
-  );
-};
+  )
+}
 
 interface FeaturesWithLastFilledProps {
-  services: Props[];
-  sectionTitle?: string;
-  sectionSubtitle?: string;
+  services: Props[]
+  sectionTitle?: string
+  sectionSubtitle?: string
 }
 
 export const FeaturesWithLastFilled: React.FC<FeaturesWithLastFilledProps> = ({
@@ -92,7 +92,10 @@ export const FeaturesWithLastFilled: React.FC<FeaturesWithLastFilledProps> = ({
   sectionSubtitle,
 }) => {
   return (
-    <section className="px-4 sm:px-8 lg:px-20 py-16 bg-background">
+    <section
+      id="first-section"
+      className="px-4 sm:px-8 lg:px-20 py-16 bg-background"
+    >
       {sectionTitle && (
         <div className="text-center mb-12">
           <p className="text-sm font-bold tracking-wider text-primary uppercase mb-3">
@@ -111,5 +114,5 @@ export const FeaturesWithLastFilled: React.FC<FeaturesWithLastFilledProps> = ({
         ))}
       </div>
     </section>
-  );
-};
+  )
+}

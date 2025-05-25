@@ -1,13 +1,13 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
-import { Feature1Animated } from "@/components/ui/feature1-animated";
-import { Feature3 } from "@/components/ui/feature3";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
+import { Feature1Animated } from "@/components/ui/feature1-animated"
+import { Feature3 } from "@/components/ui/feature3"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
 import {
   Briefcase,
   BriefcaseBusiness,
@@ -22,13 +22,13 @@ import {
   NotebookPen,
   Plane,
   UserCheck,
-} from "lucide-react";
-import React, { ReactNode } from "react";
+} from "lucide-react"
+import React, { ReactNode } from "react"
 interface FeatureItem {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
+  title: string
+  description: string
+  link: string
+  icon: ReactNode
 }
 
 const featureItems: FeatureItem[] = [
@@ -60,7 +60,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-];
+]
 const featureItemsNew: FeatureItem[] = [
   {
     title: " Prince Edward Island",
@@ -76,7 +76,7 @@ const featureItemsNew: FeatureItem[] = [
     link: "/",
     icon: <Notebook className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-];
+]
 
 const cards: FeatureItemProps[] = [
   {
@@ -89,7 +89,7 @@ const cards: FeatureItemProps[] = [
     title: "AIPP Becomes Permanent",
     description: `Due to the overwhelming success of the pilot program, the Canadian government announced that the AIPP would become a permanent immigration program starting January 1, 2022. This transition from pilot to permanent status ensures that the Atlantic provinces will continue to benefit from the influx of skilled immigrants, and it solidifies the AIPP as a reliable and attractive option for those seeking permanent residency in Canada.`,
   },
-];
+]
 const features3 = [
   {
     icon: "Briefcase" as const,
@@ -109,7 +109,7 @@ const features3 = [
     description:
       " For international graduates who have completed their education in one of the Atlantic provinces.",
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Cultural Diversity",
@@ -172,7 +172,7 @@ const features2: FeatureItemData[] = [
       "Explore the opportunities in New Brunswick today and discover why this province is not just a gateway to Atlantic Canada, but a thriving center of industry, culture, and innovation.",
     icon: <Heart />,
   },
-];
+]
 const featuresNew: FeatureItemData[] = [
   {
     title: "A Strong Fishing Industry",
@@ -217,7 +217,7 @@ const featuresNew: FeatureItemData[] = [
       "Discover the opportunities Nova Scotia has to offer and experience life in one of Canada’s most dynamic coastal provinces.",
     icon: <Briefcase />,
   },
-];
+]
 const AtlanticImmigration: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -226,14 +226,8 @@ const AtlanticImmigration: React.FC = () => {
         title="Atlantic Immigration (AIPP)"
         description="New Brunswick | Newfoundland and Labrador | Nova Scotia | Prince Edward Island"
         imageUrl="/images/hero/h.avif"
-        primaryCta={{
-          label: "Alberta (AAIP)",
-          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Feature1Animated featureItems={featureItems} />
       <Feature2WithImage
@@ -274,7 +268,7 @@ const AtlanticImmigration: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default AtlanticImmigration;
+export default AtlanticImmigration

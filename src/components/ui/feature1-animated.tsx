@@ -1,19 +1,22 @@
 // Feature.tsx
-"use client";
-import React from "react";
-import { ReactNode } from "react";
+"use client"
+import React from "react"
+import { ReactNode } from "react"
 // import Link from "next/link";
 
 interface featureItems {
-  title: string;
-  description: string;
-  link: string;
-  icon: ReactNode;
+  title: string
+  description: string
+  link: string
+  icon: ReactNode
 }
 export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({
   featureItems,
 }) => (
-  <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div
+    id="first-section"
+    className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+  >
     <div className="grid gap-8 row-gap-5 md:grid-cols-2">
       {featureItems.map((item, idx) => (
         <div
@@ -54,4 +57,4 @@ export const Feature1Animated: React.FC<{ featureItems: featureItems[] }> = ({
       ))}
     </div>
   </div>
-);
+)

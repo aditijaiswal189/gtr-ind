@@ -1,14 +1,15 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
-import { Feature3 } from "@/components/ui/feature3";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
+import { Feature3 } from "@/components/ui/feature3"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { Hero2 } from "@/components/ui/hero2";
-import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react";
-import React from "react";
+} from "@/components/ui/features-2-with-image"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react"
+import React from "react"
 
 const cards: FeatureItemProps[] = [
   {
@@ -21,7 +22,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -47,7 +48,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-];
+]
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -73,7 +74,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-];
+]
 
 export const featuresNew = [
   {
@@ -112,7 +113,7 @@ export const featuresNew = [
     description:
       "This stream targets experienced entrepreneurs who wish to start or invest in a business in New Brunswick Provincial Nominee Program. It focuses on individuals who can contribute to the province's economic development. Requirements typically include:A proven track record of successful business ownership or management. A detailed business plan demonstrating the viability and potential economic impact of the business. Sufficient personal net worth and financial resources to support the business and contribute to job creation in New Brunswick Provincial Nominee Program.",
   },
-];
+]
 
 const NewBrunswwick: React.FC = () => {
   return (
@@ -122,14 +123,8 @@ const NewBrunswwick: React.FC = () => {
         title="New Brunswick Provincial Nominee Program (NBPNP)​"
         description="New Brunswick is one of the thirteen provinces and territories of Canada. It is one of the three Maritime provinces and one of the four Atlantic provinces. It is the only province with both French and English as its official languages."
         imageUrl="/images/hero/j.avif"
-        primaryCta={{
-          label: "Alberta (AAIP)",
-          href: "/immigration/provincial-nominee-programs/alberta(aaip)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <Feature3
@@ -170,7 +165,7 @@ Here are the details about each program:"
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default NewBrunswwick;
+export default NewBrunswwick

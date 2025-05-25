@@ -1,48 +1,51 @@
-"use client";
+"use client"
 
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // ✅ using lucide-react
-import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react" // ✅ using lucide-react
+import { useEffect, useState } from "react"
 
 type Testimonial = {
-  quote: string;
-  name: string;
-  designation: string;
-  src: string;
-};
+  quote: string
+  name: string
+  designation: string
+  src: string
+}
 
 interface AnimatedTestimonialsProps {
-  testimonials: Testimonial[];
-  autoplay?: boolean;
+  testimonials: Testimonial[]
+  autoplay?: boolean
 }
 
 export const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
   testimonials,
   autoplay = false,
 }) => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(0)
 
   const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length);
-  };
+    setActive((prev) => (prev + 1) % testimonials.length)
+  }
 
   const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
 
-  const isActive = (index: number) => index === active;
+  const isActive = (index: number) => index === active
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
+      const interval = setInterval(handleNext, 5000)
+      return () => clearInterval(interval)
     }
-  }, [autoplay, handleNext]);
+  }, [autoplay, handleNext])
 
-  const randomRotateY = () => Math.floor(Math.random() * 21) - 10;
+  const randomRotateY = () => Math.floor(Math.random() * 21) - 10
 
   return (
-    <div className="mx-auto max-w-sm px-[var(--section-padding-x)] py-[var(--section-padding-y)] font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div
+      id="first-section"
+      className="mx-auto max-w-sm px-[var(--section-padding-x)] py-[var(--section-padding-y)] font-sans antialiased md:max-w-4xl md:px-8 lg:px-12"
+    >
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         {/* Image Section */}
         <div className="relative h-80 w-full">
@@ -147,5 +150,5 @@ export const AnimatedTestimonials: React.FC<AnimatedTestimonialsProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

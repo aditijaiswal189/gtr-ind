@@ -1,13 +1,12 @@
-import React from 'react';
-
+import React from "react"
 
 export interface FeatureItemProps {
-  icon: React.ReactElement<{ className?: string }>;
-  title: string;
-  description: string;
+  icon: React.ReactElement<{ className?: string }>
+  title: string
+  description: string
 }
 
- const FeatureItem: React.FC<FeatureItemProps> = ({
+const FeatureItem: React.FC<FeatureItemProps> = ({
   icon,
   title,
   description,
@@ -21,25 +20,21 @@ export interface FeatureItemProps {
       "
     >
       {/* enforce icon sizing */}
-      {React.cloneElement(icon, { className: 'w-6 h-6' })}
+      {React.cloneElement(icon, { className: "w-6 h-6" })}
     </div>
     <h6 className="mb-2 font-semibold leading-5 text-[var(--foreground)]">
       {title}
     </h6>
-    <p className="text-sm text-[var(--muted-foreground)]">
-      {description}
-    </p>
+    <p className="text-sm text-[var(--muted-foreground)]">{description}</p>
   </div>
-);
-
-
+)
 
 export interface ContentSectionProps {
-  heading: React.ReactNode;
-  subheading: string;
-  features: FeatureItemProps[];
-  imageSrc: string;
-  imageAlt?: string;
+  heading: React.ReactNode
+  subheading: string
+  features: FeatureItemProps[]
+  imageSrc: string
+  imageAlt?: string
 }
 
 export const Feature2WithImage: React.FC<ContentSectionProps> = ({
@@ -47,9 +42,10 @@ export const Feature2WithImage: React.FC<ContentSectionProps> = ({
   subheading,
   features,
   imageSrc,
-  imageAlt = '',
+  imageAlt = "",
 }) => (
   <section
+    id="first-section"
     className="
       px-[var(--section-padding-x)] py-[var(--section-padding-y)]
       mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl
@@ -85,4 +81,4 @@ export const Feature2WithImage: React.FC<ContentSectionProps> = ({
       </div>
     </div>
   </section>
-);
+)

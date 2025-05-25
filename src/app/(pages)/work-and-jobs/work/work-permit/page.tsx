@@ -1,13 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { StepConfigList } from "@/app/(pages)/about-us/about/book-appointment/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { StepConfigList } from "@/app/(pages)/about-us/about/book-appointment/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import { Hero2 } from "@/components/ui/hero2";
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+} from "@/components/ui/features-list"
+import { Hero2 } from "@/components/ui/hero2"
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   Briefcase,
@@ -21,8 +22,8 @@ import {
   Plane,
   Smile,
   Star,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 
 const features2: FeatureItemData[] = [
   {
@@ -50,7 +51,7 @@ const features2: FeatureItemData[] = [
       "Post-Graduation Work Permit is designed for international students who have graduated from Canadian universities, colleges, or vocational schools.This permit allows them to work in Canada for a specified period after completing their studies",
     icon: <Heart />,
   },
-];
+]
 
 const items: FeatureItemPropsList[] = [
   {
@@ -72,7 +73,7 @@ const items: FeatureItemPropsList[] = [
     icon: Award,
     text: "Other supporting documents specific to your application",
   },
-];
+]
 const steps: StepConfigList[] = [
   {
     icon: Lightbulb,
@@ -116,7 +117,7 @@ const steps: StepConfigList[] = [
     description:
       "You will receive a decision regarding your work permit application. If approved, you will receive a Port of Entry (POE) Letter of Introduction or a Temporary Resident Visa (TRV) in your passport, depending on your country of residence.",
   },
-];
+]
 const WorkPermit: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -125,11 +126,8 @@ const WorkPermit: React.FC = () => {
         title="Work Permits (WP)"
         description="Working in Canada typically requires foreign nationals to obtain a work permit.  There are several different types of work permits available in Canada"
         imageUrl="/images/hero/s.avif"
-        primaryCta={{ label: "LMIA", href: "/work-and-jobs/work/lmia" }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <FeatureGrid4
@@ -162,7 +160,7 @@ const WorkPermit: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default WorkPermit;
+export default WorkPermit

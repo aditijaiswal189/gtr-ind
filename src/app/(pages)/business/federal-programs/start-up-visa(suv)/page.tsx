@@ -1,18 +1,19 @@
 import {
   Cta4FeatureItemProps,
   Cta4FeaturesWithoutImage,
-} from "@/components/ui/cta4-features-without-image";
+} from "@/components/ui/cta4-features-without-image"
 import {
   FeatureItemListProps,
   FeatureListWithImage,
-} from "@/components/ui/feature-list-with-image";
+} from "@/components/ui/feature-list-with-image"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import { Hero2 } from "@/components/ui/hero2";
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
-import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3";
+} from "@/components/ui/features-list"
+import { Hero2 } from "@/components/ui/hero2"
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
+import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   CheckSquare,
@@ -27,8 +28,8 @@ import {
   Star,
   Users,
   Zap,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 export const items2: Cta4FeatureItemProps[] = [
   {
     icon: Users,
@@ -58,11 +59,11 @@ export const items2: Cta4FeatureItemProps[] = [
       "Our RCIC navigators help you assemble and submit all required documentation correctly. From forms to supporting materials, we provide ongoing support so you’re fully prepared and informed at every stage of the application process.",
     ctaHref: "/",
   },
-];
+]
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
+  description: string
 }
 const steps: StepConfigList[] = [
   {
@@ -95,7 +96,7 @@ const steps: StepConfigList[] = [
     description:
       "Personalize the settings as you wish with intuitive instructions and helpful guides",
   },
-];
+]
 
 export const featuresConfig: FeatureItemListProps[] = [
   {
@@ -117,7 +118,7 @@ export const featuresConfig: FeatureItemListProps[] = [
     text: " Qualify to apply for Canadian citizenship( 6th strongest passport globally), enjoy direct ETA access to 185 countries",
     Icon: Globe2,
   },
-];
+]
 const items: FeatureItemPropsList[] = [
   {
     icon: Star,
@@ -136,7 +137,7 @@ const items: FeatureItemPropsList[] = [
     icon: Notebook,
     text: "Language Proficiency- Meet the minimum CLB 5 in either English or French in all 4 skills (listening,reading,writing and speaking)",
   },
-];
+]
 const stepsBenefit = [
   {
     title: "Direct Path to Permanent Residence (PR CANADA)",
@@ -153,7 +154,7 @@ const stepsBenefit = [
     description:
       "Retain permanent residency status even in the event of business failure",
   },
-];
+]
 
 const StartUpVisa: React.FC = () => {
   return (
@@ -164,14 +165,8 @@ const StartUpVisa: React.FC = () => {
         description="Start Up Visa Program - Canada Immigration Program that allows talented entrepreneurs and their family from abroad to come, establish and manage new businesses in Canada with Work / Visitor/ Study Permit while waiting for Permanent residency
 "
         imageUrl="/images/hero/n.avif"
-        primaryCta={{
-          label: "Intra Company Transfer",
-          href: "/business/federal-programs/intra-company-transfer(ict)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <FeatureList
         badgeText="Eligibility
@@ -234,7 +229,7 @@ We can assist you by providing a range of valuable services
         items={items2}
       />
     </div>
-  );
-};
+  )
+}
 
-export default StartUpVisa;
+export default StartUpVisa

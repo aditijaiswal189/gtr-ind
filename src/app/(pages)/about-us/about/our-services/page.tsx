@@ -1,5 +1,5 @@
-import { Hero2 } from "@/components/ui/hero2";
-import React from "react";
+import { Hero2 } from "@/components/ui/hero2"
+import React from "react"
 
 // data/services-data.tsx
 import {
@@ -9,12 +9,13 @@ import {
   Notebook,
   Plane,
   UserCheck,
-} from "lucide-react";
+} from "lucide-react"
 import {
   FeaturesWithLastFilled,
   Props,
-} from "@/components/ui/features-with-last-filled";
-import { Newsletter, NewsletterConfig } from "@/components/ui/news-letter";
+} from "@/components/ui/features-with-last-filled"
+import { Newsletter, NewsletterConfig } from "@/components/ui/news-letter"
+import { commonProps } from "@/constant/commonProps"
 
 export const services: Props[] = [
   {
@@ -61,7 +62,7 @@ export const services: Props[] = [
     href: "/about-us/about/book-appointment",
     icon: <Plane size={32} />,
   },
-];
+]
 
 const aboutNewsletterConfig: NewsletterConfig = {
   label: "Connect with us",
@@ -70,7 +71,7 @@ const aboutNewsletterConfig: NewsletterConfig = {
   buttonText: "Book an appointment",
   imageSrc: "/images/hero/g.avif",
   imageAlt: "Woman reading newsletter",
-};
+}
 
 const OurServices: React.FC = () => {
   return (
@@ -82,14 +83,8 @@ const OurServices: React.FC = () => {
           description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
           imageUrl="/images/download.jfif"
           // imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260'
-          primaryCta={{
-            label: "Why choose us?",
-            href: "/about-us/about/why-choose-us",
-          }}
-          secondaryCta={{
-            label: "Learn More",
-            href: "/about-us/about/book-appointment",
-          }}
+          primaryCta={commonProps?.primaryCta}
+          secondaryCta={commonProps?.secondaryCta}
         />
         <FeaturesWithLastFilled
           services={services}
@@ -100,7 +95,7 @@ overcome their barriers and obtain Permanent Residensy in Canada"
       </div>
       <Newsletter config={aboutNewsletterConfig} />
     </>
-  );
-};
+  )
+}
 
-export default OurServices;
+export default OurServices

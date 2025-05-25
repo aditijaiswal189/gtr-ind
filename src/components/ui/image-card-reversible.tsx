@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
 interface TeamCardProps {
-  name: string;
-  role: string;
-  description: string;
-  image: string;
+  name: string
+  role: string
+  description: string
+  image: string
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({
@@ -25,13 +25,13 @@ const TeamCard: React.FC<TeamCardProps> = ({
       <p className="mb-4 text-xs tracking-wide text-white">{description}</p>
     </div>
   </div>
-);
+)
 
 interface ImageCardReversibleProps {
-  heading: React.ReactNode;
-  subtitle: string;
-  description: string;
-  members: TeamCardProps[];
+  heading: React.ReactNode
+  subtitle: string
+  description: string
+  members: TeamCardProps[]
 }
 
 export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({
@@ -41,7 +41,10 @@ export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({
   members,
 }) => {
   return (
-    <div className="px-[var(--section-padding-x)] py-[var(--section-padding-y)] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+    <div
+      id="first-section"
+      className="px-[var(--section-padding-x)] py-[var(--section-padding-y)] mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl"
+    >
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <p className="inline-block px-3 py-2 mb-4 text-xs font-semibold tracking-wider text-[var(--primary)] uppercase rounded-full bg-[color-mix(in srgb, var(--primary) 10%, transparent)]">
           {subtitle}
@@ -60,5 +63,5 @@ export const ImageCardReversible: React.FC<ImageCardReversibleProps> = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}

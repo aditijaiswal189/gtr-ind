@@ -1,16 +1,17 @@
-import { features } from "@/app/(pages)/about-us/about/about/page";
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { features } from "@/app/(pages)/about-us/about/about/page"
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
+} from "@/components/ui/features-2-with-image"
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list";
-import { Hero2 } from "@/components/ui/hero2";
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+} from "@/components/ui/features-list"
+import { Hero2 } from "@/components/ui/hero2"
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
+import { commonProps } from "@/constant/commonProps"
 import {
   Award,
   Briefcase,
@@ -24,8 +25,8 @@ import {
   Plane,
   Smile,
   Star,
-} from "lucide-react";
-import React from "react";
+} from "lucide-react"
+import React from "react"
 const items: FeatureItemPropsList[] = [
   {
     icon: Star,
@@ -33,7 +34,7 @@ const items: FeatureItemPropsList[] = [
   },
   { icon: Briefcase, text: "Alberta Express Entry Stream" },
   { icon: Notebook, text: "Accelerated Tech Pathway" },
-];
+]
 const items2: FeatureItemPropsList[] = [
   { icon: Star, text: "Graduate Entrepreneur Stream" },
   { icon: Briefcase, text: "Foreign Graduate Entrepreneur Stream​" },
@@ -43,17 +44,17 @@ const items2: FeatureItemPropsList[] = [
     icon: Award,
     text: "Farm Stream",
   },
-];
+]
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  title: string;
-  description: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string
+  description: string
 }
 export interface StepMajorConfig {
-  badgeText: string;
-  heading: string;
-  subheading: string;
-  steps: StepConfigList[];
+  badgeText: string
+  heading: string
+  subheading: string
+  steps: StepConfigList[]
 }
 const stepsMajor = [
   {
@@ -188,7 +189,7 @@ const stepsMajor = [
       },
     ],
   },
-];
+]
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -214,7 +215,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-];
+]
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -240,7 +241,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-];
+]
 
 const cards: FeatureItemProps[] = [
   {
@@ -253,7 +254,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-];
+]
 const Alberta: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -262,14 +263,8 @@ const Alberta: React.FC = () => {
         title="Alberta Advantage Immigrant Program (AAIP)"
         description="Located in the western heart of Canada, Alberta is renowned for its breathtaking natural landscapes and welcoming immigration program for foreign skilled talents and entrepreneurs."
         imageUrl="/images/hero/d.avif"
-        primaryCta={{
-          label: "Atlantic Immigration Program",
-          href: "/immigration/provincial-nominee-programs/atlantic-immigration(aipp)",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <FeatureList
         badgeText="Provincial Nominee Programs"
@@ -339,7 +334,7 @@ const Alberta: React.FC = () => {
         features={features}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Alberta;
+export default Alberta

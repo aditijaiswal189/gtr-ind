@@ -1,13 +1,14 @@
-import { services } from "@/app/(pages)/about-us/about/our-services/page";
-import { Feature4 } from "@/components/ui/feature4";
+import { services } from "@/app/(pages)/about-us/about/our-services/page"
+import { Feature4 } from "@/components/ui/feature4"
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image";
-import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
-import { Hero2 } from "@/components/ui/hero2";
-import { Briefcase, Notebook } from "lucide-react";
-import React from "react";
+} from "@/components/ui/features-2-with-image"
+import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled"
+import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
+import { Briefcase, Notebook } from "lucide-react"
+import React from "react"
 
 const cards: FeatureItemProps[] = [
   {
@@ -22,7 +23,7 @@ const cards: FeatureItemProps[] = [
     description:
       "The CEC Express Entry program is a popular choice for foreign workers who have accumulated work experience in Canada and international students who have found employment in Canada after graduation, all of whom aspire to fulfill their Canadian immigration dreams. This program is not suitable for foreign nationals without any prior work experience in Canada",
   },
-];
+]
 const CanadianExperienceClass: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -31,14 +32,8 @@ const CanadianExperienceClass: React.FC = () => {
         title="Canadian Experience Class (CEC)"
         description="The Canadian Experience Class (CEC) is an economic immigration program that requires work experience in Canada. Applicants must have a minimum of 12 months of full-time work experience in a skilled occupation in Canada within the last 3 years."
         imageUrl="/images/hero/f.avif"
-        primaryCta={{
-          label: "Federal Skilled Worker",
-          href: "/immigration/express-entry/federal-skilled-worker",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
 
       <Feature4
@@ -94,7 +89,7 @@ job offer or certificate of qualification and language ability "
         sectionSubtitle="Through Express Entry, candidates and their family can participate and compete for points to receive an ITA – Invitation to Apply from the Canadian government to immigrate and work in the country."
       />
     </div>
-  );
-};
+  )
+}
 
-export default CanadianExperienceClass;
+export default CanadianExperienceClass

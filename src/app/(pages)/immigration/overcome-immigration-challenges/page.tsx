@@ -1,8 +1,8 @@
-import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
-import React from "react";
-import { Hero2 } from "@/components/ui/hero2";
-import { Feature4 } from "@/components/ui/feature4";
-import { services } from "../../about-us/about/our-services/page";
+import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled"
+import React from "react"
+import { Hero2 } from "@/components/ui/hero2"
+import { Feature4 } from "@/components/ui/feature4"
+import { services } from "../../about-us/about/our-services/page"
 
 const OvercomeImmigrationChallenges: React.FC = () => {
   return (
@@ -12,14 +12,8 @@ const OvercomeImmigrationChallenges: React.FC = () => {
         title="Overcome Immigration Challenges"
         description="We can help you assess your situation, determine the best course of action, and guide you through the application process to overcome the challenges"
         imageUrl="/images/hero/e.avif"
-        primaryCta={{
-          label: "Federal Skilled Worker",
-          href: "/immigration/express-entry/federal-skilled-worker",
-        }}
-        secondaryCta={{
-          label: "Learn More",
-          href: "/about-us/about/book-appointment",
-        }}
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
       />
       <Feature4
         badge="Overcome Immigration Challenges"
@@ -62,7 +56,7 @@ const OvercomeImmigrationChallenges: React.FC = () => {
         sectionSubtitle="Through Express Entry, candidates and their family can participate and compete for points to receive an ITA – Invitation to Apply from the Canadian government to immigrate and work in the country."
       />
     </div>
-  );
-};
+  )
+}
 
-export default OvercomeImmigrationChallenges;
+export default OvercomeImmigrationChallenges

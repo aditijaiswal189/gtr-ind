@@ -1,5 +1,5 @@
-import React from 'react'
-import { Check } from 'lucide-react'
+import React from "react"
+import { Check } from "lucide-react"
 
 export interface FeatureItemListProps {
   /** Main text of the feature */
@@ -13,13 +13,10 @@ export const FeatureItem: React.FC<FeatureItemListProps> = ({
   Icon = Check,
 }) => (
   <li className="flex items-start">
-    <Icon
-      className="w-5 h-5 flex-shrink-0 mt-[2px] text-primary"
-    />
+    <Icon className="w-5 h-5 flex-shrink-0 mt-[2px] text-primary" />
     <span className="ml-2 text-[var(--foreground)]">{text}</span>
   </li>
 )
-
 
 export interface FeatureListProps {
   /** Array of feature items */
@@ -49,7 +46,6 @@ export const FeatureList: React.FC<FeatureListProps> = ({
   )
 }
 
-
 export interface ContentSectionProps {
   badgeText?: string
   heading: React.ReactNode
@@ -65,9 +61,10 @@ export const FeatureListWithImage: React.FC<ContentSectionProps> = ({
   subheading,
   features,
   imageSrc,
-  imageAlt = '',
+  imageAlt = "",
 }) => (
   <section
+    id="first-section"
     className="
       px-[var(--section-padding-x)] py-[var(--section-padding-y)]
       mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl
@@ -120,4 +117,3 @@ export const FeatureListWithImage: React.FC<ContentSectionProps> = ({
     </div>
   </section>
 )
-
