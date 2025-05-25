@@ -38,3 +38,14 @@ export const MapView = ({ location }: MapViewProps) => {
     </MapContainer>
   );
 };
+// Renamed to avoid conflict with the Location interface above
+export interface DetailedLocation {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  country: string;
+  phone: string;
+  email: string;
+  coordinates: [number, number];
+}

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { cn } from "@/lib/utils"; // Optional: for conditional class merging if you're using ShadCN
 

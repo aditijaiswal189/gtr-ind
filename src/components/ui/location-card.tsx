@@ -1,10 +1,20 @@
+"use client";
 import { motion } from "framer-motion";
 
 interface LocationCardProps {
   location: Location;
   isHovered: boolean;
 }
-
+export interface Location {
+  id: string;
+  name: string;
+  address: string;
+  city: string;
+  country: string;
+  phone: string;
+  email: string;
+  coordinates: [number, number];
+}
 export const LocationCard = ({ location, isHovered }: LocationCardProps) => {
   return (
     <motion.div
