@@ -1,9 +1,8 @@
-import { FocusCards } from "@/components/ui/focus-cards"
-import { Hero2 } from "@/components/ui/hero2"
-import { ImageCardReversible } from "@/components/ui/image-card-reversible"
-import { commonProps } from "@/constant/commonProps"
+import { FocusCards } from "@/components/ui/focus-cards";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
 
-import React from "react"
+import React from "react";
 const teamData = [
   {
     heading: (
@@ -123,7 +122,6 @@ const teamData = [
     ],
   },
 
-  ,
   {
     heading: (
       <>
@@ -397,7 +395,7 @@ const teamData = [
       },
     ],
   },
-]
+];
 
 const SuccessCustomers: React.FC = () => {
   return (
@@ -413,7 +411,7 @@ const SuccessCustomers: React.FC = () => {
 
       <FocusCards cards={teamData} />
     </div>
-  )
-}
+  );
+};
 
-export default SuccessCustomers
+export default SuccessCustomers;

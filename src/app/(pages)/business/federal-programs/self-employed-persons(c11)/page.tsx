@@ -1,14 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { Feature1Animated } from "@/components/ui/feature1-animated"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { Feature1Animated } from "@/components/ui/feature1-animated";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, Globe, Notebook, UserCheck } from "lucide-react"
-import React, { ReactNode } from "react"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, Globe, Notebook, UserCheck } from "lucide-react";
+import React, { ReactNode } from "react";
 const cards: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -22,12 +22,12 @@ const cards: FeatureItemProps[] = [
     description:
       "The C11 work permit is granted if you are business owner or self-employed person with good business plan and can prove the significant bềnits to Canadians from the business.",
   },
-]
+];
 interface FeatureItem {
-  title: string
-  description: string
-  link: string
-  icon: ReactNode
+  title: string;
+  description: string;
+  link: string;
+  icon: ReactNode;
 }
 
 const featureItems: FeatureItem[] = [
@@ -45,7 +45,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-]
+];
 const SelfEmployedPersons: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -53,7 +53,7 @@ const SelfEmployedPersons: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Federal Self-employed Persons Program (C11)"
         description="The International Mobility Program (IMP) grants the distinctive Canadian work permit visa, the C11 category work permit. It is offered to international business owners and investors who want to operate a business in Canada as self-employed persons."
-        imageUrl="/images/hero/l.avif"
+        imageUrl="/images/n/c11.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -77,7 +77,7 @@ const SelfEmployedPersons: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default SelfEmployedPersons
+export default SelfEmployedPersons;

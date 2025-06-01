@@ -1,14 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+import { commonProps } from "@/constant/commonProps";
 import {
   Award,
   Briefcase,
@@ -19,8 +19,8 @@ import {
   Lightbulb,
   Notebook,
   Plane,
-} from "lucide-react"
-import React from "react"
+} from "lucide-react";
+import React from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -33,7 +33,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-]
+];
 const cardsFour: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -46,7 +46,7 @@ const cardsFour: FeatureItemProps[] = [
     title: "Invest",
     description: `And looking to invest in a farming operation and settle in the province of Saskatchewan.`,
   },
-]
+];
 const cardsOne: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -65,7 +65,7 @@ const cardsOne: FeatureItemProps[] = [
       individuals and families with experience to settle and work in
       Saskatchewan.`,
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -91,7 +91,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-]
+];
 const typesConfigKey: FeatureItemData[] = [
   {
     icon: <Plane />,
@@ -117,7 +117,7 @@ const typesConfigKey: FeatureItemData[] = [
     description:
       "For experienced farmers with capital looking to own or operate a farm.",
   },
-]
+];
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -143,12 +143,12 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-]
+];
 
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-  title: string
-  description: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
 }
 const stepsTwo: StepConfigList[] = [
   {
@@ -180,7 +180,7 @@ const stepsTwo: StepConfigList[] = [
     title: "Investors: ",
     description: "For individuals who invest in Saskatchewan’s economy.",
   },
-]
+];
 const featuresConf = [
   {
     icon: "Briefcase" as const,
@@ -202,7 +202,7 @@ const featuresConf = [
     description:
       "SINP provides a supportive environment for newcomers to settle and integrate into Canadian society.",
   },
-]
+];
 const featuresTypesTwo = [
   {
     icon: "BriefcaseBusiness" as const,
@@ -242,7 +242,7 @@ const featuresTypesTwo = [
     description:
       "You must have a valid job offer for a permanent, full-time agricultural sector job in Saskatchewan. You must have completed at least secondary school (high school) or a higher level of education. You must attest to your intention to live and work in Saskatchewan.",
   },
-]
+];
 const featuresTypesThree = [
   {
     icon: "BriefcaseBusiness" as const,
@@ -284,7 +284,7 @@ const featuresTypesThree = [
     description:
       "After 6 months, candidates become eligible to apply for the provincial nomination for permanent residence. They must also meet the terms of the BPA.",
   },
-]
+];
 const featuresTypesOne = [
   {
     icon: "BriefcaseBusiness" as const,
@@ -323,7 +323,7 @@ const featuresTypesOne = [
     description:
       "You must have an offer for an eligible permanent, full-time technology or innovation sector job in Saskatchewan. Attest to your intent to work and reside in Saskatchewan. Have a post-secondary education that relates to the job you've been offered (Master's or Bachelor's degree; or a three-year degree at a university or college; or a diploma that requires two years at a university, college, trade or technical school, or other post-secondary institution).",
   },
-]
+];
 const Saskatchewan: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -332,7 +332,7 @@ const Saskatchewan: React.FC = () => {
         title="Saskatchewan Immigrant Nominee Program (SINP)"
         description="
 Saskatchewan, situated in the heart of Canada, is renowned for its vast prairies and expansive fields. It is an ideal destination for newcomers to Canada, offering a cost-effective lifestyle and a diverse, culturally rich community."
-        imageUrl="/images/hero/s.avif"
+        imageUrl="/images/n/sinp.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -440,6 +440,6 @@ The Saskatchewan Entrepreneur Stream allows candidates and their families to sta
         features={features}
       />
     </div>
-  )
-}
-export default Saskatchewan
+  );
+};
+export default Saskatchewan;

@@ -1,7 +1,7 @@
-import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled"
-import { Hero2 } from "@/components/ui/hero2"
-import React from "react"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
+import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
+import { Hero2 } from "@/components/ui/hero2";
+import React from "react";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
 import {
   Terminal,
   RefreshCw,
@@ -13,15 +13,15 @@ import {
   Heart,
   BookOpen,
   Notebook,
-} from "lucide-react"
-import { Feature3 } from "@/components/ui/feature3"
-import { Feature4 } from "@/components/ui/feature4"
+} from "lucide-react";
+import { Feature3 } from "@/components/ui/feature3";
+import { Feature4 } from "@/components/ui/feature4";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { services } from "@/app/(pages)/about-us/about/our-services/page"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { services } from "@/app/(pages)/about-us/about/our-services/page";
+import { commonProps } from "@/constant/commonProps";
 // import { Feature3 } from '@/components/ui/feature3';
 
 const features: FeatureItemData[] = [
@@ -85,7 +85,7 @@ const features: FeatureItemData[] = [
       "prepare and cook a wide variety of foods; package meat products; create and bake a diverse range of bread, pastries, and desserts",
     icon: <Heart />,
   },
-]
+];
 const features2 = [
   {
     icon: "Briefcase" as const,
@@ -104,7 +104,7 @@ const features2 = [
     description:
       "Proficiency in French, in addition to English, is highly valued by Canada. Demonstrating strong French language skills through recognized tests can earn extra points in the Comprehensive Ranking System (CRS). This boosts your chances of receiving an Invitation to Apply (ITA) for permanent residency in Canada",
   },
-]
+];
 
 const cards: FeatureItemProps[] = [
   {
@@ -119,7 +119,7 @@ const cards: FeatureItemProps[] = [
     description:
       "You do not need to be currently living in Canada, have any immediate family members residing in the country, nor have previous work or educational experiences in Canada.",
   },
-]
+];
 
 const FederalSkilledTrade: React.FC = () => {
   return (
@@ -128,7 +128,7 @@ const FederalSkilledTrade: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Federal Skilled Trade Program (FSTP)"
         description="You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada."
-        imageUrl="/images/hero/d.avif"
+        imageUrl="/images/n/federalskilledtrade.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -198,7 +198,7 @@ job offer or certificate of qualification and language ability "
         sectionSubtitle="Through Express Entry, candidates and their family can participate and compete for points to receive an ITA – Invitation to Apply from the Canadian government to immigrate and work in the country."
       />
     </div>
-  )
-}
+  );
+};
 
-export default FederalSkilledTrade
+export default FederalSkilledTrade;

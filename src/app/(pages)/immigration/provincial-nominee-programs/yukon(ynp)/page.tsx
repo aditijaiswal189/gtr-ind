@@ -1,14 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature1Animated } from "@/components/ui/feature1-animated"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature1Animated } from "@/components/ui/feature1-animated";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
 import {
   Briefcase,
   FileText,
@@ -17,8 +17,8 @@ import {
   Notebook,
   Plane,
   UserCheck,
-} from "lucide-react"
-import React, { ReactNode } from "react"
+} from "lucide-react";
+import React, { ReactNode } from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -31,7 +31,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -57,7 +57,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-]
+];
 const featuresYukon: FeatureItemData[] = [
   {
     title: "Job Offer:",
@@ -83,7 +83,7 @@ const featuresYukon: FeatureItemData[] = [
       "You must possess a minimum of high school education or equivalent, as required by the job profile.",
     icon: <Heart />,
   },
-]
+];
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -109,12 +109,12 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-]
+];
 interface FeatureItem {
-  title: string
-  description: string
-  link: string
-  icon: ReactNode
+  title: string;
+  description: string;
+  link: string;
+  icon: ReactNode;
 }
 const featureItemsAni: FeatureItem[] = [
   {
@@ -131,7 +131,7 @@ const featureItemsAni: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-]
+];
 
 const newConfig = [
   {
@@ -170,7 +170,7 @@ const newConfig = [
     description:
       "Eligible entrepreneurs can leverage the Yukon Provincial Nominee Program to obtain permanent residency while growing their business in the Yukon.",
   },
-]
+];
 const YukonYNP: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -179,7 +179,7 @@ const YukonYNP: React.FC = () => {
         title="Yukon Provincial Nominee Program (YNP)"
         description="
 Yukon, a territory in northwestern Canada, is known for its vast wilderness and rugged landscapes. Dominated by pristine wilderness, Yukon is home to stunning mountain ranges, expansive forests, and the iconic Yukon River. The capital, Whitehorse, is a small city with a vibrant cultural scene and serves as a gateway to the territory’s outdoor adventures."
-        imageUrl="/images/hero/t.avif"
+        imageUrl="/images/n/ynp.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -226,6 +226,6 @@ Yukon, a territory in northwestern Canada, is known for its vast wilderness and 
         features={features}
       />
     </div>
-  )
-}
-export default YukonYNP
+  );
+};
+export default YukonYNP;

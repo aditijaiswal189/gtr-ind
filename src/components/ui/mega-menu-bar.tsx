@@ -80,7 +80,7 @@ export function MegaMenuBar() {
         return {
           title: "About Our Services",
           description: "Learn more about our immigration consulting services.",
-          image: "/images/n/immigrationhome.jpeg",
+          image: "/images/n/about.jfif",
           cta: {
             text: "Book a Consultation",
             link: "/about-us/about/book-appointment",

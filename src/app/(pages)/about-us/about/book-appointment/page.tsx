@@ -1,11 +1,11 @@
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+import { commonProps } from "@/constant/commonProps";
 import {
   Award,
   Briefcase,
@@ -16,8 +16,8 @@ import {
   Lightbulb,
   Notebook,
   Plane,
-} from "lucide-react"
-import React from "react"
+} from "lucide-react";
+import React from "react";
 const features2: FeatureItemData[] = [
   {
     title: "Assessment and Eligibility",
@@ -43,11 +43,11 @@ const features2: FeatureItemData[] = [
       "Consultants offer support and guidance even after immigration approval, assisting with settlement, obtaining essential documents, and navigating life in Canada",
     icon: <Heart />,
   },
-]
+];
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-  title: string
-  description: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
 }
 const steps: StepConfigList[] = [
   {
@@ -80,7 +80,7 @@ const steps: StepConfigList[] = [
     description:
       "If you have any doubts or concerns about the authenticity of your consultant’s registration, you can contact ICCRC directly for further verification or clarification.",
   },
-]
+];
 const cards: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -92,7 +92,7 @@ const cards: FeatureItemProps[] = [
     title: "Important Disclaimers",
     description: `This is a preliminary consultation only and does not guarantee your visa, work permit, or permanent residency—those decisions rest solely with Canadian Immigration Authorities. Advice is based on current laws and remains confidential except as required by law; by booking you agree to our terms and any applicable fees.`,
   },
-]
+];
 
 const BookAppointment: React.FC = () => {
   return (
@@ -101,7 +101,7 @@ const BookAppointment: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Book Appointment"
         description="Book your appointment in a few simple steps: Choose a service, pick your date and time, and fill in your details. See you soon!"
-        imageUrl="/images/hero/d.avif"
+        imageUrl="/images/n/postgraduatework.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -131,7 +131,7 @@ const BookAppointment: React.FC = () => {
         features={features2}
       />
     </div>
-  )
-}
+  );
+};
 
-export default BookAppointment
+export default BookAppointment;

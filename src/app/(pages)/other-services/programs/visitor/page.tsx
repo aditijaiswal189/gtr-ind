@@ -1,9 +1,9 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { Feature3 } from "@/components/ui/feature3"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import React from "react"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { Feature3 } from "@/components/ui/feature3";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import React from "react";
 
 const features3 = [
   {
@@ -43,7 +43,7 @@ const features3 = [
     description:
       "The visitor visa also covers short-term business activities like attending conferences, business meetings, negotiations, or seminars. However, individuals looking to work or engage in long-term business ventures must apply for a separate work permit",
   },
-]
+];
 const features4 = [
   {
     icon: "Briefcase" as const,
@@ -63,7 +63,7 @@ const features4 = [
     description:
       "After submitting the application, applicants will be required to pay the necessary visa fees. Processing times vary, but applicants are advised to apply well in advance of their planned travel date. If the application is approved, a visa will be stamped in the passport, allowing the individual to travel to Canada for the specified period.",
   },
-]
+];
 const Visitor: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -71,7 +71,7 @@ const Visitor: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Visitor Visa"
         description="Canada, known for its breathtaking landscapes, vibrant cities, and welcoming atmosphere, has become an increasingly popular destination for tourists worldwide. If you're considering a visit to the Great White North, you may need to acquaint yourself with the process of obtaining a Canadian Visitor Visa, also known as a Temporary Resident Visa (TRV)"
-        imageUrl="/images/hero/h.avif"
+        imageUrl="/images/n/visitorvisa.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -97,7 +97,7 @@ const Visitor: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Visitor
+export default Visitor;

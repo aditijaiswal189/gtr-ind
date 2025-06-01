@@ -66,7 +66,7 @@ const PostGraduate: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Post Graduate Work Permit"
         description="Canada offers a Post-Graduation Work Permit (PGWP) program to international students who have completed a program of study at a designated learning institution in Canada."
-        imageUrl="/images/hero/j.avif"
+        imageUrl="/images/n/postgraduatework.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

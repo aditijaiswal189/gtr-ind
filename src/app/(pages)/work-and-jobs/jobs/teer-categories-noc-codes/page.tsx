@@ -1,22 +1,22 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4 } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import React from "react"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4 } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import React from "react";
 
 // src/config/gridMajor.ts
 
 export interface FeatureItemData {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 export interface GridMajorConfig {
-  title: string
-  description: string
-  features: FeatureItemData[]
+  title: string;
+  description: string;
+  features: FeatureItemData[];
 }
 
 export const gridMajor: GridMajorConfig[] = [
@@ -852,7 +852,7 @@ export const gridMajor: GridMajorConfig[] = [
       },
     ],
   },
-]
+];
 const features2 = [
   {
     icon: "Briefcase" as const,
@@ -890,7 +890,7 @@ const features2 = [
     description:
       "Occupations that usually require: short-term work demonstration and no formal education-- Landscaping and grounds maintenance labourers,Delivery service drivers and door-to-door distributors",
   },
-]
+];
 
 const TeerCategoriesNocCodes: React.FC = () => {
   return (
@@ -899,7 +899,7 @@ const TeerCategoriesNocCodes: React.FC = () => {
         badgeText="GreenTech Resources"
         title="TEER Categories and NOC Codes"
         description="TEER categories and examples of jobs"
-        imageUrl="/images/hero/p.avif"
+        imageUrl="/images/n/noccode.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -930,7 +930,7 @@ const TeerCategoriesNocCodes: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default TeerCategoriesNocCodes
+export default TeerCategoriesNocCodes;

@@ -1,17 +1,17 @@
-import { services } from "@/app/(pages)/about-us/about/our-services/page"
-import { Feature3 } from "@/components/ui/feature3"
-import { Feature4 } from "@/components/ui/feature4"
+import { services } from "@/app/(pages)/about-us/about/our-services/page";
+import { Feature3 } from "@/components/ui/feature3";
+import { Feature4 } from "@/components/ui/feature4";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { FeaturesWithLastFilled } from "@/components/ui/features-with-last-filled";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
 
-import { BookOpen, Notebook } from "lucide-react"
+import { BookOpen, Notebook } from "lucide-react";
 
-import React from "react"
+import React from "react";
 export const features = [
   {
     icon: "Briefcase" as const,
@@ -30,7 +30,7 @@ export const features = [
     description:
       "Proficiency in French, in addition to English, is highly valued by Canada. Demonstrating strong French language skills through recognized tests can earn extra points in the Comprehensive Ranking System (CRS). This boosts your chances of receiving an Invitation to Apply (ITA) for permanent residency in Canada",
   },
-]
+];
 
 const cards: FeatureItemProps[] = [
   {
@@ -45,7 +45,7 @@ const cards: FeatureItemProps[] = [
     description:
       "However, this program has high requirements for work experience, educational qualifications, age, and language proficiency in English/French. All applicants for the Federal Skilled Worker Program (FSW) must have at least one year of work experience in a specialized field",
   },
-]
+];
 
 const FederalSkilledWorker: React.FC = () => {
   return (
@@ -54,7 +54,7 @@ const FederalSkilledWorker: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Federal Skilled Worker Program (FSWP)"
         description="You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada."
-        imageUrl="/images/hero/c.avif"
+        imageUrl="/images/n/federalskilledprogram.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -118,7 +118,7 @@ const FederalSkilledWorker: React.FC = () => {
         sectionSubtitle="Through Express Entry, candidates and their family can participate and compete for points to receive an ITA – Invitation to Apply from the Canadian government to immigrate and work in the country."
       />
     </div>
-  )
-}
+  );
+};
 
-export default FederalSkilledWorker
+export default FederalSkilledWorker;

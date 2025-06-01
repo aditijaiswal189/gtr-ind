@@ -1,14 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, Notebook } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, Notebook } from "lucide-react";
+import React from "react";
 const features2 = [
   {
     icon: "Briefcase" as const,
@@ -28,7 +28,7 @@ const features2 = [
     description:
       "For employees with proprietary knowledge or expertise essential to the company's operations",
   },
-]
+];
 const cards: FeatureItemProps[] = [
   {
     icon: <Briefcase />,
@@ -42,7 +42,7 @@ const cards: FeatureItemProps[] = [
     description:
       "To qualify for the ICT program, the applicant should be an essential employee in a managerial, executive, or specialized knowledge position.. Applicants need to provide relevant documentation, including an offer of employment, describing the intra-company transfer, the foreign and Canadian positions, and the employee's qualifications.",
   },
-]
+];
 const IntraCompanyTransfer: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -50,7 +50,7 @@ const IntraCompanyTransfer: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Intra-Company Transfer (ICT)"
         description="The Intra-Company Transfer (ICT) program in Canada allows multinational companies to transfer key personnel from their foreign operations to their Canadian branches, subsidiaries, or affiliates"
-        imageUrl="/images/hero/j.avif"
+        imageUrl="/images/n/ict.jpeg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -82,6 +82,6 @@ const IntraCompanyTransfer: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
-export default IntraCompanyTransfer
+  );
+};
+export default IntraCompanyTransfer;

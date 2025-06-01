@@ -1,5 +1,5 @@
-import { Hero2 } from "@/components/ui/hero2"
-import React from "react"
+import { Hero2 } from "@/components/ui/hero2";
+import React from "react";
 import {
   CheckCircle,
   MapPin,
@@ -11,23 +11,23 @@ import {
   Heart,
   Notebook,
   Briefcase,
-} from "lucide-react"
+} from "lucide-react";
 import {
   Cta4FeatureItemProps,
   Cta4FeaturesWithoutImage,
-} from "@/components/ui/cta4-features-without-image"
-import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3"
+} from "@/components/ui/cta4-features-without-image";
+import { StepsWithHeading3 } from "@/components/ui/steps-with-heading3";
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-list";
+import { commonProps } from "@/constant/commonProps";
 
 export interface FeatureItemProps {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-  title: string
-  description: string
-  ctaHref?: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+  ctaHref?: string;
 }
 
 export const items2: Cta4FeatureItemProps[] = [
@@ -59,7 +59,7 @@ export const items2: Cta4FeatureItemProps[] = [
       "We provide ongoing support and guidance throughout the application process, ensuring that applicants are well-prepared and informed at every stage.",
     ctaHref: "/",
   },
-]
+];
 const steps = [
   {
     title: "Preparing and completing the required forms and documents",
@@ -76,7 +76,7 @@ const steps = [
     description:
       "Direction du regroupement familial et de l’enregistrement Ministère de l’Immigration, de la Francisation et de l’Intégration 285, rue Notre-Dame Ouest, 4e étage Montréal (Québec) H2Y 1T8 CANADA",
   },
-]
+];
 const items: FeatureItemPropsList[] = [
   {
     icon: Star,
@@ -103,7 +103,7 @@ const items: FeatureItemPropsList[] = [
     icon: Briefcase,
     text: "If you wish to practise a regulated profession or trade in Québec, you must obtain the legal right to practise, even if you have obtained a degree or license outside of Québec",
   },
-]
+];
 
 const QuSelfEmployed: React.FC = () => {
   return (
@@ -112,7 +112,7 @@ const QuSelfEmployed: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Québec Self-Employed Program"
         description="Settle in Québec and work for yourself - for those with experience in arts, cultural or athletic activities"
-        imageUrl="/images/hero/i.avif"
+        imageUrl="/images/n/quebecselfemployed.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -151,7 +151,7 @@ const QuSelfEmployed: React.FC = () => {
         items={items2}
       />
     </div>
-  )
-}
+  );
+};
 
-export default QuSelfEmployed
+export default QuSelfEmployed;

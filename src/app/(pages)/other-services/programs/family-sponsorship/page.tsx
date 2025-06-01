@@ -1,9 +1,9 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature1Animated } from "@/components/ui/feature1-animated"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature1Animated } from "@/components/ui/feature1-animated";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
 import {
   Briefcase,
   Globe,
@@ -11,8 +11,8 @@ import {
   Notebook,
   Plane,
   UserCheck,
-} from "lucide-react"
-import React, { ReactNode } from "react"
+} from "lucide-react";
+import React, { ReactNode } from "react";
 
 const features2: FeatureItemData[] = [
   {
@@ -36,12 +36,12 @@ const features2: FeatureItemData[] = [
     description: "",
     icon: <Heart />,
   },
-]
+];
 interface FeatureItem {
-  title: string
-  description: string
-  link: string
-  icon: ReactNode
+  title: string;
+  description: string;
+  link: string;
+  icon: ReactNode;
 }
 const featureItems: FeatureItem[] = [
   {
@@ -59,7 +59,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Globe className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-]
+];
 const FamilySponsorship: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -68,7 +68,7 @@ const FamilySponsorship: React.FC = () => {
         title="Family Sponsor"
         description="
 The program allows eligible individuals to sponsor their close family members for permanent residency in Canada"
-        imageUrl="/images/hero/e.avif"
+        imageUrl="/images/n/familysponsor.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -89,7 +89,7 @@ Family Sponsor"
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default FamilySponsorship
+export default FamilySponsorship;

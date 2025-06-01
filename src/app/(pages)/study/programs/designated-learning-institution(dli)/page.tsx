@@ -1,17 +1,17 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
+} from "@/components/ui/features-2-with-image";
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, FileText, Notebook, Star } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-list";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, FileText, Notebook, Star } from "lucide-react";
+import React from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -27,7 +27,7 @@ All primary and secondary schools in Canada are designated learning institutions
     description: `Applicants must provide the Designated Learning Institution number (DLI #) for their school of choice. The DLI number is the number that begins with the letter “O” on the study permit application form.Sometimes, institutions may lose their designated status. Depending on when the status is lost, the international student may be affected.
 DLI`,
   },
-]
+];
 const items: FeatureItemPropsList[] = [
   {
     icon: Star,
@@ -41,7 +41,7 @@ const items: FeatureItemPropsList[] = [
     icon: Notebook,
     text: "Some institutions in Quebec are designated by the provincial government, but do not have a unique DLI number",
   },
-]
+];
 const DesignatedLearningInstitution: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -50,7 +50,7 @@ const DesignatedLearningInstitution: React.FC = () => {
         title="Designated Learning Institution (DLI)"
         description="
 Apply for a study permit, you need an acceptance letter from a designated learning institution. A designated learning institution is a school approved by a provincial or territorial government to host international students."
-        imageUrl="/images/hero/i.avif"
+        imageUrl="/images/n/designatedstudy.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -86,7 +86,7 @@ Apply for a study permit, you need an acceptance letter from a designated learni
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default DesignatedLearningInstitution
+export default DesignatedLearningInstitution;

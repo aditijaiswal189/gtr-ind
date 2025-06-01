@@ -1,14 +1,14 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list"
-import { commonProps } from "@/constant/commonProps"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { StepsWithHeadingImageList } from "@/components/ui/steps-with-heading-image-list";
+import { commonProps } from "@/constant/commonProps";
 import {
   Award,
   Briefcase,
@@ -19,8 +19,8 @@ import {
   Lightbulb,
   Notebook,
   Terminal,
-} from "lucide-react"
-import React from "react"
+} from "lucide-react";
+import React from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -35,7 +35,7 @@ const cards: FeatureItemProps[] = [
     description:
       "A positive LMIA will show that there is a need for a foreign worker to fill the job. It will also show that no Canadian worker or permanent resident is available to do the job. A positive LMIA is sometimes called a confirmation letter.",
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Job Offer",
@@ -57,7 +57,7 @@ const features2: FeatureItemData[] = [
     description: "The LMIA number.",
     icon: <Heart />,
   },
-]
+];
 const features3 = [
   {
     icon: "Briefcase" as const,
@@ -77,11 +77,11 @@ const features3 = [
     description:
       " Foreign nationals who have the financial assets to purchase an existing business in Canada to become the Owner Operator and be approved for an Owner Operator LMIA.",
   },
-]
+];
 export interface StepConfigList {
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-  title: string
-  description: string
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
 }
 const steps: StepConfigList[] = [
   {
@@ -117,7 +117,7 @@ const steps: StepConfigList[] = [
     title: "Application",
     description: "Application for Permanent Residence",
   },
-]
+];
 const OwnerOperatorLMIA: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -125,7 +125,7 @@ const OwnerOperatorLMIA: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Owner Operator LMIA"
         description="The Owner Operator Labour Market Impact Assessment (LMIA) pathway is a great option for foreign nationals who are looking to become permanent residents and settle in Canada as business owners and operators"
-        imageUrl="/images/hero/k.avif"
+        imageUrl="/images/n/owneroperatorlmia.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -167,7 +167,7 @@ const OwnerOperatorLMIA: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default OwnerOperatorLMIA
+export default OwnerOperatorLMIA;

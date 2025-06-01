@@ -1,13 +1,13 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Award, Briefcase, Notebook, Smile } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-list";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Award, Briefcase, Notebook, Smile } from "lucide-react";
+import React from "react";
 
 const items: FeatureItemPropsList[] = [
   {
@@ -23,7 +23,7 @@ const items: FeatureItemPropsList[] = [
     icon: Award,
     text: "Have the minimum-required IELTS level of English language ability of 6.0 in all categories (listening, reading, writing and speaking)",
   },
-]
+];
 const StudentDirectStream: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -32,7 +32,7 @@ const StudentDirectStream: React.FC = () => {
         title="Student Direct Stream (SDS)"
         description="
 Student Direct Stream (SDS) is a student permit facilitation program which will offer faster and simpler visa processing to international students best placed to complete their academic studie"
-        imageUrl="/images/hero/k.avif"
+        imageUrl="/images/n/studentdirectstream.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -54,7 +54,7 @@ Student Direct Stream (SDS) is a student permit facilitation program which will 
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default StudentDirectStream
+export default StudentDirectStream;

@@ -1,15 +1,15 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   FeatureItemPropsList,
   FeatureList,
-} from "@/components/ui/features-list"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, Heart, Notebook, Plane, Smile, Star } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-list";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, Heart, Notebook, Plane, Smile, Star } from "lucide-react";
+import React from "react";
 
 const items: FeatureItemPropsList[] = [
   {
@@ -29,7 +29,7 @@ const items: FeatureItemPropsList[] = [
     icon: Smile,
     text: " Accumulating work experience in Canada can enhance your chances of obtaining permanent residency.",
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Federal Skilled Worker (FSW)",
@@ -56,7 +56,7 @@ const features2: FeatureItemData[] = [
       "Explore other immigration options, such as Family Sponsorship, the Start-Up Visa (SUV) program, and more. Consulting with GTR Worldwide to navigate the complex process of Canadian immigration and choose the best option for your personal circumstances and objectives.",
     icon: <Heart />,
   },
-]
+];
 const features3 = [
   {
     icon: "Briefcase" as const,
@@ -88,7 +88,7 @@ const features3 = [
     title: "",
     description: "",
   },
-]
+];
 const StudyToPR: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -97,7 +97,7 @@ const StudyToPR: React.FC = () => {
         title="Pathway from Study to PR"
         description="
 Canada provides several pathways for international students to transition from study to permanent residency (PR)"
-        imageUrl="/images/hero/i.avif"
+        imageUrl="/images/n/stydyhome.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -133,7 +133,7 @@ The competition in Canada’s Express Entry system is currently very high, and t
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default StudyToPR
+export default StudyToPR;

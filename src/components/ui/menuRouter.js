@@ -205,7 +205,7 @@ export const menuRouter = [
             element: "Atlantic Immigration (AIPP)",
           },
           {
-            path: "/business/provincial-business-programs/british-columbia-bcpnp",
+            path: "/business/provincial-business-programs/british-columbia-bc-pnp",
 
             element: "British Colombia (BC PNP)",
           },
@@ -338,4 +338,4 @@ export const menuRouter = [
       },
     ],
   },
-]
+];

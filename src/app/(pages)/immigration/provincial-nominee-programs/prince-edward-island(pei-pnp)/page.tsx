@@ -1,15 +1,15 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react";
+import React from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -22,7 +22,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -48,7 +48,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-]
+];
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -74,7 +74,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-]
+];
 export const featuresNew = [
   {
     icon: "Send" as const,
@@ -95,7 +95,7 @@ export const featuresNew = [
     description:
       "Entrepreneurs looking to start or invest in a business in Prince Edward Island can apply through the Business Impact Category. This stream encourages individuals to actively manage and operate a business in the province, contributing to its economic growth. The business category is ideal for those ready to invest and bring innovative ideas to PEI.",
   },
-]
+];
 export const featuresNew2 = [
   {
     icon: "Briefcase" as const,
@@ -115,7 +115,7 @@ export const featuresNew2 = [
     description:
       "The Business Impact Category is designed for experienced entrepreneurs and business owners who are ready to invest in and manage a business in PEI. This stream provides a pathway for those looking to establish or buy a business in the province and contribute to its economic development. Successful applicants must demonstrate the financial capacity and management experience needed to run a business in PEI, as well as a commitment to actively managing the enterprise.",
   },
-]
+];
 const PrinceEdwardIsland: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -175,7 +175,7 @@ For those looking to make Prince Edward Island their new home, there are three p
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default PrinceEdwardIsland
+export default PrinceEdwardIsland;

@@ -1,9 +1,9 @@
-"use client"
-import React from "react"
-import { Hero2 } from "@/components/ui/hero2"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { commonProps } from "@/constant/commonProps"
+"use client";
+import React from "react";
+import { Hero2 } from "@/components/ui/hero2";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { commonProps } from "@/constant/commonProps";
 
 const JobsMap: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const JobsMap: React.FC = () => {
         title="
 Job Map"
         description="Know more about us, book an appointment today"
-        imageUrl="/images/hero/g.avif"
+        imageUrl="/images/n/indemandjobs.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -38,7 +38,7 @@ Job Map"
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default JobsMap
+export default JobsMap;

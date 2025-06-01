@@ -1,15 +1,15 @@
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4"
-import { Feature3 } from "@/components/ui/feature3"
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { FeatureGrid4, FeatureItemData } from "@/components/ui/feature-grid4";
+import { Feature3 } from "@/components/ui/feature3";
 import {
   Feature2WithImage,
   FeatureItemProps,
-} from "@/components/ui/features-2-with-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react"
-import React from "react"
+} from "@/components/ui/features-2-with-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import { Briefcase, FileText, Heart, Notebook, Plane } from "lucide-react";
+import React from "react";
 
 const cards: FeatureItemProps[] = [
   {
@@ -22,7 +22,7 @@ const cards: FeatureItemProps[] = [
     title: "Legal protection",
     description: `Legal protection under Canadian laws`,
   },
-]
+];
 const features2: FeatureItemData[] = [
   {
     title: "Access to Healthcare",
@@ -48,7 +48,7 @@ const features2: FeatureItemData[] = [
       "Provincial nomination opens the door for your entire family to eventually apply for Canadian citizenship, enjoying full rights and privileges.",
     icon: <Heart />,
   },
-]
+];
 const features3: FeatureItemData[] = [
   {
     title: "Freedom to Live, Work, and Study Anywhere in Canada",
@@ -74,7 +74,7 @@ const features3: FeatureItemData[] = [
       "After fulfilling the residency requirements, permanent residents become eligible to apply for Canadian citizenship. Once you gain citizenship, you’ll hold the 6th most powerful passport globally, granting visa-free or direct ETA access to 185 countries, allowing you to travel with ease across the world.",
     icon: <Heart />,
   },
-]
+];
 export const featuresNew = [
   {
     icon: "Send" as const,
@@ -112,7 +112,7 @@ export const featuresNew = [
     description:
       "This stream is for highly skilled workers with a valid job offer from a Newfoundland employer and who are eligible under the federal Express Entry system. It’s one of the fastest ways to immigrate to the province.",
   },
-]
+];
 const NewFoundlandAndLabrador: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -121,7 +121,7 @@ const NewFoundlandAndLabrador: React.FC = () => {
         title="Newfoundland Provincial Nominee Program (NL PNP)"
         description="Newfoundland and Labrador is the easternmost province of Canada. Situated in the country’s Atlantic region, it is composed of the insular region of
 Newfoundland and the continental region of Labrador to the northwest"
-        imageUrl="/images/hero/k.avif"
+        imageUrl="/images/n/newbrunswick1.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -163,7 +163,7 @@ The Newfoundland Provincial Nominee Program (NL PNP) offers five immigration pat
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default NewFoundlandAndLabrador
+export default NewFoundlandAndLabrador;

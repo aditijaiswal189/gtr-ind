@@ -1,10 +1,10 @@
-"use client"
-import { features } from "@/app/(pages)/about-us/about/about/page"
-import { BlogSection } from "@/components/ui/blog-section"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { Hero2 } from "@/components/ui/hero2"
-import { commonProps } from "@/constant/commonProps"
-import React from "react"
+"use client";
+import { features } from "@/app/(pages)/about-us/about/about/page";
+import { BlogSection } from "@/components/ui/blog-section";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { Hero2 } from "@/components/ui/hero2";
+import { commonProps } from "@/constant/commonProps";
+import React from "react";
 
 const News: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const News: React.FC = () => {
         badgeText="GreenTech Resources"
         title="News Section"
         description="Get updated news about immigration and be informed. "
-        imageUrl="/images/hero/d.avif"
+        imageUrl="/images/n/suv.avif"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -27,7 +27,7 @@ const News: React.FC = () => {
         features={features}
       />
     </div>
-  )
-}
+  );
+};
 
-export default News
+export default News;
