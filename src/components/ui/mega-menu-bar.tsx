@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   ArrowRight,
   BookOpen,
@@ -6,81 +6,81 @@ import {
   ChevronDown,
   GraduationCap,
   MapPin,
-} from "lucide-react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+} from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   useCallback,
   useEffect,
   useLayoutEffect,
   useRef,
   useState,
-} from "react"
-import { Button } from "./button"
-import { menuRouter } from "@/components/ui/menuRouter"
+} from "react";
+import { Button } from "./button";
+import { menuRouter } from "@/components/ui/menuRouter";
 
-const router = menuRouter
+const router = menuRouter;
 function cn(...classes: (string | undefined | null | false)[]): string {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 export function MegaMenuBar() {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null)
-  const menuRef = useRef<HTMLDivElement>(null)
-  const pathname = usePathname()
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
-  const menuButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+  const menuButtonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const [menuPosition, setMenuPosition] = useState<{
-    left: number
-    top: number
-    width: number
-  } | null>(null)
+    left: number;
+    top: number;
+    width: number;
+  } | null>(null);
 
   useEffect(() => {
-    setActiveMenu(null)
-  }, [pathname])
+    setActiveMenu(null);
+  }, [pathname]);
 
   useLayoutEffect(() => {
     if (activeMenu && menuButtonRefs.current[activeMenu]) {
       const buttonRect =
-        menuButtonRefs.current[activeMenu]!.getBoundingClientRect()
-      const menuWidth = 900
+        menuButtonRefs.current[activeMenu]!.getBoundingClientRect();
+      const menuWidth = 900;
       const left = Math.min(
         Math.max(16, buttonRect.left + buttonRect.width / 2 - menuWidth / 2),
         window.innerWidth - menuWidth - 16
-      )
-      const top = buttonRect.bottom - 50
-      setMenuPosition({ left, top, width: menuWidth })
+      );
+      const top = buttonRect.bottom - 50;
+      setMenuPosition({ left, top, width: menuWidth });
     } else {
-      setMenuPosition(null)
+      setMenuPosition(null);
     }
-  }, [activeMenu])
+  }, [activeMenu]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setActiveMenu(null)
+        setActiveMenu(null);
       }
-    }
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [])
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleMenuClick = useCallback(
     (menu: string) =>
       setActiveMenu((current) => (current === menu ? null : menu)),
     []
-  )
+  );
 
   const getFeaturedContent = (category: string) => {
-    const styles = "h-8 w-8 text-primary"
+    const styles = "h-8 w-8 text-primary";
     switch (category) {
       case "About":
         return {
           title: "About Our Services",
           description: "Learn more about our immigration consulting services.",
-          image: "/images/customers/cu1.webp",
+          image: "/images/n/immigrationhome.jpeg",
           cta: {
             text: "Book a Consultation",
             link: "/about-us/about/book-appointment",
@@ -91,13 +91,13 @@ export function MegaMenuBar() {
             text: "15+ years of experience, helping thousands successfully immigrate.",
             link: "/about-us/about/why-choose-us",
           },
-        }
+        };
       case "Immigration":
         return {
           title: "Immigration Pathways",
           description:
             "Discover various immigration programs for your situation.",
-          image: "/images/customers/cu2.webp",
+          image: "/images/n/immigrationhome1.avif",
           cta: {
             text: "Assess Your Eligibility",
             link: "/immigration/express-entry/federal-skilled-trade",
@@ -108,12 +108,12 @@ export function MegaMenuBar() {
             text: "Fastest PR path for skilled workers.",
             link: "/immigration/express-entry/federal-skilled-worker",
           },
-        }
+        };
       case "Business":
         return {
           title: "Business Immigration",
           description: "Start or expand your business in Canada.",
-          image: "/images/customers/cu3.jpeg",
+          image: "/images/n/businesshome.png",
           cta: {
             text: "Business Options",
             link: "/business/quebec/quebec-investor",
@@ -124,12 +124,12 @@ export function MegaMenuBar() {
             text: "Launch innovative ideas with Canadian support.",
             link: "/business/federal-programs/start-up-visa(suv)",
           },
-        }
+        };
       case "Work And Jobs":
         return {
           title: "Canadian Work Opportunities",
           description: "From work permits to permanent jobs.",
-          image: "/images/customers/cu4.webp",
+          image: "/images/n/workjobhome.png",
           cta: {
             text: "In-Demand Jobs",
             link: "/work-and-jobs/jobs/in-demand-jobs",
@@ -140,12 +140,12 @@ export function MegaMenuBar() {
             text: "Understand LMIA process for work permits.",
             link: "/work-and-jobs/work/lmia",
           },
-        }
+        };
       case "Study":
         return {
           title: "Study in Canada",
           description: "World-class education + PR pathways.",
-          image: "/images/customers/cu5.webp",
+          image: "/images/n/stydyhome.png",
           cta: {
             text: "Find Programs",
             link: "/study/programs/study-in-canada",
@@ -156,12 +156,12 @@ export function MegaMenuBar() {
             text: "Gain Canadian work experience.",
             link: "/study/programs/post-graduate-wp",
           },
-        }
+        };
       case "Other Services":
         return {
           title: "Other Services",
           description: "News and updates",
-          image: "/images/customers/cu6.webp",
+          image: "/images/n/workpermit1.png",
           cta: {
             text: "Find Programs",
             link: "/other-services/programs/family-sponsorship",
@@ -172,11 +172,11 @@ export function MegaMenuBar() {
             text: "Stay informed",
             link: "/other-services/news-service/news",
           },
-        }
+        };
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <div className="hidden md:flex md:items-center md:justify-between md:flex-1 md:ml-5 md:mr-2">
@@ -196,13 +196,13 @@ export function MegaMenuBar() {
               >
                 {item.element}
               </Link>
-            )
+            );
           }
           return (
             <div key={item.path} className="relative group">
               <button
                 ref={(el) => {
-                  menuButtonRefs.current[item.path] = el
+                  menuButtonRefs.current[item.path] = el;
                 }}
                 onClick={() => handleMenuClick(item.path)}
                 className={cn(
@@ -228,9 +228,9 @@ export function MegaMenuBar() {
                 >
                   <div className="grid grid-cols-12 gap-4">
                     {(() => {
-                      const children = item.children
+                      const children = item.children;
                       //   const allDirectLinks = children.every((child) => !child.children);
-                      const featured = getFeaturedContent(item.path)
+                      const featured = getFeaturedContent(item.path);
 
                       return (
                         <>
@@ -317,15 +317,15 @@ export function MegaMenuBar() {
                             )}
                           </div>
                         </>
-                      )
+                      );
                     })()}
                   </div>
                 </div>
               )}
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
