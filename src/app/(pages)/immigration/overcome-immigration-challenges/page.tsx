@@ -3,6 +3,7 @@ import React from "react"
 import { Hero2 } from "@/components/ui/hero2"
 import { Feature4 } from "@/components/ui/feature4"
 import { services } from "../../about-us/about/our-services/page"
+import { commonProps } from "@/constant/commonProps"
 
 const OvercomeImmigrationChallenges: React.FC = () => {
   return (

@@ -8,6 +8,7 @@ import {
   FeatureItemProps,
 } from "@/components/ui/features-2-with-image"
 import { Hero2 } from "@/components/ui/hero2"
+import { commonProps } from "@/constant/commonProps"
 import {
   Briefcase,
   BriefcaseBusiness,
