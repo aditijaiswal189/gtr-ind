@@ -70,7 +70,7 @@ const cards = [
     ],
     icon: <Plane className="w-6 h-6 text-white bg-primary-red" />,
 
-    imageUrl: "/images/pic1.webp",
+    imageUrl: "/images/n/immigrationhome1.avif",
     imagePosition: "left",
     color: "red" as CardColor,
   },
@@ -101,8 +101,7 @@ const cards = [
     ],
     icon: <Briefcase className="w-6 h-6 text-white bg-primary-blue" />,
 
-    imageUrl:
-      "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: "/images/n/businesshome1.png",
 
     imagePosition: "right",
     color: "blue" as CardColor,
@@ -144,8 +143,7 @@ const cards = [
       },
     ],
     icon: <GraduationCap className="w-6 h-6 bg-primary-green text-white" />,
-    imageUrl:
-      "https://images.pexels.com/photos/4778611/pexels-photo-4778611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: "/images/n/studyhome1.jpg",
     imagePosition: "left",
     color: "green" as CardColor,
   },
@@ -192,8 +190,7 @@ const cards = [
       },
     ],
     icon: <Network className="w-6 h-6 text-white bg-primary-yellow" />,
-    imageUrl:
-      "https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: "/images/n/workpermit.jpg",
     imagePosition: "right",
     color: "yellow" as CardColor,
   },

@@ -3,25 +3,25 @@ import React, { useState, useEffect } from "react";
 // Sample images and content from Pexels
 const slides = [
   {
-    image: "/images/hero/g.avif",
+    image: "/images/n/businesshome.png",
     title: "Business in Canada",
     subtitle:
       "C11, Start Up Visa, PNP Entrepreneur minimum investment of $100K.Talk to our experts",
   },
   {
-    image: "/images/hero/f.avif",
+    image: "/images/n/stydyhome.png",
     title: "Study in Canada",
     subtitle:
       "Studying in Canada offers a world-class education, diverse cultural experiences, and excellent opportunities for personal and professional growth",
   },
   {
-    image: "/images/hero/d.avif",
+    image: "/images/n/workjobhome.png",
     title: "Work in Canada",
     subtitle:
       "Working in Canada offers a wide array of opportunities for skilled workers from around the world",
   },
   {
-    image: "/images/hero/e.avif",
+    image: "/images/n/immigrationhome.jpeg",
     title: "Immigrate to Canada",
     subtitle:
       "Invest and build your business while ensuring Canadian permanent residency for your family",
