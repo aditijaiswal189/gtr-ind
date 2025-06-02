@@ -221,7 +221,7 @@ Entrepreneur "
         }
         subheading="The BC Provincial Nominee Program (BC PNP) is an economic immigration program. It lets the Province select economic immigrants who will live in B.C. and help fill job vacancies or operate businesses. If you are nominated, you and your family can apply to Immigration, Refugees and Citizenship Canada (IRCC) for permanent residence in Canada.The BC PNP has two main components"
         features={cards2}
-        imageSrc="/images/n/quebecselfemployed.png"
+        imageSrc="b"
         imageAlt="Fox in the wild"
       />
       <FeatureGrid4

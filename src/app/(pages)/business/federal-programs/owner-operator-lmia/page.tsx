@@ -125,7 +125,7 @@ const OwnerOperatorLMIA: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Owner Operator LMIA"
         description="The Owner Operator Labour Market Impact Assessment (LMIA) pathway is a great option for foreign nationals who are looking to become permanent residents and settle in Canada as business owners and operators"
-        imageUrl="/images/n/owneroperatorlmia.jpg"
+        imageUrl="/images/n/rinp.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

@@ -184,7 +184,7 @@ const BritishColumbia: React.FC = () => {
         badgeText="GreenTech Resources"
         title="British Columbia Provincial Nominee Program (BC PNP)"
         description="British Columbia, located on Canada’s west coast, is renowned for its breathtaking natural beauty, including coastal rainforests and majestic mountain ranges. Vancouver, its largest city, boasts a vibrant multicultural scene, while Victoria, the capital on Vancouver Island, exudes historical charm."
-        imageUrl="/images/n/brcolumbia.jpg"
+        imageUrl="/images/n/quebecselfemployed.png"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
