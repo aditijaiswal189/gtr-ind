@@ -1,20 +1,24 @@
-import React from 'react';
-import { Check } from 'lucide-react';
-import { CountryConfig } from '@/constant/countries';
+import React from "react";
+import { Check } from "lucide-react";
+import { CountryConfig } from "@/constant/countries";
+import Link from "next/link";
 
 interface CountrySectionProps {
   country: CountryConfig;
   index: number;
 }
 
-const CountrySectionStudy: React.FC<CountrySectionProps> = ({ country, index }) => {
+const CountrySectionStudy: React.FC<CountrySectionProps> = ({
+  country,
+  index,
+}) => {
   const isEven = index % 2 === 0;
-  
+
   const ContentSection = () => (
     <div className="lg:w-1/2 flex flex-col justify-center">
       <h2 className="text-3xl font-bold mb-8">{country.name}</h2>
       <p className="text-lg mb-10 leading-relaxed">{country.description}</p>
-      
+
       <div>
         <h3 className="text-2xl font-semibold mb-6">Quick facts</h3>
         <ul className="space-y-4">
@@ -28,17 +32,25 @@ const CountrySectionStudy: React.FC<CountrySectionProps> = ({ country, index }) 
           ))}
         </ul>
       </div>
-      
-      <button 
+
+      <Link
+        href="https://zfrmz.in/aUYj5HvMhH1MXRTxD7J2"
+        target="_blank"
         className="mt-10 px-8 py-3 rounded-md bg-white text-base font-medium
                    transition-all duration-300 hover:shadow-lg w-fit"
-        style={{ color: country.backgroundColor === '#fff1f2' ? '#dc2626' : 
-                        country.backgroundColor === '#f0f9ff' ? '#2563eb' :
-                        country.backgroundColor === '#f0fdf4' ? '#16a34a' : 
-                        '#ca8a04' }}
+        style={{
+          color:
+            country.backgroundColor === "#fff1f2"
+              ? "#dc2626"
+              : country.backgroundColor === "#f0f9ff"
+              ? "#2563eb"
+              : country.backgroundColor === "#f0fdf4"
+              ? "#16a34a"
+              : "#ca8a04",
+        }}
       >
         Enquire Now
-      </button>
+      </Link>
     </div>
   );
 
@@ -46,29 +58,29 @@ const CountrySectionStudy: React.FC<CountrySectionProps> = ({ country, index }) 
     <div className="lg:w-1/2">
       <div className="grid grid-cols-6 gap-4">
         <div className="col-span-6 h-[300px] overflow-hidden rounded-xl shadow-md">
-          <img 
-            src={country.images[0]} 
+          <img
+            src={country.images[0]}
             alt={`${country.name} - main image`}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <div className="col-span-2 h-[150px] overflow-hidden rounded-xl shadow-md">
-          <img 
-            src={country.images[1]} 
+          <img
+            src={country.images[1]}
             alt={`${country.name} - image 2`}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <div className="col-span-2 h-[150px] overflow-hidden rounded-xl shadow-md">
-          <img 
-            src={country.images[2]} 
+          <img
+            src={country.images[2]}
             alt={`${country.name} - image 3`}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
         </div>
         <div className="col-span-2 h-[150px] overflow-hidden rounded-xl shadow-md">
-          <img 
-            src={country.images[3]} 
+          <img
+            src={country.images[3]}
             alt={`${country.name} - image 4`}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
           />
@@ -78,8 +90,11 @@ const CountrySectionStudy: React.FC<CountrySectionProps> = ({ country, index }) 
   );
 
   return (
-    <section 
-      style={{ backgroundColor: country.backgroundColor, color: country.textColor }}
+    <section
+      style={{
+        backgroundColor: country.backgroundColor,
+        color: country.textColor,
+      }}
       className="py-20 px-4 md:px-8 w-full transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
