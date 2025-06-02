@@ -1,6 +1,5 @@
 "use client";
 import { LocationSection } from "@/components/ui/location-section";
-import { SectionHeader } from "@/components/ui/section-header";
 import ZohoStyledForm from "@/components/ui/zoho-lead-form";
 
 // import dynamic from "next/dynamic"
