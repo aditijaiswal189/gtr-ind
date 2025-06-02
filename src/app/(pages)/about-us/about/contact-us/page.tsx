@@ -1,6 +1,8 @@
 "use client";
+import { Hero2 } from "@/components/ui/hero2";
 import { LocationSection } from "@/components/ui/location-section";
 import ZohoStyledForm from "@/components/ui/zoho-lead-form";
+import { commonProps } from "@/constant/commonProps";
 
 // import dynamic from "next/dynamic"
 // const ZohoIframeForm = dynamic(() => import("@/components/ui/zoho-lead-form"), {
@@ -9,14 +11,16 @@ import ZohoStyledForm from "@/components/ui/zoho-lead-form";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen p-8 mt-10 flex flex-col gap-12">
+    <div className="min-h-screen  mt-10 flex flex-col gap-12">
+      <Hero2
+        badgeText="GreenTech Resources"
+        title="Contact Us"
+        description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
+        imageUrl="/images/n/immigrationhome.jpeg"
+        primaryCta={commonProps?.primaryCta}
+        secondaryCta={commonProps?.secondaryCta}
+      />
       <div>
-        {/* <SectionHeader subtitle="Contact Us" title="Get in Touch" /> */}
-        {/* <ZohoIframeForm
-        src="https://crm.zoho.in/crm/WebFormServeServlet?rid=7e6911d9944d98f765f359e70ec97af3ce4124cbf2bdf873627ab6426228935c80785ed5ee59f7a507b8bd251d661a98gid5b8262eddd5a1ed51d675503188d2b3b817286eb86ee3405f9b3cd2c26eb470e"
-        width="610px"
-        height="320px"
-      /> */}
         <ZohoStyledForm />
       </div>
 
