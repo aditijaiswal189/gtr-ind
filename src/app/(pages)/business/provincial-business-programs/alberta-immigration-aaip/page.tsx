@@ -318,7 +318,7 @@ const Alberta: React.FC = () => {
         }
         subheading="  During the wait for permanent residency, your family can apply to come, work and study in Canada"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/quebecselfemployed.png"
         imageAlt="Fox in the wild"
       />
       <FeatureGrid4

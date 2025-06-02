@@ -150,7 +150,7 @@ To immigrate to Québec as an entrepreneur, starting and operating an innovative
         }
         subheading="Quebec’s dynamic cities, picturesque landscapes, and strong economy make it an appealing choice for immigration. "
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/quebecselfemployed.png"
         imageAlt="Fox in the wild"
       />
 

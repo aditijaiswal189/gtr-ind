@@ -16,7 +16,11 @@ interface FeatureBoxProps {
   description: string;
 }
 
-const FeatureBox: React.FC<FeatureBoxProps> = ({ icon, title, description }) => (
+const FeatureBox: React.FC<FeatureBoxProps> = ({
+  icon,
+  title,
+  description,
+}) => (
   <div>
     <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-primary/20 text-primary">
       {icon ?? <Plane className="w-6 h-6" />}
@@ -27,7 +31,7 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({ icon, title, description }) => 
 );
 export const CtaWith4Features: React.FC<CtaWith4FeaturesProps> = ({
   features,
-  imageUrl = "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+  imageUrl = "/images/n/quebecselfemployed.png",
 }) => {
   return (
     <section className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -47,12 +51,12 @@ export const CtaWith4Features: React.FC<CtaWith4FeaturesProps> = ({
             ))}
           </div>
           <div className="flex items-center justify-center">
-  <img
-    className="object-contain max-h-[400px] w-full rounded shadow-lg"
-    src={imageUrl}
-    alt="CTA Visual"
-  />
-</div>
+            <img
+              className="object-contain max-h-[400px] w-full rounded shadow-lg"
+              src={imageUrl}
+              alt="CTA Visual"
+            />
+          </div>
         </div>
       </div>
     </section>

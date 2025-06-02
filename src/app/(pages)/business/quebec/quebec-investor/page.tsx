@@ -120,7 +120,7 @@ The Business Immigration Programs serve as a bridge for those seeking to contrib
         }
         subheading="Quebec’s dynamic cities, picturesque landscapes, and strong economy make it an appealing choice for immigration. The Business Immigration Programs serve as a bridge for those seeking to contribute to Quebec’s vibrant communities and economic development."
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/quebecselfemployed.png"
         imageAlt="Fox in the wild"
       />
       <Feature1Animated featureItems={featureItems} />
