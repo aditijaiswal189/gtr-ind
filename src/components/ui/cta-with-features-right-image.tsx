@@ -52,9 +52,9 @@ export const CtaWithFeaturesRightImage: React.FC<
   subtitle,
   features,
   images = [
-    "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
-    "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
-    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    "/images/n/businesshome1.png",
+    "/images/n/studyincanada.png",
+    "/images/n/familysponsor.png",
   ],
 }) => {
   return (

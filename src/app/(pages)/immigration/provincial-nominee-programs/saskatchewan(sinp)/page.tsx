@@ -332,7 +332,7 @@ const Saskatchewan: React.FC = () => {
         title="Saskatchewan Immigrant Nominee Program (SINP)"
         description="
 Saskatchewan, situated in the heart of Canada, is renowned for its vast prairies and expansive fields. It is an ideal destination for newcomers to Canada, offering a cost-effective lifestyle and a diverse, culturally rich community."
-        imageUrl="/images/n/sinp.jpg"
+        imageUrl="/images/hero/f.avif"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

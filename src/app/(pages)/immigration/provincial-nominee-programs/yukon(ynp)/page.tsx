@@ -179,7 +179,7 @@ const YukonYNP: React.FC = () => {
         title="Yukon Provincial Nominee Program (YNP)"
         description="
 Yukon, a territory in northwestern Canada, is known for its vast wilderness and rugged landscapes. Dominated by pristine wilderness, Yukon is home to stunning mountain ranges, expansive forests, and the iconic Yukon River. The capital, Whitehorse, is a small city with a vibrant cultural scene and serves as a gateway to the territory’s outdoor adventures."
-        imageUrl="/images/n/ynp.jpg"
+        imageUrl="/images/hero/j.avif"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

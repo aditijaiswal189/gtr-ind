@@ -303,6 +303,16 @@ export const menuRouter = [
           },
         ],
       },
+      {
+        path: "Study",
+
+        children: [
+          {
+            path: "/study/study/study-abroad",
+            element: "Study Abroad",
+          },
+        ],
+      },
     ],
   },
   {

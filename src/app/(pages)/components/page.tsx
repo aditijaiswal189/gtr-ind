@@ -99,7 +99,7 @@ const aboutNewsletterConfig: NewsletterConfig = {
   placeholder: "Enter your email",
   buttonText: "Book an appointment",
   imageSrc:
-    "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/images/n/ontariopnp.png",
   imageAlt: "Woman reading newsletter",
 };
 // export const services: Props[] = [

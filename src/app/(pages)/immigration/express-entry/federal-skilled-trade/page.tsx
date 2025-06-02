@@ -128,7 +128,7 @@ const FederalSkilledTrade: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Federal Skilled Trade Program (FSTP)"
         description="You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada."
-        imageUrl="/images/n/federalskilledtrade.jpg"
+        imageUrl="/images/n/alberta.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -177,7 +177,7 @@ job offer or certificate of qualification and language ability "
         }
         subheading="Federal Skilled Trade Program"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/federalskilledtrade.jpg"
         imageAlt="Fox in the wild"
       />
       <Feature3

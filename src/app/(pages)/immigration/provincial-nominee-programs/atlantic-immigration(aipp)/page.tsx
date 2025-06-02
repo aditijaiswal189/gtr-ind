@@ -240,7 +240,7 @@ const AtlanticImmigration: React.FC = () => {
         }
         subheading="Atlantic Immigration Pilot Program (AIPP) Opportunities: Your Path to Permanent Residency in Canada"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/quebecselfemployed.png"
         imageAlt="Fox in the wild"
       />
 

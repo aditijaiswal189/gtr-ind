@@ -79,7 +79,7 @@ job offer or certificate of qualification and language ability "
         }
         subheading="Canadian Experience Class (CEC)"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/canadianexperience.webp"
         imageAlt="Fox in the wild"
       />
 

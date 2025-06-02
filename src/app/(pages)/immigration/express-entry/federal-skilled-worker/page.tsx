@@ -101,7 +101,7 @@ const FederalSkilledWorker: React.FC = () => {
         }
         subheading="Federal Skilled Worker Program"
         features={cards}
-        imageSrc="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        imageSrc="/images/n/c11.jpg"
         imageAlt="Fox in the wild"
       />
 

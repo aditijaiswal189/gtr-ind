@@ -122,7 +122,7 @@ const NewBrunswwick: React.FC = () => {
         badgeText="GreenTech Resources"
         title="New Brunswick Provincial Nominee Program (NBPNP)​"
         description="New Brunswick is one of the thirteen provinces and territories of Canada. It is one of the three Maritime provinces and one of the four Atlantic provinces. It is the only province with both French and English as its official languages."
-        imageUrl="/images/n/newbrunswick.jpg"
+        imageUrl="/images/hero/r.avif"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
