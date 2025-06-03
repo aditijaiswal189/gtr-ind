@@ -54,7 +54,7 @@ const FederalSkilledWorker: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Federal Skilled Worker Program (FSWP)"
         description="You are a talented individual with a proven track record, and this is your quickest route to migrate and thrive in Canada."
-        imageUrl="/images/n/federalskilledprogram.jpg"
+        imageUrl="/images/n/m/federalworker.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

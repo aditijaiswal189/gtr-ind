@@ -4,11 +4,6 @@ import { LocationSection } from "@/components/ui/location-section";
 import ZohoStyledForm from "@/components/ui/zoho-lead-form";
 import { commonProps } from "@/constant/commonProps";
 
-// import dynamic from "next/dynamic"
-// const ZohoIframeForm = dynamic(() => import("@/components/ui/zoho-lead-form"), {
-//   ssr: false,
-// })
-
 export default function ContactPage() {
   return (
     <div className="min-h-screen  mt-10 flex flex-col gap-12">

@@ -210,7 +210,7 @@ const AboutPage: React.FC = () => {
         badgeText="GreenTech Resources"
         title="About Us"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
-        imageUrl="/images/n/immigrationhome.jpeg"
+        imageUrl="/images/n/m/aboutus.webp"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

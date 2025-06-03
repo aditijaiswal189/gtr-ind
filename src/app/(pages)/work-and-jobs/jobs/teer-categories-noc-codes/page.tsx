@@ -899,7 +899,7 @@ const TeerCategoriesNocCodes: React.FC = () => {
         badgeText="GreenTech Resources"
         title="TEER Categories and NOC Codes"
         description="TEER categories and examples of jobs"
-        imageUrl="/images/n/noccode.jpg"
+        imageUrl="/images/n/m/federalworker.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

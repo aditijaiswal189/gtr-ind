@@ -31,7 +31,7 @@ const CanadianExperienceClass: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Canadian Experience Class (CEC)"
         description="The Canadian Experience Class (CEC) is an economic immigration program that requires work experience in Canada. Applicants must have a minimum of 12 months of full-time work experience in a skilled occupation in Canada within the last 3 years."
-        imageUrl="/images/n/canadianexperience.webp"
+        imageUrl="/images/n/m/canadianexperience.jpg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

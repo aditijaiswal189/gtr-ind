@@ -1,30 +1,30 @@
-import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter"
-import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image"
-import { Feature1Animated } from "@/components/ui/feature1-animated"
-import { Hero2 } from "@/components/ui/hero2"
-import { Stats } from "@/components/ui/stats"
-import { Briefcase, Globe, Network, UserCheck } from "lucide-react"
-import React, { ReactNode } from "react"
-import { features } from "../about/page"
-import { commonProps } from "@/constant/commonProps"
+import { ContentWithImageDynamicCounter } from "@/components/ui/content-with-image-dynamic-counter";
+import { CtaWithFeaturesRightImage } from "@/components/ui/cta-with-features-right-image";
+import { Feature1Animated } from "@/components/ui/feature1-animated";
+import { Hero2 } from "@/components/ui/hero2";
+import { Stats } from "@/components/ui/stats";
+import { Briefcase, Globe, Network, UserCheck } from "lucide-react";
+import React, { ReactNode } from "react";
+import { features } from "../about/page";
+import { commonProps } from "@/constant/commonProps";
 
 interface StatItem {
-  label: string
-  end: number
-  suffix?: string
+  label: string;
+  end: number;
+  suffix?: string;
 }
 interface FeaturesConfig {
   intro: {
-    eyebrow: string
-    heading: string
-    text: string
-  }
+    eyebrow: string;
+    heading: string;
+    text: string;
+  };
   images: {
-    main: string
-    overlay?: string
-    badge?: { value: string; label: string }
-  }
-  stats: StatItem[]
+    main: string;
+    overlay?: string;
+    badge?: { value: string; label: string };
+  };
+  stats: StatItem[];
 }
 
 const featuresConfig: FeaturesConfig = {
@@ -46,12 +46,12 @@ const featuresConfig: FeaturesConfig = {
     { label: "Success Rate", end: 96, suffix: "%" },
     { label: "Customer Support", end: 24, suffix: "/7" },
   ],
-}
+};
 interface FeatureItem {
-  title: string
-  description: string
-  link: string
-  icon: ReactNode
+  title: string;
+  description: string;
+  link: string;
+  icon: ReactNode;
 }
 
 const featureItems: FeatureItem[] = [
@@ -83,7 +83,7 @@ const featureItems: FeatureItem[] = [
     link: "/",
     icon: <Briefcase className="w-16 h-16 text-primary lg:w-20 lg:h-20" />,
   },
-]
+];
 const WhyChooseUs: React.FC = () => {
   return (
     <div className="min-h-screen bg-white flex gap-12 flex-col">
@@ -92,7 +92,7 @@ const WhyChooseUs: React.FC = () => {
         title="Why Choose Us?"
         description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
         // imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260'
-        imageUrl="/images/pic1.webp"
+        imageUrl="/images/n/m/workandjobimage.jpeg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
@@ -106,7 +106,7 @@ const WhyChooseUs: React.FC = () => {
       />
       <Stats />
     </div>
-  )
-}
+  );
+};
 
-export default WhyChooseUs
+export default WhyChooseUs;

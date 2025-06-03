@@ -190,7 +190,7 @@ const cards = [
       },
     ],
     icon: <Network className="w-6 h-6 text-white bg-primary-yellow" />,
-    imageUrl: "/images/n/workpermit.jpg",
+    imageUrl: "/images/n/m/worknjobhome.jpg",
     imagePosition: "right",
     color: "yellow" as CardColor,
   },

@@ -125,7 +125,7 @@ const WorkPermit: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Work Permits (WP)"
         description="Working in Canada typically requires foreign nationals to obtain a work permit.  There are several different types of work permits available in Canada"
-        imageUrl="/images/n/workpermit.jpg"
+        imageUrl="/images/n/m/fstp.jpeg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />

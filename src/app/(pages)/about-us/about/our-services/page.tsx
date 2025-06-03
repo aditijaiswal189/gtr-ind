@@ -69,7 +69,7 @@ const aboutNewsletterConfig: NewsletterConfig = {
   heading: "Book a session today and start changing your life!",
   placeholder: "Enter your email",
   buttonText: "Book an appointment",
-  imageSrc: "/images/n/ontariopnp.png",
+  imageSrc: "/images/n/m/workandjobimage.jpeg",
   imageAlt: "Woman reading newsletter",
 };
 
@@ -81,7 +81,7 @@ const OurServices: React.FC = () => {
           badgeText="GreenTech Resources"
           title="Our Services"
           description="GreenTech Resources & GreenTech Resource Worldwide Canada is ranked as the 3rd top recruitment agency and immigration consultant in Saskatchewan."
-          imageUrl="/images/download.jfif"
+          imageUrl="/images/n/m/ourservice.jpg"
           // imageUrl='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260'
           primaryCta={commonProps?.primaryCta}
           secondaryCta={commonProps?.secondaryCta}

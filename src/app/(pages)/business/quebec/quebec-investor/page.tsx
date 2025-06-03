@@ -92,7 +92,7 @@ const QuInvestor: React.FC = () => {
         badgeText="GreenTech Resources"
         title="Québec Immigrant Investor Program (QIIP)"
         description="This program is designed for high-net-worth individuals who wish to invest in the Quebec economy Applicants must have these qualifications"
-        imageUrl="/images/n/quebecimmigrant.jpg"
+        imageUrl="/images/n/m/quebecinvestor.jpeg"
         primaryCta={commonProps?.primaryCta}
         secondaryCta={commonProps?.secondaryCta}
       />
